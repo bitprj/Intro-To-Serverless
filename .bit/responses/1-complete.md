@@ -1,0 +1,1 @@
+That's it for Week 1, move on to Week 2 in your new issue!
