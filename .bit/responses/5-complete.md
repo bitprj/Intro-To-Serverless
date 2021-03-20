@@ -1,1 +1,0 @@
-That's it for Week 5! Great job on finishing the course!
