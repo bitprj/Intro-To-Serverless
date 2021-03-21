@@ -74,15 +74,6 @@ steps:
           with: 2.10-Week 2 Step 10.md
           files: ['n/a']
           scripts: n/a
-    - title: 'Week 2: Week 2 Step 10'
-      description: 'The Blog'
-      event: issue_comment.created
-      stepType: IssueComment
-      actions:
-        - type: respond
-          with: 2.2-Week 2 Step 2.md
-          files: ['n/a']
-          scripts: n/a
     - title: 'Week 2: Week 2 Step 2'
       description: 'Before the Function can be used:'
       event: workflow_run.completed
@@ -153,6 +144,15 @@ steps:
       actions:
         - type: respond
           with: feedback.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 2: Week 2 Step 10'
+      description: 'The Blog'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 2.2-Week 2 Step 2.md
           files: ['n/a']
           scripts: n/a
     - title: 'Week 2: Feedback'
