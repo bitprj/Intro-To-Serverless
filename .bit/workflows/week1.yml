@@ -26,11 +26,6 @@ jobs:
         run: |
           node .bit/tests/test.helloworld.js
           
-      - name: Got Secrets?
-        if: ${{steps.vars.outputs.count == 2 && github.event.head_commit.message != 'Update progress' && secrets.HTTP_ENDPOINT == null}}
-        run: |
-          node .bit/tests/error.throw.js
-
       - name: Step 3
         if: ${{steps.vars.outputs.count == 2 && github.event.head_commit.message != 'Update progress'}}
         env:
@@ -38,4 +33,3 @@ jobs:
         run: |
           npm install node-fetch
           node .bit/tests/test.firstfunction.js
-
