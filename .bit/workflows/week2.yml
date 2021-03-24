@@ -34,7 +34,7 @@ jobs:
           node .bit/tests/test.secret1.js
 
       - name: Step 2
-        if: ${{steps.vars.outputs.count == 8 && github.event.head_commit.message != 'Update progress' && steps.secrets.outputs.functionurl == null}}
+        if: ${{steps.vars.outputs.count == 8 && github.event.head_commit.message != 'Update progress' }}
         env:
           FUNCTION_URL: ${{secrets.FUNCTION_URL}}
         run: |
