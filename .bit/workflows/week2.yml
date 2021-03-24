@@ -21,26 +21,14 @@ jobs:
         id: vars
         run: echo ::set-output name=count::$(cat ./.bit/.progress)
 
-      - name: Got Secrets?
-        id: secrets
-        run: |
-          echo ::set-output name=api::${{secrets.API_ENDPOINT}}
-          echo ::set-output name=key::${{secrets.SUBSCRIPTION_KEY}}
-          echo ::set-output name=functionurl::${{secrets.FUNCTION_URL}}
-
-      - name: Step 2
-        if: ${{steps.vars.outputs.count == 7 && github.event.head_commit.message != 'Update progress' && steps.secrets.outputs.functionurl == null}}
+      - name: Step 3
+        if: ${{steps.vars.outputs.count == 7 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/test.secret1.js
 
-      - name: Step 2
-        if: ${{steps.vars.outputs.count == 8 && github.event.head_commit.message != 'Update progress' }}
-        env:
-          FUNCTION_URL: ${{secrets.FUNCTION_URL}}
+      - name: Step 4
+        if: ${{steps.vars.outputs.count == 8 && github.event.head_commit.message != 'Update progress'}}
         run: |
-          npm install node-fetch
-          npm install fs
-          npm install form-data
           node .bit/tests/test.parseimage.js
 
       - name: Step 6
@@ -50,11 +38,6 @@ jobs:
 
       - name: Step 8
         if: ${{steps.vars.outputs.count == 12 && github.event.head_commit.message != 'Update progress'}}
-        env:
-          FUNCTION_URL: ${{secrets.FUNCTION_URL}}
         run: |
-          npm install node-fetch
-          npm install fs
-          npm install form-data
           node .bit/tests/test.emotiondata.js
 
