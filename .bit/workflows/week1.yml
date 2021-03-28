@@ -21,13 +21,15 @@ jobs:
         id: vars
         run: echo ::set-output name=count::$(cat ./.bit/.progress)
 
-      - name: Step 1
-        if: ${{steps.vars.outputs.count == 0 && github.event.head_commit.message != 'Update progress'}}
-        run: |
-          node .bit/tests/test.hello.js
-
       - name: Step 2
         if: ${{steps.vars.outputs.count == 1 && github.event.head_commit.message != 'Update progress'}}
         run: |
-          node .bit/tests/test2.hello.js
-
+          node .bit/tests/test.helloworld.js
+          
+      - name: Step 3
+        if: ${{steps.vars.outputs.count == 2 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          HTTP_ENDPOINT: ${{ secrets.HTTP_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          node .bit/tests/test.firstfunction.js
