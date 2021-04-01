@@ -37,7 +37,7 @@ steps:
           files: ['n/a']
           scripts: test.firstfunction.js
     - title: 'Week 1: Week 1 Step 4'
-      description: '📝 Week 1 Livestream Feedback'
+      description: 'Postman, APIs, and requests'
       event: issue_comment.created
       stepType: IssueComment
       actions:
@@ -46,6 +46,24 @@ steps:
           files: ['n/a']
           scripts: n/a
     - title: 'Week 1: Week 1 Step 5'
+      description: 'Setting up the Emotion Reader Function'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 1.6-Week 1 Step 6.md
+          files: ['n/a']
+          scripts: test.secret1.js
+    - title: 'Week 1: Week 1 Step 6'
+      description: '📝 Week 1 Livestream Feedback'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 1.7-Week 1 Step 7.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 1: Week 1 Step 7'
       description: 'The Blog'
       event: issue_comment.created
       stepType: IssueComment
@@ -63,10 +81,10 @@ steps:
           with: 1-complete.md
         - type: createIssue
           title: Week 2
-          body: 2.1-Week 2 Step 1.md
+          body: 2.10-Week 2 Step 10.md
         - type: closeIssue
-    - title: 'Week 2: Week 2 Step 1'
-      description: 'Postman, APIs, and requests'
+    - title: 'Week 2: Week 2 Step 10'
+      description: 'The Blog'
       event: issue_comment.created
       stepType: IssueComment
       actions:
@@ -91,7 +109,7 @@ steps:
         - type: respond
           with: 2.3-Week 2 Step 3.md
           files: ['n/a']
-          scripts: test.secret1.js
+          scripts: n/a
     - title: 'Week 2: Week 2 Step 3'
       description: '[Parsing](https://oxylabs.io/blog/what-is-data-parser#:~:text=Data%20parsing%20is%20a%20method,be%20easily%20read%20and%20understood.) Multipart'
       event: workflow_run.completed
