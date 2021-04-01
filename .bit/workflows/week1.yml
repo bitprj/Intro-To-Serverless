@@ -28,14 +28,16 @@ jobs:
 
       - name: Step 2
         if: ${{steps.vars.outputs.count == 1 && github.event.head_commit.message != 'Update progress'}}
-        env:
-          HTTP_ENDPOINT: ${{ secrets.HTTP_ENDPOINT }}
         run: |
-          npm install node-fetch
           node .bit/tests/test.firstfunction.js
 
       - name: Step 3
         if: ${{steps.vars.outputs.count == 2 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/test.readme.js
+
+      - name: Step 7
+        if: ${{steps.vars.outputs.count == 6 && github.event.head_commit.message != 'Update progress'}}
+        run: |
+          node .bit/tests/test.secret1.js
 
