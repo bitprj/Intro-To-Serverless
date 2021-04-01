@@ -25,7 +25,7 @@ jobs:
         if: ${{steps.vars.outputs.count == 1 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/test.helloworld.js
-          
+
       - name: Step 3
         if: ${{steps.vars.outputs.count == 2 && github.event.head_commit.message != 'Update progress'}}
         env:
@@ -33,3 +33,11 @@ jobs:
         run: |
           npm install node-fetch
           node .bit/tests/test.firstfunction.js
+
+      - name: Step 5
+        if: ${{steps.vars.outputs.count == 4 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          FUNCTION_URL: ${{ secrets.FUNCTION_URL }}
+        run: |
+          node .bit/tests/test.secret1.js
+
