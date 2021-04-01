@@ -37,7 +37,7 @@ steps:
           files: ['README.md']
           scripts: test.readme.js
     - title: 'Week 1: Week 1 Step 4'
-      description: '📝 Week 1 Livestream Feedback'
+      description: 'Postman, APIs, and requests'
       event: issue_comment.created
       stepType: IssueComment
       actions:
@@ -46,16 +46,16 @@ steps:
           files: ['n/a']
           scripts: n/a
     - title: 'Week 1: Week 1 Step 5'
-      description: 'The Blog'
-      event: issue_comment.created
-      stepType: IssueComment
+      description: 'Setting up the Emotion Reader Function'
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: 1.6-Week 1 Step 6.md
           files: ['n/a']
-          scripts: n/a
+          scripts: test.secret1.js
     - title: 'Week 1: Week 1 Step 6'
-      description: 'Postman, APIs, and requests'
+      description: '📝 Week 1 Livestream Feedback'
       event: issue_comment.created
       stepType: IssueComment
       actions:
@@ -64,14 +64,14 @@ steps:
           files: ['n/a']
           scripts: n/a
     - title: 'Week 1: Week 1 Step 7'
-      description: 'Setting up the Emotion Reader Function'
-      event: workflow_run.completed
-      stepType: checks
+      description: 'The Blog'
+      event: issue_comment.created
+      stepType: IssueComment
       actions:
         - type: respond
           with: feedback.md
           files: ['n/a']
-          scripts: test.secret1.js
+          scripts: n/a
     - title: 'Week 1: Feedback'
       description: Provide your feedback for Week 1!
       event: issue_comment.created

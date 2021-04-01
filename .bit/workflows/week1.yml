@@ -36,8 +36,8 @@ jobs:
         run: |
           node .bit/tests/test.readme.js
 
-      - name: Step 7
-        if: ${{steps.vars.outputs.count == 6 && github.event.head_commit.message != 'Update progress'}}
+      - name: Step 5
+        if: ${{steps.vars.outputs.count == 4 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/test.secret1.js
 
