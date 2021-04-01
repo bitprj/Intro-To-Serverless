@@ -28,23 +28,23 @@ steps:
           files: ['n/a']
           scripts: test.helloworld.js
     - title: 'Week 1: Week 1 Step 3'
-      description: 'Getting Started'
-      event: workflow_run.completed
-      stepType: checks
-      actions:
-        - type: respond
-          with: 1.4-Week 1 Step 4.md
-          files: ['n/a']
-          scripts: test.firstfunction.js
-    - title: 'Week 1: Week 1 Step 4'
       description: 'Postman, APIs, and requests'
       event: issue_comment.created
       stepType: IssueComment
       actions:
         - type: respond
-          with: 1.5-Week 1 Step 5.md
+          with: 1.4-Week 1 Step 4.md
           files: ['n/a']
           scripts: n/a
+    - title: 'Week 1: Week 1 Step 4'
+      description: 'Writing Your First Function'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 1.5-Week 1 Step 5.md
+          files: ['n/a']
+          scripts: test.firstfunction.js
     - title: 'Week 1: Week 1 Step 5'
       description: 'Setting up the Emotion Reader Function'
       event: workflow_run.completed
