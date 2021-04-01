@@ -2,7 +2,7 @@ name: Syncing Your Cabin
 on:
   push:
     branches:
-      - main
+      - week1-update
 
 jobs:
 
