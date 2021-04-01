@@ -6,7 +6,7 @@ template:
     repo: your-learninglab-template
 before:
     - type: createIssue
-      title: Getting Started
+      title: Week 1
       body: 1.1-Week 1 Step 1.md
 steps:
     - title: 'Week 1: Week 1 Step 1'
@@ -62,7 +62,7 @@ steps:
         - type: respond
           with: 1-complete.md
         - type: createIssue
-          title: Creating an Emotion-Reader Azure Function
+          title: Week 2
           body: 2.1-Week 2 Step 1.md
         - type: closeIssue
     - title: 'Week 2: Week 2 Step 1'
