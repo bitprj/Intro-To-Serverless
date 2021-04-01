@@ -6,7 +6,7 @@ template:
     repo: your-learninglab-template
 before:
     - type: createIssue
-      title: Week 1
+      title: Getting Started
       body: 1.1-Week 1 Step 1.md
 steps:
     - title: 'Week 1: Week 1 Step 1'
