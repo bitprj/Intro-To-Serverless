@@ -46,24 +46,33 @@ steps:
           files: ['n/a']
           scripts: test.firstfunction.js
     - title: 'Week 1: Week 1 Step 5'
-      description: 'Setting up the Emotion Reader Function'
+      description: 'What is the day?'
       event: workflow_run.completed
       stepType: checks
       actions:
         - type: respond
           with: 1.6-Week 1 Step 6.md
           files: ['n/a']
-          scripts: test.secret1.js
+          scripts: test.secondfunction.js
     - title: 'Week 1: Week 1 Step 6'
+      description: 'Setting up the Emotion Reader Function'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 1.7-Week 1 Step 7.md
+          files: ['n/a']
+          scripts: test.secret1.js
+    - title: 'Week 1: Week 1 Step 7'
       description: '📝 Week 1 Livestream Feedback'
       event: issue_comment.created
       stepType: IssueComment
       actions:
         - type: respond
-          with: 1.7-Week 1 Step 7.md
+          with: 1.8-Week 1 Step 8.md
           files: ['n/a']
           scripts: n/a
-    - title: 'Week 1: Week 1 Step 7'
+    - title: 'Week 1: Week 1 Step 8'
       description: 'The Blog'
       event: issue_comment.created
       stepType: IssueComment
