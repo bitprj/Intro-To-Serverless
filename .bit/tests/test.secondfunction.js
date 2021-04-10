@@ -1,8 +1,7 @@
 let uri = undefined
 const fetch = require('node-fetch');
 
-// uri = process.env.SECOND_ENDPOINT
-uri = "https://bitcamptest.azurewebsites.net/api/daytrigger?code=HFIYzbNj525PzF2O21P1SOj4oyAKNPRZayAeaMxFd8QcFLHqwiCBNw=="
+uri = process.env.SECOND_ENDPOINT
 if (uri[0] != "h") {
    throw new Error("You have not added your function url as a secret!");
 }
