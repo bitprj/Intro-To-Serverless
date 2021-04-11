@@ -10,7 +10,7 @@ for(var i = 0; i < commit_file.length; i++) {
     var a = commit_file[i];
     fs.access(commit_file[i], err => {
         if (err) {
-          return console.error("You did not commit '" + a + "'")
+            throw new Error("You did not commit '" + a + "'")
         }
     })
 }
