@@ -3,6 +3,8 @@
 
 *Managing a server is pretty complicated, and building with serverless architectures simplifies this process. As a student, mastering serverless functions can help you to build projects that solve real-world problems by integrating APIs, constructing user interfaces, and analysing data. Javascript is the core language of this course - one of the most in-demand languages to learn in the industry.*
 
+#### :question: Not sure how to get started? Click [here](/GETTING_STARTED.md)! 
+
 ### :zap: Outline
 
 #### **Week 1** - Get Started with Azure Functions!
