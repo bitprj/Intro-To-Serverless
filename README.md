@@ -1,6 +1,8 @@
 
 # :camping: Welcome to the *Intro To Serverless* Cabin!
 
+![github](https://user-images.githubusercontent.com/28051494/114525441-f3d6c500-9bfa-11eb-9de1-421cf1b2f263.png)
+
 *Managing a server is pretty complicated, and building with serverless architectures simplifies this process. As a student, mastering serverless functions can help you to build projects that solve real-world problems by integrating APIs, constructing user interfaces, and analysing data. Javascript is the core language of this course - one of the most in-demand languages to learn in the industry.*
 
 #### :question: Not sure how to get started? Click [here](/GETTING_STARTED.md)! 
