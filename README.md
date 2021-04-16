@@ -1,7 +1,5 @@
 ![Newsletter](https://user-images.githubusercontent.com/69332964/114803220-14269100-9d6d-11eb-9a3a-e92a637e5d79.png)
 
-![github](https://user-images.githubusercontent.com/69332964/114646723-c7c64d00-9ca9-11eb-9c8b-f76e6432ba22.png)
-
 *Managing a server is pretty complicated, and building with serverless architectures simplifies this process. As a student, mastering serverless functions can help you to build projects that solve real-world problems by integrating APIs, constructing user interfaces, and analysing data. Javascript is the core language of this course - one of the most in-demand languages to learn in the industry.*
 
 #### :question: Not sure how to get started? Click [here](/GETTING_STARTED.md)! 
