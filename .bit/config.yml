@@ -6,11 +6,11 @@ template:
     repo: your-learninglab-template
 before:
     - type: createIssue
-      title: Getting Started
+      title: Week 1
       body: 1.1-Week 1 Step 1.md
 steps:
-    - title: 'Week 1: Week 1 Step 1'
-      description: 'Getting Started'
+    - title: 'Week 1: Learning GitHub'
+      description: 'GitHub'
       event: pull_request.closed
       stepType: PRmerge
       actions:
@@ -46,7 +46,7 @@ steps:
           files: ['n/a']
           scripts: test.firstfunction.js
     - title: 'Week 1: Week 1 Step 5'
-      description: "One Cat Isn't Enough"
+      description: 'One Cat Isn't Enough'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -90,64 +90,55 @@ steps:
           with: 1-complete.md
         - type: createIssue
           title: Week 2
-          body: 2.10-Week 2 Step 10.md
+          body: 2.1-Week 2 Step 1.md
         - type: closeIssue
-    - title: 'Week 2: Week 2 Step 10'
-      description: 'The Blog'
-      event: issue_comment.created
-      stepType: IssueComment
-      actions:
-        - type: respond
-          with: 2.10-Week 2 Step 10.md
-          files: ['n/a']
-          scripts: n/a
-    - title: 'Week 2: Week 2 Step 10'
-      description: 'The Blog'
-      event: issue_comment.created
-      stepType: IssueComment
+    - title: 'Week 2: Week 2 Step 1'
+      description: '[Parsing](https://oxylabs.io/blog/what-is-data-parser#:~:text=Data%20parsing%20is%20a%20method,be%20easily%20read%20and%20understood.) Multipart'
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: 2.2-Week 2 Step 2.md
           files: ['n/a']
-          scripts: n/a
+          scripts: test.parseimage.js
     - title: 'Week 2: Week 2 Step 2'
-      description: 'Before the Function can be used:'
-      event: workflow_run.completed
-      stepType: checks
+      description: 'Checkpoint #1'
+      event: issue_comment.created
+      stepType: IssueComment
       actions:
         - type: respond
           with: 2.3-Week 2 Step 3.md
           files: ['n/a']
           scripts: n/a
     - title: 'Week 2: Week 2 Step 3'
-      description: '[Parsing](https://oxylabs.io/blog/what-is-data-parser#:~:text=Data%20parsing%20is%20a%20method,be%20easily%20read%20and%20understood.) Multipart'
+      description: '📝 Task 3: Create a Face [API Endpoint](https://smartbear.com/learn/performance-monitoring/api-endpoints/#:~:text=For%20APIs%2C%20an%20endpoint%20can,to%20carry%20out%20their%20function.&text=The%20place%20that%20APIs%20send,lives%2C%20is%20called%20an%20endpoint.)'
       event: workflow_run.completed
       stepType: checks
       actions:
         - type: respond
           with: 2.4-Week 2 Step 4.md
           files: ['n/a']
-          scripts: test.parseimage.js
+          scripts: test.secrets2.js
     - title: 'Week 2: Week 2 Step 4'
-      description: 'Checkpoint #1'
-      event: issue_comment.created
-      stepType: IssueComment
+      description: 'Call the Face API P1: Setting [Params](https://idratherbewriting.com/learnapidoc/docapis_doc_parameters.html)'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
         - type: respond
           with: 2.5-Week 2 Step 5.md
-          files: ['n/a']
+          files: ['index.js']
           scripts: n/a
     - title: 'Week 2: Week 2 Step 5'
-      description: 'Create a Face [API Endpoint](https://smartbear.com/learn/performance-monitoring/api-endpoints/#:~:text=For%20APIs%2C%20an%20endpoint%20can,to%20carry%20out%20their%20function.&text=The%20place%20that%20APIs%20send,lives%2C%20is%20called%20an%20endpoint.)'
+      description: 'Call the Face API P2: Using Fetch'
       event: workflow_run.completed
       stepType: checks
       actions:
         - type: respond
           with: 2.6-Week 2 Step 6.md
           files: ['n/a']
-          scripts: test.secrets2.js
+          scripts: test.emotiondata.js
     - title: 'Week 2: Week 2 Step 6'
-      description: 'Call the Face API P1: Setting [Params](https://idratherbewriting.com/learnapidoc/docapis_doc_parameters.html)'
+      description: 'Checkpoint 2'
       event: issue_comment.created
       stepType: IssueComment
       actions:
@@ -156,25 +147,43 @@ steps:
           files: ['n/a']
           scripts: n/a
     - title: 'Week 2: Week 2 Step 7'
-      description: 'Call the Face API P2: Using Fetch'
-      event: workflow_run.completed
-      stepType: checks
-      actions:
-        - type: respond
-          with: 2.8-Week 2 Step 8.md
-          files: ['n/a']
-          scripts: test.emotiondata.js
-    - title: 'Week 2: Week 2 Step 8'
-      description: 'Checkpoint 2'
+      description: 'Setting up the Twilio API'
       event: issue_comment.created
       stepType: IssueComment
       actions:
         - type: respond
-          with: 2.9-Week 2 Step 9.md
+          with: 2.8-Week 2 Step 8.md
           files: ['n/a']
           scripts: n/a
+    - title: 'Week 2: Week 2 Step 8'
+      description: 'Connecting Locally to the Twillio API'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: 2.9-Week 2 Step 9.md
+          files: ['node-modules.json']
+          scripts: n/a
     - title: 'Week 2: Week 2 Step 9'
+      description: 'Calling the Twillio API'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: 2.a10-Week 2 Step 10.md
+          files: ['index.js']
+          scripts: n/a
+    - title: 'Week 2: Week 2 Step 10'
       description: '📝 Week 2 Livestream Feedback'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 2.a11-Week 2 Step 11.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 2: Week 2 Step 11'
+      description: 'The Blog'
       event: issue_comment.created
       stepType: IssueComment
       actions:
@@ -194,42 +203,69 @@ steps:
           body: 3.1-Week 3 Step 1.md
         - type: closeIssue
     - title: 'Week 3: Week 3 Step 1'
-      description: 'Creating an HTML Page'
-      event: issue_comment.created
-      stepType: IssueComment
+      description: 'Learning Objectives'
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: 3.2-Week 3 Step 2.md
-          files: ['index.html', 'js/config.js']
-          scripts: testStep1.js
+          files: ['n/a']
+          scripts: test.helloworld.js
     - title: 'Week 3: Week 3 Step 2'
-      description: 'Displaying Emotion Data'
-      event: issue_comment.created
-      stepType: IssueComment
+      description: 'Calling the Giphy API'
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: 3.3-Week 3 Step 3.md
-          files: ['index.html', 'js/config.js']
-          scripts: testStep1.js
+          files: ['n/a']
+          scripts: test.secret1.js
     - title: 'Week 3: Week 3 Step 3'
-      description: 'Deploying through Azure Static Web Apps'
-      event: issue_comment.created
-      stepType: IssueComment
+      description: 'Sending the GIF'
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: 3.4-Week 3 Step 4.md
           files: ['n/a']
-          scripts: n/a
+          scripts: test.secret1.js
     - title: 'Week 3: Week 3 Step 4'
-      description: '📝 Week 3 Livestream Feedback'
+      description: 'Learning Objectives'
       event: issue_comment.created
       stepType: IssueComment
       actions:
         - type: respond
           with: 3.5-Week 3 Step 5.md
           files: ['n/a']
-          scripts: n/a
+          scripts: testStep1.js
     - title: 'Week 3: Week 3 Step 5'
+      description: 'Setting Up Configuration'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 3.6-Week 3 Step 6.md
+          files: ['js/databaseContext.js']
+          scripts: test.databaseContext.js
+    - title: 'Week 3: Week 3 Step 6'
+      description: 'Modifying your Azure Function'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 3.7-Week 3 Step 7.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 3: Week 3 Step 7'
+      description: '📝 Week 3 Livestream Feedback'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 3.8-Week 3 Step 8.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 3: Week 3 Step 8'
       description: '**Week 3 Blog**'
       event: issue_comment.created
       stepType: IssueComment

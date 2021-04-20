@@ -21,27 +21,15 @@ jobs:
         id: vars
         run: echo ::set-output name=count::$(cat ./.bit/.progress)
 
-      - name: Step 2
-        if: ${{steps.vars.outputs.count == 8 && github.event.head_commit.message != 'Update progress'}}
-        run: |
-        
-      - name: Step 3
-        if: ${{steps.vars.outputs.count == 7 && github.event.head_commit.message != 'Update progress'}}
-        run: |
-          node .bit/tests/test.secret1.js
-
-      - name: Step 4
+      - name: Step 1
         if: ${{steps.vars.outputs.count == 8 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/test.parseimage.js
-
-      - name: Step 4
+      - name: Step 3
         if: ${{steps.vars.outputs.count == 10 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/test.secrets2.js
-
-      - name: Step 6
+      - name: Step 5
         if: ${{steps.vars.outputs.count == 12 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/test.emotiondata.js
-
