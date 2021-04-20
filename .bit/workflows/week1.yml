@@ -37,7 +37,7 @@ jobs:
       - name: Step 5
         if: ${{steps.vars.outputs.count == 4 && github.event.head_commit.message != 'Update progress'}}
         env:
-          HTTP_ENDPOINT: ${{ secrets.SECOND_ENDPOINT }}
+          SECOND_ENDPOINT: ${{ secrets.SECOND_ENDPOINT }}
         run: |
           npm install node-fetch
           node .bit/tests/test.secondfunction.js
