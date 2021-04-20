@@ -46,7 +46,7 @@ steps:
           files: ['n/a']
           scripts: test.firstfunction.js
     - title: 'Week 1: Week 1 Step 5'
-      description: 'One Cat Isn't Enough'
+      description: "One Cat Isn't Enough"
       event: workflow_run.completed
       stepType: checks
       actions:
