@@ -66,7 +66,7 @@ steps:
     - title: 'Week 1: Week 1 Step 7'
       description: '📝 Week 1 Livestream Feedback'
       event: issue_comment.created
-      stepType: IssueComment
+      stepType: feedback
       actions:
         - type: respond
           with: feedback.md
@@ -75,7 +75,7 @@ steps:
     - title: 'Week 1: Feedback'
       description: Provide your feedback for Week 1!
       event: issue_comment.created
-      stepType: IssueComment
+      stepType: feedback
       actions:
         - type: respond
           with: 1-complete.md
@@ -167,7 +167,7 @@ steps:
     - title: 'Week 2: Week 2 Step 10'
       description: '📝 Week 2 Livestream Feedback'
       event: issue_comment.created
-      stepType: IssueComment
+      stepType: feedback
       actions:
         - type: respond
           with: 2.a11-Week 2 Step 11.md
@@ -185,7 +185,7 @@ steps:
     - title: 'Week 2: Feedback'
       description: Provide your feedback for Week 2!
       event: issue_comment.created
-      stepType: IssueComment
+      stepType: feedback
       actions:
         - type: respond
           with: 2-complete.md
@@ -250,7 +250,7 @@ steps:
     - title: 'Week 3: Week 3 Step 7'
       description: '📝 Week 3 Livestream Feedback'
       event: issue_comment.created
-      stepType: IssueComment
+      stepType: feedback
       actions:
         - type: respond
           with: 3.8-Week 3 Step 8.md
@@ -268,7 +268,7 @@ steps:
     - title: 'Week 3: Feedback'
       description: Provide your feedback for Week 3!
       event: issue_comment.created
-      stepType: IssueComment
+      stepType: feedback
       actions:
         - type: respond
           with: 3-complete.md
