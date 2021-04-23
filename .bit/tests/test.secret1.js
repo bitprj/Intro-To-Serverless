@@ -9,7 +9,7 @@ if (endpoint[0] != "h") {
 const fs = require('fs') //get the methods in the fs package
 
 //if you wanna add more files, just put a comma after the filename (array)
-const commit_file = ['../../package.json']
+const commit_file = ['package.json']
 
 for(var i = 0; i < commit_file.length; i++) {
     var a = commit_file[i];
