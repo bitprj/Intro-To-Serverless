@@ -6,7 +6,7 @@ template:
     repo: your-learninglab-template
 before:
     - type: createIssue
-      title: Week 1
+      title: Getting Started
       body: 1.1-Week 1 Step 1.md
 steps:
     - title: 'Week 1: Learning GitHub'
@@ -80,7 +80,7 @@ steps:
         - type: respond
           with: 1-complete.md
         - type: createIssue
-          title: Week 2
+          title: Coding the Azure Functions
           body: 2.1-Week 2 Step 1.md
         - type: closeIssue
     - title: 'Week 2: Week 2 Step 1'
@@ -190,7 +190,7 @@ steps:
         - type: respond
           with: 2-complete.md
         - type: createIssue
-          title: Week 3
+          title: Storing and Retrieving Data
           body: 3.1-Week 3 Step 1.md
         - type: closeIssue
     - title: 'Week 3: Week 3 Step 1'
