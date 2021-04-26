@@ -195,31 +195,31 @@ steps:
         - type: closeIssue
     - title: 'Week 3: Week 3 Step 1'
       description: 'Learning Objectives'
-      event: workflow_run.completed
-      stepType: checks
+      event: issue_comment.created
+      stepType: IssueComment
       actions:
         - type: respond
           with: 3.2-Week 3 Step 2.md
           files: ['n/a']
-          scripts: test.helloworld.js
+          scripts: n/a
     - title: 'Week 3: Week 3 Step 2'
       description: 'Calling the Giphy API'
-      event: workflow_run.completed
-      stepType: checks
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
         - type: respond
           with: 3.3-Week 3 Step 3.md
-          files: ['n/a']
-          scripts: test.secret1.js
+          files: ['index.js']
+          scripts: n/a
     - title: 'Week 3: Week 3 Step 3'
       description: 'Sending the GIF'
-      event: workflow_run.completed
-      stepType: checks
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
         - type: respond
           with: 3.4-Week 3 Step 4.md
-          files: ['n/a']
-          scripts: test.secret1.js
+          files: ['index.js']
+          scripts: n/a
     - title: 'Week 3: Week 3 Step 4'
       description: 'Learning Objectives'
       event: issue_comment.created
