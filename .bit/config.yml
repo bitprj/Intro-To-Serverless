@@ -253,15 +253,6 @@ steps:
       stepType: feedback
       actions:
         - type: respond
-          with: 3.8-Week 3 Step 8.md
-          files: ['n/a']
-          scripts: n/a
-    - title: 'Week 3: Week 3 Step 8'
-      description: '**Week 3 Blog**'
-      event: issue_comment.created
-      stepType: IssueComment
-      actions:
-        - type: respond
           with: feedback.md
           files: ['n/a']
           scripts: n/a
