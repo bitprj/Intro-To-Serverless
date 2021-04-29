@@ -42,7 +42,7 @@ describe('Test HTML Page', () => {
     })
 
     it('Testing form submission', () => {
-        const fileName = "puffle.jpg"
+        const fileName = "testimage.jpg"
         uploadFile(fileName, 'image/jpg', 'input[name="image"]')
         cy.get('button').click()
         cy.get('#emotion').contains('anger', {matchCase: false})
