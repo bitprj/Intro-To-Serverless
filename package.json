@@ -1,0 +1,22 @@
+{
+    "name": "serverless-functions",
+    "version": "1.0.0",
+    "description": "test",
+    "main": "index.js",
+    "scripts": {
+      "test": "node index.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/emsesc/serverless-functions.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/emsesc/serverless-functions/issues"
+    },
+    "homepage": "https://github.com/emsesc/serverless-functions#readme",
+    "dependencies": {
+      "cypress": "^6.8.0"
+    }
+  }
