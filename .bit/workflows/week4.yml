@@ -21,7 +21,12 @@ jobs:
         id: vars
         run: echo ::set-output name=count::$(cat ./.bit/.progress)
 
-      - name: Cypress run
+      - name: Step 1
         uses: cypress-io/github-action@v2
         with:
-          spec: cypress/integration/week4.js
+          spec: cypress/integration/test.baseelements.js
+      
+      - name: Step 2
+        uses: cypress-io/github-action@v2
+        with:
+          spec: cypress/integration/test.form.js
