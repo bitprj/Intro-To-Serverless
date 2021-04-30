@@ -170,15 +170,6 @@ steps:
       stepType: feedback
       actions:
         - type: respond
-          with: 2.a11-Week 2 Step 11.md
-          files: ['n/a']
-          scripts: n/a
-    - title: 'Week 2: Week 2 Step 11'
-      description: 'The Blog'
-      event: issue_comment.created
-      stepType: IssueComment
-      actions:
-        - type: respond
           with: feedback.md
           files: ['n/a']
           scripts: n/a
