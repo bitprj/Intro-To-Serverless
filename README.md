@@ -4,6 +4,11 @@
 
 #### :question: Not sure how to get started? Click [here](/GETTING_STARTED.md)! 
 
+|             | dasdf          |                   |                |
+|-------------|----------------|-------------------|----------------|
+| **Twocatz API** | **Emotional GIFs** | **Deep Secrets API**  | **TwinFinder API** |
+| Return Multiple Pictures of Cats, named after your friends | Use AI/ML to return a GIF that best matches your facial emotions | Create an app to read and share your deepest secrets, all through Text | Combine all the skills you learned so far to create an app to upload your face to find your twin! |
+
 ## :zap: Outline
 
 ### **Week 1** - Get Started with Azure Functions!
