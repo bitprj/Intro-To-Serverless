@@ -6,7 +6,7 @@
 
 |             | dasdf          |                   |                |
 |-------------|----------------|-------------------|----------------|
-| **Twocatz API** <br> Return Multiple Pictures of Cats, named after your friends | **Emotional GIFs** <br> Use AI/ML to return a GIF that best matches your facial emotions | **Deep Secrets API** <br> Create an app to read and share your deepest secrets, all through SMS| **TwinFinder API** <br> Having a good (beard) day? Text a picture of your face to this API and it’ll return a selfie of your twin (or the closest to it) with the power of AI/ML! |
+| 🐈 **twoCatz API** <br> Return multiple pictures of cats, and name them after your friends | 😭 **Emotional GIFs** <br> Use AI/ML to return a GIF that best matches your facial emotions | 🤫 **Deep Secrets API** <br> Create an app to read and share your deepest secrets, all through SMS | 👯 **TwinFinder API** <br> Having a good, bad, or beard day? Text a picture of your face to this API and it’ll return a selfie of your twin (or the closest to it) with the power of AI/ML! |
 
 
 ## :zap: Outline
