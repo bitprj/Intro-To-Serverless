@@ -21,34 +21,50 @@
 
 
 ### **Week 1** - Get Started with Azure Functions!
-* Learn how to work with
-    * Github 
-    * VSCode
-    * Postman
 
+**Project** - **ServerlessTime** 🐈 <br>
+HTTP Trigger Azure Function to return current time, written in javascript. 
+- VSCODE, Github, Postman, Azure functions Locally + Testing Javascript Knowledge
+- 
 **Project** - **twoCatz API** 🐈 <br>
 Create a REST API that returns multiple pictures of cats, named after your friends.
+ - How to consume an API using http://cataas.com/ API
+ - writing Azure HTTP Trigger function
 
 **Challenge** - [Top Secret] <br>
 Build a Serverless Function that converts English to Morse Code 
+- npm packages
+- azure functions/developing locally
 
 ### **Week 2** - Working with APIs
-* Code a HTTP Trigger Serverless Function
-    * Parse an image
-    * Make a request to an API
-    * Return emotion data
-* Work with the Giphy and Twilio API
-    * Understand POST and GET requests
-    * Send data in different formats
-    * Text the user a gif
+
+**Project** - **Emotional Gifs** <br>
+Serverless Function that takes a picture from SMS (through Twilio), uses Microsoft Face API to analyze emotion, and sends back a gif that matches the user's expression. 
+
+- Twilio API
+- Giphy API 
+- Micorosft Face API
+- Writing Azure Function
+
+**Challenge** - TwinFinder Pt1 <br>
+
 
 ### **Week 3** - Incorporate a Database
+Deep Secrets API
+It's a Serverless Function that takes in a text input from SMS (Twilio)/ HTTP Request, stores it into a database (CosmosDB) and returns a random secret as the response.
+
+* Azure Functions
+* Twilio
 * Implement a CosmosDB database
     * Learn about NoSQL databases and data structures
     * Store data with documents
     * Code functions to work with databases
 
 ### **Week 4** - Building a Frontend
+
+Create a frontend for DeepSecrets API
+Code a rudimentary frontend with HTML, CSS, and JS for the Deep Secrets API. 
+
 * Code a rudimentary frontend with HTML, CSS, and JS
     * Code and style a page
     * Integrate JS that makes a POST request to the HTTP Triggers
