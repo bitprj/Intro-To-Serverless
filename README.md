@@ -4,24 +4,33 @@
 
 #### :question: Not sure how to get started? Click [here](/GETTING_STARTED.md)! 
 
-|             | dasdf          |                   |                |
-|-------------|----------------|-------------------|----------------|
-| 🐈 **twoCatz API** <br> Return multiple pictures of cats, and name them after your friends | 😭 **Emotional GIFs** <br> Use AI/ML to return a GIF that best matches your facial emotions | 🤫 **Deep Secrets API** <br> Create an app to read and share your deepest secrets, all through SMS | 👯 **TwinFinder API** <br> Having a good, bad, or beard day? Text a picture of your face to this API and it’ll return a selfie of your twin (or the closest to it) with the power of AI/ML! |
 
 
-## :zap: Outline
+## :zap: Learn about Azure Functions! (Week 1-4)
+| Week   | Project Name      | Description                                                                     |
+|--------|-------------------|---------------------------------------------------------------------------------|
+| 1      | ServerlessTime.js |                                                                                 |
+| 1      | twoCatz.js        | Create an API that returns multiple pictures of cats, named after your friends. |
+| 1      | TopSecret API     | Create an API that takes in English as an input and returns morse code.         |
+| 2      | Emotional Gifs    |                                                                                 |
+| 2      | TwinFinder Pt. 1  |                                                                                 |
+| 3      | Deep Secrets API  |                                                                                 |
+| 3      | Twin Finder Pt. 2 |                                                                                 |
+| 4      | Deep Secrets App  |                                                                                 |
+| 4      | Twin Finder Pt. 3 |                                                                                 |
+
 
 ### **Week 1** - Get Started with Azure Functions!
-* Set up tools needed for the "Emotion Reader" project
-    * Work with an IDE (VSCode)
-    * Configure Azure
-    * Navigate GitHub
-* Code your first Serverless Function
-* Set up your project
-    * Configure the Azure Face API
-    * Install dependencies
-* Learn how to test APIs with Postman
+* Learn how to work with
+    * Github 
+    * VSCode
+    * Postman
 
+**Project** - **twoCatz API** 🐈 <br>
+Create a REST API that returns multiple pictures of cats, named after your friends.
+
+**Challenge** - [Top Secret] <br>
+Build a Serverless Function that converts English to Morse Code 
 
 ### **Week 2** - Working with APIs
 * Code a HTTP Trigger Serverless Function
@@ -47,6 +56,7 @@
     * Integrate the data stored in the CosmosDB database
     * Visualize the emotion data retrieved from the Face API
 
+## :zap: Build your Own Project (Week 5-8)
 
 ### ✔️ After completing the cabin, students will create their own app with this timeline:
 > ### **Week 5** - Brainstorming & Proposals ⛈
