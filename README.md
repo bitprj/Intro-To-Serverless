@@ -9,14 +9,14 @@
 ## :zap: Learn about Azure Functions! (Week 1-4)
 | Week   | Project Name      | Description                                                                     |
 |--------|-------------------|---------------------------------------------------------------------------------|
-| 1      | ServerlessTime.js |                                                                                 |
+| 1      | ServerlessTime.js | Build yourself an API that returns the current time.                                                                                 |
 | 1      | twoCatz.js        | Create an API that returns multiple pictures of cats, named after your friends. |
 | 1      | TopSecret API     | Create an API that takes in English as an input and returns morse code.         |
-| 2      | Emotional Gifs    |                                                                                 |
+| 2      | Emotional Gifs    | Match your emotions with a gif-tastic Gif from Giphy using a web page and machine learning.|
 | 2      | TwinFinder Pt. 1  |                                                                                 |
-| 3      | Deep Secrets API  |                                                                                 |
+| 3      | Deep Secrets API  | Everyone has secrets. Text your confessions to a number and receive someone else's back.|
 | 3      | Twin Finder Pt. 2 |                                                                                 |
-| 4      | Deep Secrets App  |                                                                                 |
+| 4      | Deep Secrets App  | Everyone needs to confess their secrets! Record your anonymous confession on a webpage and receive a phone call with someone else's secret.                                                                                |
 | 4      | Twin Finder Pt. 3 |                                                                                 |
 
 
