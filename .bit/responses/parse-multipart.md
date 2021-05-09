@@ -1,0 +1,67 @@
+---
+files: n/a
+stepType: IssueComment
+scripts: n/a
+week: 2
+step: 2
+name: Week 2 Step 2
+---
+Week 2 Step 2 ⬤⬤◯◯◯◯ | 🕐 Estimated completion: 5-20 minutes
+## Parsing Images with Parse-Multipart
+Now that we have used the Face API successfully, we want to change the function so it's not analyzing one provided image, but any file we provide as an input. 
+
+### ✅ Task:
+**Create an azure function that takes in an image from a HTTP request, parses it with `parse-multipart` and return the emotion data.**
+
+- [ ]  Run `git pull` 
+- [ ]  Make sure you are in the `week2` branch 
+- [ ]  Install  `parse-multipart` npm package
+- [ ]  Modify your serverless function from the previous step to analyze the image sent by the HTTP Request
+- [ ] Commit your code to `week2/emotional.js`
+
+
+## What is multipart request?
+A **HTTP multipart request** is a HTTP request that HTTP clients construct to send files and data over to a HTTP Server. It is commonly used by browsers and HTTP clients to **upload** files to the server.
+
+Because we want to send an image file through an HTTP Request, we need a piece of software to parse the raw data to extract the image file. Here comes the handy NPM package: `parse-multipart`! 
+
+The raw payload formatted as multipart/form-data will looks like this one:
+
+```
+------WebKitFormBoundaryDtbT5UpPj83kllfw
+Content-Disposition: form-data; name="uploads[]"; filename="somebinary.dat"
+Content-Type: application/octet-stream
+
+some binary data...maybe the bits of a image..
+------WebKitFormBoundaryDtbT5UpPj83kllfw
+Content-Disposition: form-data; name="uploads[]"; filename="sometext.txt"
+Content-Type: text/plain
+
+hello how are you
+------WebKitFormBoundaryDtbT5UpPj83kllfw--
+```
+
+The lines above represents a **raw multipart/form-data payload** sent by some HTTP client via form submission containing two files. We need to extract the all files contained inside it. The multipart format allows you to send more than one file in the same payload, that's why it is called: multipart.
+
+<details>
+<summary>How do I use this package?</summary>
+</br>
+
+Notice that `multipart.Parse(body, boundary)`  requires two parameters.  I've already gotten the boundary for you – just like the documentation example, our boundary is a string in the format `"----WebKitFormBoundary(random characters here)"`.
+
+In the `multipart.Parse()` call, you need to figure out what the body parameter should be.
+
+> :bulb: **Hint:** It should be the request body. Think about the template HTTP Trigger Azure function. How did we access the body in there?
+
+```js
+
+// here's your boundary:
+var boundary = multipart.getBoundary(req.headers['content-type']);
+  
+// TODO: assign the body variable the correct value
+var body = '<WHAT GOES HERE?>'
+
+// parse the body
+var parts = multipart.Parse(body, boundary);
+```
+</details>
