@@ -7,16 +7,16 @@
 
 
 ## :zap: Learn about Azure Functions! (Week 1-4)
-| Week # | Project Name     | Description                                                                                                       |
-|--------|------------------|-------------------------------------------------------------------------------------------------------------------|
-| 1      | twoCatz.js       | Create an API Endpoint returning multiple pictures of cats, named after your friends.                             |
-| 1      | TopSecret API    | Create an API Endpoint returning morse code translations of inputs                                                |
-| 2      | Poem4U.js        | Create an API Endpoint returning a poem matching the dominant emotion on your face!                               |
-| 2      | Song4U.js        | Create an API Endpoint that takes in an image of a face and calls you back with a song matching how old you look! |
-| 3      | Bunnimage API    | Create a File Sharing API that saves images that are able to be downloaded with a secret code                     |
-| 3      | Deep Secrets API | Create an API to share your deepest secrets, and in return hear someone else's                                    |
-| 4      | Bunnimage App    | Create a Frontend that allows users interact with BunnImage API built in week 2                                   |
-| 4      | Deep Secrets App | Create a Frontend that allows users interact with DeepSecrets API built in week 3                                 |
+| Week   | Project Name      | Description                                                                     |
+|--------|-------------------|---------------------------------------------------------------------------------|
+| 1      | twoCatz.js        | Create an API that returns multiple pictures of cats, named after your friends. |
+| 1      | TopSecret API     | Create an API that takes in English as an input and returns morse code.         |
+| 2      | Emotional Gifs    | Match your emotions with a gif-tastic Gif from Giphy using a web page and machine learning.|
+| 2      | Song4U.js  |   Create an API Endpoint that takes in an image of a face and calls you back with a song matching how old you look!                                                                              |
+| 3      | Bunnimage API | Create a File Sharing API that saves images that are able to be downloaded with a secret code                                                                                |
+| 3      | Deep Secrets API  | Everyone has secrets. Text your confessions to a number and receive someone else's back.|
+| 4      | Deep Secrets App  | Everyone needs to confess their secrets! Record your anonymous confession on a webpage and receive a phone call with someone else's secret.                                                                                |
+| 4      | Bunnimage App |   Create a Frontend that allows users interact with BunnImage API built in week 2                                                                              |
 
 ### **Week 1** - Get Started with Azure Functions!
 
