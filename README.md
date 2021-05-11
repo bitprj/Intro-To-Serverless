@@ -19,6 +19,8 @@
 | 4      | Bunnimage App |   Create a Frontend that allows users interact with the Bunnimage API which stores and retrieves images.                                                                             |
 
 ### **Week 1** - Get Started with Azure Functions!
+This week, students build projects to get started with Azure Functions, Cloud Engineering, and Javascript! In addition, they will set up their development environment, familiarizing themselves with various developer toolsg like Github and Postman. 
+
 | Category  | Assignment       | Description                                                                         | Learning Objectives                                                                  |
 |-----------|------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | Project   | ServerlessOracle | HTTP Trigger Azure Function to return the answer to life, written in Javascript.    |  <ul><li>VSCode</li><li>Github</li><li>Postman</li><li>Azure functions Locally</li><li>Testing Javascript Knowledge</li></ul> |
