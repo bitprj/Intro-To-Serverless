@@ -5,7 +5,7 @@ const FormData = require('form-data');
 
 uri = process.env.FUNCTION_URL
 
-if (uri == null) {
+if (uri[0] == null) {
     throw new Error("You have not added your function url as a secret!");
 }
 
