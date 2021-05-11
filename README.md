@@ -7,16 +7,6 @@
 
 
 ## :zap: Learn about Azure Functions! (Week 1-4)
-| Week   | Project Name      | Description                                                                     |
-|--------|-------------------|---------------------------------------------------------------------------------|
-| 1      | twoCatz.js        | Create an API that returns multiple pictures of cats, named after your friends. |
-| 1      | TopSecret API     | Create an API that takes in English as an input and returns morse code.         |
-| 2      | Emotional Gifs    | Match your emotions with a gif-tastic Gif from Giphy using a web page and machine learning.|
-| 2      | Song4U.js  |   Create an API Endpoint that takes in an image of a face and calls you back with a song matching how old you look!                                                                              |
-| 3      | Bunnimage API | Create a File Sharing API that saves images that are able to be downloaded on another device with a secret code.                                                                                |
-| 3      | Deep Secrets API  | Everyone has secrets. Text your confessions to a number and receive someone else's back.|
-| 4      | Deep Secrets App  | Everyone needs to confess their secrets! Record your anonymous confession on a webpage and receive a phone call with someone else's voice-recorded secret.                                                                                |
-| 4      | Bunnimage App |   Create a Frontend that allows users interact with the Bunnimage API which stores and retrieves images.                                                                             |
 
 ### **Week 1** - Get Started with Azure Functions!
 Build projects to get started with Azure Functions, Cloud Engineering, and Javascript! In addition, set up your development environment with various developer tools like Github and Postman. 
