@@ -19,20 +19,11 @@
 | 4      | Bunnimage App |   Create a Frontend that allows users interact with the Bunnimage API which stores and retrieves images.                                                                             |
 
 ### **Week 1** - Get Started with Azure Functions!
-
-**Project** - **ServerlessOracle** 🐈 <br>
-HTTP Trigger Azure Function to return the answer to life, written in javascript. 
-- VSCODE, Github, Postman, Azure functions Locally + Testing Javascript Knowledge
-
-**Project** - **twoCatz API** 🐈 <br>
-Create a REST API that returns multiple pictures of cats, named after your friends.
- - How to consume an API using http://cataas.com/ API
- - Writing an Azure HTTP Trigger function and practicing JS
-
-**Challenge** - [Top Secret] <br>
-Build a Serverless Function that converts English to Morse Code 
-- npm packages
-- Azure functions/developing locally
+| Category  | Assignment       | Description                                                                         | Learning Objectives                                                                  |
+|-----------|------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| Project   | ServerlessOracle | HTTP Trigger Azure Function to return the answer to life, written in Javascript.    |  <ul><li>VSCode</li><li>Github</li><li>Postman</li><li>Azure functions Locally</li><li>Testing Javascript Knowledge</li></ul> |
+| Project   | twoCatz API      | Create a REST API that returns multiple pictures of cats, named after your friends. | <ul><li>Consuming API</li><li>Azure functions Locally</li><li>Vanilla JS</li></ul>|
+| Challenge | [Top Secret]     | Build a Serverless Function that converts English to Morse Code                     | - npm packages - Writing HTTP Trigger Functions                                      |
 
 ### **Week 2** - Working with APIs
 
