@@ -13,32 +13,31 @@
 | 1      | TopSecret API     | Create an API that takes in English as an input and returns morse code.         |
 | 2      | Emotional Gifs    | Match your emotions with a gif-tastic Gif from Giphy using a web page and machine learning.|
 | 2      | Song4U.js  |   Create an API Endpoint that takes in an image of a face and calls you back with a song matching how old you look!                                                                              |
-| 3      | Bunnimage API | Create a File Sharing API that saves images that are able to be downloaded with a secret code                                                                                |
+| 3      | Bunnimage API | Create a File Sharing API that saves images that are able to be downloaded on another device with a secret code.                                                                                |
 | 3      | Deep Secrets API  | Everyone has secrets. Text your confessions to a number and receive someone else's back.|
-| 4      | Deep Secrets App  | Everyone needs to confess their secrets! Record your anonymous confession on a webpage and receive a phone call with someone else's secret.                                                                                |
-| 4      | Bunnimage App |   Create a Frontend that allows users interact with BunnImage API built in week 2                                                                              |
+| 4      | Deep Secrets App  | Everyone needs to confess their secrets! Record your anonymous confession on a webpage and receive a phone call with someone else's voice-recorded secret.                                                                                |
+| 4      | Bunnimage App |   Create a Frontend that allows users interact with the Bunnimage API which stores and retrieves images.                                                                             |
 
 ### **Week 1** - Get Started with Azure Functions!
 
-**Project** - **ServerlessTime** 🐈 <br>
-HTTP Trigger Azure Function to return current time, written in javascript. 
+**Project** - **ServerlessOracle** 🐈 <br>
+HTTP Trigger Azure Function to return the answer to life, written in javascript. 
 - VSCODE, Github, Postman, Azure functions Locally + Testing Javascript Knowledge
-- 
+
 **Project** - **twoCatz API** 🐈 <br>
 Create a REST API that returns multiple pictures of cats, named after your friends.
  - How to consume an API using http://cataas.com/ API
- - writing Azure HTTP Trigger function
+ - Writing an Azure HTTP Trigger function and practicing JS
 
 **Challenge** - [Top Secret] <br>
 Build a Serverless Function that converts English to Morse Code 
 - npm packages
-- azure functions/developing locally
+- Azure functions/developing locally
 
 ### **Week 2** - Working with APIs
 
 **Project** - **Emotional Gifs** <br>
 Serverless Function that takes a picture from SMS (through Twilio), uses Microsoft Face API to analyze emotion, and sends back a gif that matches the user's expression. 
-
 - Twilio API
 - Giphy API 
 - Micorosft Face API
