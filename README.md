@@ -5,6 +5,13 @@
 #### :question: Not sure how to get started? Click [here](/GETTING_STARTED.md)! 
 
 
+## Table of Contents
+
+* [Week 1](https://github.com/bitprj/intro-to-serverless/#week-1---get-started-with-azure-functions)
+* [Week 2](https://github.com/bitprj/intro-to-serverless/#week-2---working-with-apis) 
+* [Week 3](https://github.com/bitprj/intro-to-serverless/#week-3---incorporate-a-database)
+* [Week 4](https://github.com/bitprj/intro-to-serverless/#week-4---building-a-frontend)
+* [Week 5-8: Build your Own Project](https://github.com/bitprj/intro-to-serverless/#week-5---brainstorming--proposals-)
 
 ## :zap: Learn about Azure Functions! (Week 1-4)
 
