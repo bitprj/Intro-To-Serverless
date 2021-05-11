@@ -37,27 +37,20 @@ Build projects with awesome APIs from Twilio, Microsoft Cognitive Services, and 
 
 
 ### **Week 3** - Incorporate a Database
-Deep Secrets API
-It's a Serverless Function that takes in a text input from SMS (Twilio)/ HTTP Request, stores it into a database (CosmosDB) and returns a random secret as the response.
+Build projects with Blob Storage and a NoSQL database to store data recieved through your serverless function!  
 
-* Azure Functions
-* Twilio
-* Implement a CosmosDB database
-    * Learn about NoSQL databases and data structures
-    * Store data with documents
-    * Code functions to work with databases
+| Category  | Assignment       | Description                                                                                                      | Learning Objectives                                                                  |
+|-----------|------------------|------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| Project   | Bunnimage API    | Create a File Sharing API that saves images that are able to be downloaded on another device with a secret code. | - VSCODE - Github - Postman - Azure functions Locally - Testing Javascript Knowledge |
+| Challenge | Deep Secrets API | Everyone has secrets. Text your confessions to a number and receive someone else's back.                         | - Consuming API - Write HTTP Trigger Function - Vanilla Javascript                   |
 
 ### **Week 4** - Building a Frontend
+Build a frontend with HTML/CSS/JS to interact with your serverless functions! 
 
-Create a frontend for DeepSecrets API
-Code a rudimentary frontend with HTML, CSS, and JS for the Deep Secrets API. 
-
-* Code a rudimentary frontend with HTML, CSS, and JS
-    * Code and style a page
-    * Integrate JS that makes a POST request to the HTTP Triggers
-* Visualize emotion data
-    * Integrate the data stored in the CosmosDB database
-    * Visualize the emotion data retrieved from the Face API
+| Category  | Assignment       | Description                                                                                                                | Learning Objectives                                                                  |
+|-----------|------------------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| Project   | Bunnimage App    | Create a Frontend that allows users interact with the Bunnimage API which stores and retrieves images.                     | - VSCODE - Github - Postman - Azure functions Locally - Testing Javascript Knowledge |
+| Challenge | Deep Secrets App | Create a Frontend that allows users interact with the Deep Secrets API which stores and retrieves secrets from a database. | - Consuming API - Write HTTP Trigger Function - Vanilla Javascript                   |
 
 ## :zap: Build your Own Project (Week 5-8)
 
