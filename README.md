@@ -19,7 +19,7 @@
 | 4      | Bunnimage App |   Create a Frontend that allows users interact with the Bunnimage API which stores and retrieves images.                                                                             |
 
 ### **Week 1** - Get Started with Azure Functions!
-This week, students build projects to get started with Azure Functions, Cloud Engineering, and Javascript! In addition, they will set up their development environment, familiarizing themselves with various developer toolsg like Github and Postman. 
+Build projects to get started with Azure Functions, Cloud Engineering, and Javascript! In addition, set up your development environment with various developer tools like Github and Postman. 
 
 | Category  | Assignment       | Description                                                                         | Learning Objectives                                                                  |
 |-----------|------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
@@ -28,15 +28,12 @@ This week, students build projects to get started with Azure Functions, Cloud En
 | Challenge | [Top Secret]     | Build a Serverless Function that converts English to Morse Code                     | - npm packages - Writing HTTP Trigger Functions                                      |
 
 ### **Week 2** - Working with APIs
+Build projects with awesome APIs from Twilio, Microsoft Cognitive Services, and Giphy! Learn how to read documentation, experiment, and most importantly Google! 
 
-**Project** - **Emotional Gifs** <br>
-Serverless Function that takes a picture from SMS (through Twilio), uses Microsoft Face API to analyze emotion, and sends back a gif that matches the user's expression. 
-- Twilio API
-- Giphy API 
-- Micorosft Face API
-- Writing Azure Function
-
-**Challenge** - TwinFinder Pt1 <br>
+| Category  | Assignment     | Description                                                                                                       | Learning Objectives                                                                  |
+|-----------|----------------|-------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| Project   | Emotional Gifs | Match your emotions with a gif-tastic Gif from Giphy using a web page and machine learning.                       | <ul><li>Twilio API</li><li>Giphy API</li><li>Azure Functions</li></ul> |
+| Challenge | Song4u.js      | Create an API Endpoint that takes in an image of a face and calls you back with a song matching how old you look! | <ul><li> Consuming API </li><li> Write HTTP Trigger Function </li><li> Vanilla Javascript</li></ul> |
 
 
 ### **Week 3** - Incorporate a Database
