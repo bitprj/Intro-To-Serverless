@@ -16,6 +16,7 @@ for(var i = 0; i < commit_file.length; i++) {
 }
 
 uri = process.env.HACKERVOICE_ENDPOINT
+
 if (uri[0] != "h") {
    throw new Error("You have not added your function url as a secret!");
 }
@@ -25,12 +26,12 @@ try {
         const resp = await fetch(uri + "&password=letmein", {
             method: 'GET'
         });
-        var correct = await JSON.stringify(resp.json())
+        var correct = await resp.text()
 
         const response = await fetch(uri + "&password=incorrect", {
             method: 'GET'
         });
-        var incorrect = await JSON.stringify(response.json())
+        var incorrect = await response.text()
 
         try {
             if (correct == "Access granted." && incorrect == "Access denied.") {
