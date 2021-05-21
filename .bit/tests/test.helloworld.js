@@ -1,6 +1,6 @@
 let hello = undefined
 
-try { hello = require('week1/helloworld.js') }
+try { hello = require('./../../week1/helloworld.js') }
 catch(e) {
     throw new Error("Searching for \"helloworld.js\"... file cannot be found");
 }
