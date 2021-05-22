@@ -28,24 +28,31 @@ jobs:
 
       - name: Step 4
         if: ${{steps.vars.outputs.count == 3 && github.event.head_commit.message != 'Update progress'}}
-        env:
-          HTTP_ENDPOINT: ${{ secrets.HTTP_ENDPOINT }}
         run: |
-          npm install node-fetch
-          node .bit/tests/test.firstfunction.js
+          node .bit/tests/test.secret.js
 
       - name: Step 5
         if: ${{steps.vars.outputs.count == 4 && github.event.head_commit.message != 'Update progress'}}
-        env:
-          SECOND_ENDPOINT: ${{ secrets.SECOND_ENDPOINT }}
         run: |
-          npm install node-fetch
-          node .bit/tests/test.secondfunction.js
+          node .bit/tests/test.hackervoice.js
 
       - name: Step 6
         if: ${{steps.vars.outputs.count == 5 && github.event.head_commit.message != 'Update progress'}}
-        env:
-          MORSE_URL: ${{ secrets.MORSE_URL }}
         run: |
-          npm install node-fetch
+          node .bit/tests/test.secret.js
+
+      - name: Step 7
+        if: ${{steps.vars.outputs.count == 6 && github.event.head_commit.message != 'Update progress'}}
+        run: |
+          node .bit/tests/test.twocatz-file.js
+
+      - name: Step 8
+        if: ${{steps.vars.outputs.count == 7 && github.event.head_commit.message != 'Update progress'}}
+        run: |
+          node .bit/tests/test.twocatz.js
+
+      - name: Step 9
+        if: ${{steps.vars.outputs.count == 8 && github.event.head_commit.message != 'Update progress'}}
+        run: |
           node .bit/tests/test.morsecode.js
+
