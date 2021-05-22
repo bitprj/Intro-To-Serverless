@@ -75,7 +75,7 @@ def writeyml():
         stepCat = "pull_request.closed"
       elif stepContent[responses[count]][3] == "checks":
         stepCat = "workflow_run.completed"
-      elif stepContent[responses[count]][3] == "IssueComment" or stepContent[responses[count]][3] = "feedback":
+      elif stepContent[responses[count]][3] == "IssueComment" or stepContent[responses[count]][3] == "feedback":
         stepCat = "issue_comment.created"
 
       final += createStep(i+1, stepContent[responses[count]][0], stepContent[responses[count]][1], stepCat, response, stepContent[responses[count]][2], stepContent[responses[count]][3], stepContent[responses[count]][4])
