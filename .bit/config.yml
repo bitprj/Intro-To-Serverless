@@ -18,7 +18,7 @@ steps:
           with: 1.2-Week 1 Step 2.md
           files: ['blog.md']
           scripts: n/a
-    - title: 'Week 1: Say "Hello" to VSCode'
+    - title: 'Week 1: Say Hello to VSCode'
       description: '✅  Task:'
       event: workflow_run.completed
       stepType: checks
