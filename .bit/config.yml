@@ -92,7 +92,7 @@ steps:
           scripts: test.morsecode.js
     - title: 'Week 1: Week 1 Step 10'
       description: '📝 Week 1 Livestream Feedback'
-      event: 
+      event: issue_comment.created
       stepType: feedback
       actions:
         - type: respond
@@ -193,7 +193,7 @@ steps:
           scripts: n/a
     - title: 'Week 2: Week 2 Step 10'
       description: '📝 Week 2 Livestream Feedback'
-      event: 
+      event: issue_comment.created
       stepType: feedback
       actions:
         - type: respond
@@ -267,7 +267,7 @@ steps:
           scripts: n/a
     - title: 'Week 3: Week 3 Step 7'
       description: '📝 Week 3 Livestream Feedback'
-      event: 
+      event: issue_comment.created
       stepType: feedback
       actions:
         - type: respond
