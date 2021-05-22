@@ -45,6 +45,7 @@ jobs:
       - name: Step 6
         if: ${{steps.vars.outputs.count == 5 && github.event.head_commit.message != 'Update progress'}}
         env:
-          FUNCTION_URL: ${{ secrets.FUNCTION_URL }}
+          MORSE_URL: ${{ secrets.MORSE_URL }}
         run: |
-          node .bit/tests/test.secret1.js
+          npm install node-fetch
+          node .bit/tests/test.morsecode.js
