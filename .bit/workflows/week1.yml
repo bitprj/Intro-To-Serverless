@@ -29,7 +29,7 @@ jobs:
       - name: Step 4
         if: ${{steps.vars.outputs.count == 3 && github.event.head_commit.message != 'Update progress'}}
         env:
-          SECRET: ${{ secrets.HACKERVOICE_ENDPOINT }}
+          HACKERVOICE_ENDPOINT: ${{ secrets.HACKERVOICE_ENDPOINT }}
         run: |
           node .bit/tests/test.secret.js
 
@@ -44,9 +44,9 @@ jobs:
       - name: Step 6
         if: ${{steps.vars.outputs.count == 5 && github.event.head_commit.message != 'Update progress'}}
         env:
-          SECRET: ${{ secrets.TWOCATZ_ENDPOINT }}
+          TWOCATZ_ENDPOINT: ${{ secrets.TWOCATZ_ENDPOINT }}
         run: |
-          node .bit/tests/test.secret.js
+          node .bit/tests/test.twocatz-secret.js
 
       - name: Step 7
         if: ${{steps.vars.outputs.count == 6 && github.event.head_commit.message != 'Update progress'}}
