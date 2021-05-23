@@ -26,7 +26,7 @@ for(var i = 0; i < commit_file.length; i++) {
 
 
 test1 = "fifiiscool";
-uri1 = uri + "?password=" + test1;
+uri1 = uri + "&password=" + test1;
 if (uri[0] != "h") {
    throw new Error("You have not added your function url as a secret!");
 }
@@ -39,7 +39,7 @@ try {
         var data = await resp.text()
         let test = JSON.stringify(data)
 
-        if (test == test1) {     
+        if (data == test1) {     
             console.log("Yay! 🎉 We got: " + JSON.stringify(data))
         } else {
             console.log("We got this " + JSON.stringify(data) + " ... Try again!")
