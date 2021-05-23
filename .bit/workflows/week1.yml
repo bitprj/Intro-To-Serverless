@@ -31,6 +31,7 @@ jobs:
         env:
           HACKERVOICE_ENDPOINT: ${{ secrets.HACKERVOICE_ENDPOINT }}
         run: |
+          npm install node-fetch
           node .bit/tests/test.secret.js
 
       - name: Step 5
