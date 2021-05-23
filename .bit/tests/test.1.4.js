@@ -13,7 +13,7 @@ if (uri[0] != "h") {
 
 //if you wanna add more files, just put a comma after the filename (array)
 
-const commit_file = ['./../../HackerVoice/index.js']
+const commit_file = ['HackerVoice/index.js']
 
 for(var i = 0; i < commit_file.length; i++) {
     var a = commit_file[i];
