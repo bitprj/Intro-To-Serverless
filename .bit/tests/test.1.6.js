@@ -32,7 +32,7 @@ try {
 
       try {
           var catimage = test;
-          var newCat = Buffer.from(catimage1, 'base64').toString('ascii')
+          var newCat = Buffer.from(catimage, 'base64').toString('ascii')
           console.log("Yay! 🎉 We got your cat picture 🐱")
       } catch (e) {
           throw new Error("Sorry! We couldn't find one or both of the cat pictures. Make sure you encoded in BASE64!")
