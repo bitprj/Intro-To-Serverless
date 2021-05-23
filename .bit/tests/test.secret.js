@@ -5,7 +5,7 @@ const fs = require('fs') //get the methods in the fs package
 
 let endpoint = undefined
 
-uri = process.env.HTTP_ENDPOINT;
+uri = process.env.HACKERVOICE_ENDPOINT;
 
 if (uri[0] != "h") {
    throw new Error("You have not added your function url as a secret!");
