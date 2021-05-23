@@ -1,7 +1,7 @@
 let uri = undefined
 const fetch = require('node-fetch');
 
-uri = process.env.MORSE_URL
+uri = process.env.MORSE_ENDPOINT
 if (uri[0] != "h") {
    throw new Error("You have not added your function url as a secret!");
 }
