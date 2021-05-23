@@ -51,7 +51,7 @@ jobs:
 
       - name: Step 7
         if: ${{steps.vars.outputs.count == 6 && github.event.head_commit.message != 'Update progress'}}
-                env:
+        env:
           TWOCATZ_ENDPOINT: ${{ secrets.TWOCATZ_ENDPOINT }}
         run: |
           npm install node-fetch
