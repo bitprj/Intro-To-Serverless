@@ -47,6 +47,7 @@ jobs:
         env:
           TWOCATZ_ENDPOINT: ${{ secrets.TWOCATZ_ENDPOINT }}
         run: |
+          npm install node-fetch
           node .bit/tests/test.1.6.js
 
       - name: Step 7
