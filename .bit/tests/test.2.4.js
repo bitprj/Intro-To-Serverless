@@ -3,8 +3,7 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const FormData = require('form-data');
 
-// uri = process.env.EMOTIONAL_ENDPOINT
-uri = "https://bitcamptest.azurewebsites.net/api/httptrigger?code=bUGdlNFkjZoJstwLpoMDQ5k/KqX8dpDJbPi9vpa/pelysZhH/U1tyg=="
+uri = process.env.EMOTIONAL_ENDPOINT
 
 if (uri[0] == null) {
     throw new Error("You have not added your function url as a secret!");
@@ -34,6 +33,7 @@ if (uri[0] == null) {
             console.log("Yay! 🎉 You're right, we're super happy (that was the main emotion in our test picture)")
         } else {
             console.log("Try again! We didn't get the correct main emotion back.")
+            process.exit(1)
         }
   })
 })();

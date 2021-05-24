@@ -33,6 +33,7 @@ if (uri[0] == null) {
             console.log("Yay! 🎉 We got the happiness as: " + result.result[0].faceAttributes.emotion.happiness)
         } else {
             console.log("Try again! We didn't get an emotion back. Make sure you are returning in JSON format.")
+            process.exit(1)
         }
   })
 })();
