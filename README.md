@@ -4,44 +4,52 @@
 
 #### :question: Not sure how to get started? Click [here](/GETTING_STARTED.md)! 
 
-## :zap: Outline
+
+## Table of Contents
+
+* [Week 1](https://github.com/bitprj/intro-to-serverless/#week-1---get-started-with-azure-functions)
+* [Week 2](https://github.com/bitprj/intro-to-serverless/#week-2---working-with-apis) 
+* [Week 3](https://github.com/bitprj/intro-to-serverless/#week-3---incorporate-a-database)
+* [Week 4](https://github.com/bitprj/intro-to-serverless/#week-4---building-a-frontend)
+* [Week 5-8: Build your Own Project](https://github.com/bitprj/intro-to-serverless/#week-5---brainstorming--proposals-)
+
+## :zap: Learn about Azure Functions! (Week 1-4)
 
 ### **Week 1** - Get Started with Azure Functions!
-* Set up tools needed for the "Emotion Reader" project
-    * Work with an IDE (VSCode)
-    * Configure Azure
-    * Navigate GitHub
-* Code your first Serverless Function
-* Set up your project
-    * Configure the Azure Face API
-    * Install dependencies
-* Learn how to test APIs with Postman
+Build projects to get started with Azure Functions, Cloud Engineering, and Javascript! In addition, set up your development environment with various developer tools like Github and Postman. 
 
+| Category  | Assignment       | Description                                                                         | Learning Objectives                                                                  |
+|-----------|------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| Project   | ServerlessOracle | HTTP Trigger Azure Function to return the answer to life, written in Javascript.    |  <ul><li>VSCode</li><li>Github</li><li>Postman</li><li>Azure functions Locally</li><li>Testing Javascript Knowledge</li></ul> |
+| Project   | twoCatz API      | Create a REST API that returns multiple pictures of cats, named after your friends. | <ul><li>Consuming API</li><li>Azure functions Locally</li><li>Vanilla JS</li></ul>|
+| Challenge | [Top Secret]     | Build a Serverless Function that converts English to Morse Code                     | - npm packages - Writing HTTP Trigger Functions                                      |
 
 ### **Week 2** - Working with APIs
-* Code a HTTP Trigger Serverless Function
-    * Parse an image
-    * Make a request to an API
-    * Return emotion data
-* Work with the Giphy and Twilio API
-    * Understand POST and GET requests
-    * Send data in different formats
-    * Text the user a gif
+Build projects with awesome APIs from Twilio, Microsoft Cognitive Services, and Giphy! Learn how to read documentation, experiment, and most importantly Google! 
+
+| Category  | Assignment     | Description                                                                                                       | Learning Objectives                                                                  |
+|-----------|----------------|-------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| Project   | Emotional Gifs | Match your emotions with a gif-tastic Gif from Giphy using a web page and machine learning.                       | <ul><li>Twilio API</li><li>Giphy API</li><li>Azure Functions</li></ul> |
+| Challenge | Song4u.js      | Create an API Endpoint that takes in an image of a face and calls you back with a song matching how old you look! | <ul><li> Consuming API </li><li> Write HTTP Trigger Function </li><li> Vanilla Javascript</li></ul> |
+
 
 ### **Week 3** - Incorporate a Database
-* Implement a CosmosDB database
-    * Learn about NoSQL databases and data structures
-    * Store data with documents
-    * Code functions to work with databases
+Build projects with Blob Storage and a NoSQL database to store data recieved through your serverless function!  
+
+| Category  | Assignment       | Description                                                                                                      | Learning Objectives                                                                  |
+|-----------|------------------|------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| Project   | Bunnimage API    | Create a File Sharing API that saves images that are able to be downloaded on another device with a secret code. | - VSCODE - Github - Postman - Azure functions Locally - Testing Javascript Knowledge |
+| Challenge | Deep Secrets API | Everyone has secrets. Text your confessions to a number and receive someone else's back.                         | - Consuming API - Write HTTP Trigger Function - Vanilla Javascript                   |
 
 ### **Week 4** - Building a Frontend
-* Code a rudimentary frontend with HTML, CSS, and JS
-    * Code and style a page
-    * Integrate JS that makes a POST request to the HTTP Triggers
-* Visualize emotion data
-    * Integrate the data stored in the CosmosDB database
-    * Visualize the emotion data retrieved from the Face API
+Build a frontend with HTML/CSS/JS to interact with your serverless functions! 
 
+| Category  | Assignment       | Description                                                                                                                | Learning Objectives                                                                  |
+|-----------|------------------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| Project   | Bunnimage App    | Create a Frontend that allows users interact with the Bunnimage API which stores and retrieves images.                     | - VSCODE - Github - Postman - Azure functions Locally - Testing Javascript Knowledge |
+| Challenge | Deep Secrets App | Create a Frontend that allows users interact with the Deep Secrets API which stores and retrieves secrets from a database. | - Consuming API - Write HTTP Trigger Function - Vanilla Javascript                   |
+
+## :zap: Build your Own Project (Week 5-8)
 
 ### ✔️ After completing the cabin, students will create their own app with this timeline:
 > ### **Week 5** - Brainstorming & Proposals ⛈
