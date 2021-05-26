@@ -6,19 +6,16 @@ module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
     var boundary = multipart.getBoundary(req.headers['content-type']);
     var body = req.body;
-    try {
-        var parsedBody = multipart.Parse(body, boundary);
-        context.log(parsedBody);
-    } catch (e) {
-        context.res = {
-            body: "Sorry! No image attached."
-        }
-        context.done()
+
+    var responseMessage = ""
+    if (body == "") {
+        responseMessage = "Sorry! No image attached."
+    } else {
+        var password = req.headers['codename'];
+        context.log(password)
+        responseMessage = await uploadFile(parsedBody, password);
     }
 
-    var password = req.headers['codename'];
-    context.log(password)
-    var responseMessage = await uploadFile(parsedBody, password);
     context.res = {
         body: responseMessage
     };
