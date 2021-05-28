@@ -8,15 +8,25 @@ module.exports = async function (context, req) {
     var body = req.body;
     var parsedBody = multipart.Parse(body, boundary);
     context.log(parsedBody);
+    
+    var filetype = parsedBody[0].type;
+    if (filetype == "image/png") {
+        ext = "png";
+    } else if (filetype == "image/jpeg") {
+        ext = "jpeg";
+    } else {
+        username = "invalidimage"
+        ext = "";
+    }
 
-    var responseMessage = await uploadFile(parsedBody);
+    var responseMessage = await uploadFile(parsedBody, ext);
     context.res = {
         body: responseMessage
     };
     console.log(responseMessage)
 }
 
-async function uploadFile(parsedBody){
+async function uploadFile(parsedBody, ext){
     const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);
     // Create a unique name for the container
     const containerName = "resource";
@@ -28,7 +38,7 @@ async function uploadFile(parsedBody){
     const containerClient = blobServiceClient.getContainerClient(containerName);
     
     // Create the container
-    const blobName = 'test.png';
+    const blobName = 'test' + ext;
 
     // Get a block blob client
     const blockBlobClient = containerClient.getBlockBlobClient(blobName);
