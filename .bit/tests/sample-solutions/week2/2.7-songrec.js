@@ -7,7 +7,6 @@ module.exports = async function (context, req) {
     const queryObject = querystring.parse(req.body);
     context.log(queryObject)
     url = queryObject.MediaUrl0;
-    phone_number = queryObject.From;
 
     let resp = await fetch(url,{
         /*The await expression causes async function execution to pause until a Promise is settled 
