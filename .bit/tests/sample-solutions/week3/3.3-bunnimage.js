@@ -13,6 +13,7 @@ module.exports = async function (context, req) {
     } else {
         var password = req.headers['codename'];
         context.log(password)
+        var parsedBody = multipart.Parse(body, boundary);
         responseMessage = await uploadFile(parsedBody, password);
     }
 
