@@ -3,18 +3,31 @@ module.exports = async function (context, req, inputBlob) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
     var username = req.headers['username'];
-    var download = "https://bunnimagestorage.blob.core.windows.net/images/" + username + ".png";
+    var download = ""
+    var downloadpng = "https://bunnimagestorage.blob.core.windows.net/images/" + username + ".png";
+    var downloadjpg = "https://bunnimagestorage.blob.core.windows.net/images/" + username + ".jpeg";
 // replace with your own blob storage URL and make sure to make the container public!
     
-    let resp = await fetch(download, {
+    let pngresp = await fetch(downloadpng, {
         method: 'GET',
     })
-    let data = await resp;
-    if (data.statusText == "The specified blob does not exist.") {
+    let pngdata = await pngresp;
+    
+    let jpgresp = await fetch(downloadjpg, {
+        method: 'GET',
+    })
+    let jpgdata = await jpgresp;
+    
+    if (pngdata.statusText == "The specified blob does not exist." || jpgdata.statusText == "The specified blob does not exist." ) {
         success = false;
         context.log("Does not exist: " + data)
-    } else {
+    } else if (pngdata.statusText != "The specified blob does not exist.") {
         success = true;
+        download = downloadpng
+        context.log("Does exist: " + data)
+    } else if (jpgdata.statusText != "The specified blob does not exist.") {
+        success = true;
+        download = downloadjpg
         context.log("Does exist: " + data)
     }
 
