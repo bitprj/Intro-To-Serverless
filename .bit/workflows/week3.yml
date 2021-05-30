@@ -22,7 +22,7 @@ jobs:
         run: echo ::set-output name=count::$(cat ./.bit/.progress)
 
       - name: Step 5
-        if: ${{steps.vars.outputs.count == 24 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 22 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/test.databaseContext.js
 
