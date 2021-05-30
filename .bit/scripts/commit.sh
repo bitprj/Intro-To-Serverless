@@ -2,4 +2,4 @@
 
 git add . 
 git commit -m "Syncing course files"
-git push origin week1-config
+git push origin week2-config
