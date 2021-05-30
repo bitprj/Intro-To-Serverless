@@ -1,7 +1,7 @@
 let uri = undefined
 const fetch = require('node-fetch');
 
-uri = process.env.EMOTIONAL_ENDPOINT
+uri = process.env.SONGREC_ENDPOINT
 
 if (uri[0] == null) {
     throw new Error("You have not added your function url as a secret!");
