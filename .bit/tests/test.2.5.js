@@ -30,8 +30,8 @@ if (uri[0] == null) {
         if (test.length < 3) {
             console.log("No response... Try again!")
             process.exit(1)
-        } else if ( result.includes("media.giphy.com") {
-            console.log("Yay! 🎉 Thanks for the gif!)
+        } else if (result.includes("media.giphy.com")) {
+            console.log("Yay! 🎉 Thanks for the gif!")
         } else {
             console.log("Try again! We didn't get a link to a gif back.")
             process.exit(1)
