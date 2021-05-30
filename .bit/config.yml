@@ -6,7 +6,7 @@ template:
     repo: your-learninglab-template
 before:
     - type: createIssue
-      title: Week 1
+      title: Getting Started with Serverless
       body: 1.1-Week 1 Step 1.md
 steps:
     - title: 'Week 1: GitHub'
@@ -18,7 +18,7 @@ steps:
           with: 1.2-Week 1 Step 2.md
           files: ['blog.md']
           scripts: n/a
-    - title: 'Week 1: Say "Hello" to VSCode'
+    - title: 'Week 1: Say Hello to VSCode'
       description: '✅  Task:'
       event: workflow_run.completed
       stepType: checks
@@ -36,7 +36,7 @@ steps:
           with: 1.4-Week 1 Step 4.md
           files: ['n/a']
           scripts: n/a
-    - title: 'Week 1: Building our first function ⚡[HackerVoice]'
+    - title: 'Week 1: Week 1 Step 4'
       description: 'Building our first function ⚡[HackerVoice]'
       event: workflow_run.completed
       stepType: checks
@@ -55,7 +55,7 @@ steps:
           files: ['n/a']
           scripts: test.1.5.js
     - title: 'Week 1: Trying to make node-fetch happen'
-      description: '✅  Task:'
+      description: '✅ Tasks:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -81,7 +81,7 @@ steps:
           with: 1.9-Week 1 Step 9.md
           files: ['n/a']
           scripts: test.1.8.js
-    - title: 'Week 1: 📝 Week 1 Livestream Feedback'
+    - title: 'Week 1: Week 1 Step 9'
       description: '📝 Week 1 Livestream Feedback'
       event: issue_comment.created
       stepType: feedback
@@ -98,7 +98,7 @@ steps:
         - type: respond
           with: 1-complete.md
         - type: createIssue
-          title: Week 2
+          title: Fun with APIs
           body: 2.1-Week 2 Step 1.md
         - type: closeIssue
     - title: 'Week 2: Getting Emotional ~ With the Face API'
