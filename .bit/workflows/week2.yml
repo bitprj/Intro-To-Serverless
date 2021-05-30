@@ -21,18 +21,55 @@ jobs:
         id: vars
         run: echo ::set-output name=count::$(cat ./.bit/.progress)
 
-      - name: Step 1
+      - name: Step 2
         if: ${{steps.vars.outputs.count == 10 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
         run: |
-          node .bit/tests/test.parseimage.js
+          npm install node-fetch
+          npm install form-data
+          node .bit/tests/test.2.2.js
 
       - name: Step 3
-        if: ${{steps.vars.outputs.count == 12 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 11 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
         run: |
-          node .bit/tests/test.secrets2.js
+          npm install node-fetch
+          npm install form-data
+          node .bit/tests/test.2.3.js
+
+      - name: Step 4
+        if: ${{steps.vars.outputs.count == 12 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          npm install form-data
+          node .bit/tests/test.2.4.js
 
       - name: Step 5
-        if: ${{steps.vars.outputs.count == 14 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 13 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
         run: |
-          node .bit/tests/test.emotiondata.js
+          npm install node-fetch
+          npm install form-data
+          node .bit/tests/test.2.5.js
+
+      - name: Step 6
+        if: ${{steps.vars.outputs.count == 14 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          SONGREC_ENDPOINT: ${{ secrets.SONGREC_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          node .bit/tests/test.2.6.js
+
+      - name: Step 7
+        if: ${{steps.vars.outputs.count == 15 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          SONGREC_ENDPOINT: ${{ secrets.SONGREC_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          node .bit/tests/test.2.7.js
 
