@@ -31,7 +31,7 @@ async function createDocument(newItem) {
     await create(client, databaseId, containerId);
 
     const querySpec = {
-        query: "SELECT * from c"
+        query: "SELECT top 1 * FROM c order by c._ts desc"
     };
 
 // read all items in the Items container
