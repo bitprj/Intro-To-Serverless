@@ -18,10 +18,10 @@ if (uri[0] == null) {
     if (test.length < 3) {
         console.log("No response... Try again!")
         process.exit(1)
-    } else if ( result == "GenY") {
-        console.log("Yay! 🎉 You're right, you guessed the generation correctly!")
+    } else if ( result == "https://api.twilio.com/2010-04-01/Accounts/ACee62fed677d382600b621e6f24de9bb0/Messages/MM0fe83458b74a1f626eb0da4685ab28b5/Media/ME29644fd97901859108bc35e210b588f6") {
+        console.log("Yay! 🎉 Thanks for the image link!")
     } else {
-        console.log("Try again! We didn't get the correct generation/age back.")
+        console.log("Try again! We didn't get the image link back.")
         process.exit(1)
     }
 })();

@@ -25,7 +25,6 @@ jobs:
         if: ${{steps.vars.outputs.count == 1 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/test.1.2.js
-
       - name: Step 4
         if: ${{steps.vars.outputs.count == 3 && github.event.head_commit.message != 'Update progress'}}
         env:
@@ -33,7 +32,6 @@ jobs:
         run: |
           npm install node-fetch
           node .bit/tests/test.1.4.js
-
       - name: Step 5
         if: ${{steps.vars.outputs.count == 4 && github.event.head_commit.message != 'Update progress'}}
         env:
@@ -41,7 +39,6 @@ jobs:
         run: |
           npm install node-fetch
           node .bit/tests/test.1.5.js
-
       - name: Step 6
         if: ${{steps.vars.outputs.count == 5 && github.event.head_commit.message != 'Update progress'}}
         env:
@@ -49,7 +46,6 @@ jobs:
         run: |
           npm install node-fetch
           node .bit/tests/test.1.6.js
-
       - name: Step 7
         if: ${{steps.vars.outputs.count == 6 && github.event.head_commit.message != 'Update progress'}}
         env:
@@ -57,7 +53,6 @@ jobs:
         run: |
           npm install node-fetch
           node .bit/tests/test.1.7.js
-
       - name: Step 8
         if: ${{steps.vars.outputs.count == 7 && github.event.head_commit.message != 'Update progress'}}
         env:
@@ -65,4 +60,3 @@ jobs:
         run: |
           npm install node-fetch
           node .bit/tests/test.1.8.js
-
