@@ -1,4 +1,4 @@
-# [Replace this with your title]
+# [Replace this with your project title]
 
 ## About Me
 
