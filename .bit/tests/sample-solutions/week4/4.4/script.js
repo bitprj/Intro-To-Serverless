@@ -40,5 +40,5 @@ async function getImage(event) {
     const link = data.downloadUri
     var success = data.success
   
-    window.open(link)
+    window.open(link, "_self")
   }
