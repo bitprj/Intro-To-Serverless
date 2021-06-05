@@ -35,5 +35,6 @@ async function deleteBlob(filename){
         }
     };
     return result;
+    // this is optional, just shows how you can check on progress - always log everything!
 
 }
