@@ -15,7 +15,7 @@ const uploadFile = (fileName, fileType = '', selector) => {
 
 describe('Test Bunnimage', () => {
     it('Testing form submission', () => {
-        cy.visit('Bunnimage/index.html')
+        cy.visit('bunnimage/index.html')
         const fileName = "testimage.jpg"
         cy.get('input[type="text"]').type('mysecret')
         uploadFile(fileName, 'image/jpg', 'input[name="image"]')

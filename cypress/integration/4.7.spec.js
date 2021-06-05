@@ -1,6 +1,6 @@
 describe('Testing the CatzAPP', () => {
     it('Testing Week 4 Step 7', () => {
-        cy.visit('CatzAPP/index.html')
+        cy.visit('catzapp/index.html')
         cy.get('input[id="name1"]').type('cat1')
         cy.get('input[id="name2"]').type('cat2') 
         cy.get('input[id="name3"]').type('cat3') 

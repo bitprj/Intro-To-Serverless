@@ -15,7 +15,7 @@ const uploadFile = (fileName, fileType = '', selector) => {
 
 describe('Test Bunnimage', () => {
     it('Testing upload', () => {
-        cy.visit('Bunnimage/index.html')
+        cy.visit('bunnimage/index.html')
         const fileName = "testimage.jpg"
         cy.get('input[id="username"]').type('acode')
         uploadFile(fileName, 'image/jpg', 'input[name="image"]')
