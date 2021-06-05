@@ -15,11 +15,17 @@ const uploadFile = (fileName, fileType = '', selector) => {
 
 describe('Test Bunnimage', () => {
     it('Testing upload', () => {
-        cy.visit('.bit/tests/sample-solutions/week4/4.2/index.html')
+        cy.visit('Bunnimage/index.html')
         const fileName = "testimage.jpg"
-        cy.get('input[type="text"]').type('acode')
+        cy.get('input[id="username"]').type('acode')
         uploadFile(fileName, 'image/jpg', 'input[name="image"]')
-        cy.get('input[type="submit"]').click()
+        cy.get('input[id="button1"]').click()
         cy.get('#output').contains('Your image has been stored successfully!')    
+    })
+
+    it('Testing download', () => {
+        cy.get('input[id="downloadusername"]').type('acode')
+        cy.get('input[id="button2"]').click()
+        cy.url().should('include', 'acode')
     })
 })
