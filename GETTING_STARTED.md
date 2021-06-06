@@ -65,3 +65,41 @@ Click on `Issues` to find your first Week in the camp: `Getting Started`.
 **Click** on `Getting Started` to find your first step of the week. **Follow your counselor's** instructions and have fun!
 
 ![image](https://user-images.githubusercontent.com/69332964/114479022-8fe9d780-9bcd-11eb-956f-6e4132220e11.png)
+
+### :x: The Step Failed. What do I do?
+No worries, we all make mistakes - now is the time to fix it! The CounselorBot will provide feedback on what went wrong with your code. Here's how to see it:
+
+First, click on `Actions` at the top of your repository.
+![image](https://user-images.githubusercontent.com/69332964/120932906-b4da6280-c6c5-11eb-97f8-b8311c72eabb.png)
+
+Next, find the commit that failed. You can identify it by the name you called the commit. **Click on it!**
+<img width="1019" alt="Screen Shot 2021-06-06 at 12 51 31 PM" src="https://user-images.githubusercontent.com/69332964/120933012-3cc06c80-c6c6-11eb-9ca9-f3b19a8bb0b8.png">
+
+Now, go ahead and click on ":x: build"
+![image](https://user-images.githubusercontent.com/69332964/120933055-68435700-c6c6-11eb-88a9-af248114c6a9.png)
+
+The step that failed **should expand** and you'll see feedback at the bottom. 
+![image](https://user-images.githubusercontent.com/69332964/120933130-a9d40200-c6c6-11eb-91a6-c6a477aa62dc.png)
+
+For this one, the feedback was:
+```
+Try again!
+We go letmein and incorrect, but it should be "Access granted." and "Access denied."
+```
+
+> :bulb: Using this feedback, fix your code. Every time you commit, the action will run again to check your code!
+
+### :question: Do I have to push a commit to run a check?
+
+Nope! Here's how to manually trigger a check for your code to move on:
+
+#### Setting up
+1. Go to `Actions`
+2. Click on the specific workflow run that you want to run again.
+3. Click on build.
+
+*Refer to the previous section for screenshots*
+
+#### Re-running the check
+Click on `Re-run jobs`. If your code is successful, the check will work and you will be able to move on.
+<img width="1400" alt="Screen Shot 2021-06-06 at 1 15 32 PM" src="https://user-images.githubusercontent.com/69332964/120933780-a2622800-c6c9-11eb-8b66-8fd28e55e56e.png">
