@@ -98,7 +98,7 @@ steps:
         - type: respond
           with: 1-complete.md
         - type: createIssue
-          title: Fun with APIs
+          title: Getting Emotional with APIs
           body: 2.1-Week 2 Step 1.md
         - type: closeIssue
     - title: 'Week 2: Getting Emotional ~ With the Face API'
@@ -143,9 +143,13 @@ steps:
       stepType: checks
       actions:
         - type: respond
-          with: 2.6-Week 2 Step 6.md
+          with: getting-emotional.md
           files: ['n/a']
           scripts: test.2.5.js
+        - type: createIssue
+          title: Are you a Zoomer or Boomer?
+          body: 2.6-Week 2 Step 6.md
+        - type: closeIssue
     - title: 'Week 2: Pose! Song Recomendation with Age Recognition'
       description: '✅ Task:'
       event: workflow_run.completed
@@ -190,7 +194,7 @@ steps:
         - type: respond
           with: 2-complete.md
         - type: createIssue
-          title: Week 3
+          title: 'Bunnimage: File Storage & Retrieval'
           body: 3.1-Week 3 Step 1.md
         - type: closeIssue
     - title: 'Week 3: Blob Storage & Me'
@@ -235,9 +239,13 @@ steps:
       stepType: checks
       actions:
         - type: respond
-          with: 3.6-Week 3 Step 6.md
+          with: bunnimage.md
           files: ['n/a']
           scripts: test.3.5.js
+        - type: createIssue
+          title: 'Shhh... secrets!'
+          body: 3.6-Week 3 Step 6.md
+        - type: closeIssue
     - title: 'Week 3: Can you keep a secret?'
       description: '✅  Task:'
       event: workflow_run.completed
