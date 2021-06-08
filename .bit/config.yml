@@ -166,8 +166,8 @@ steps:
           scripts: test.2.7.js
     - title: 'Week 2: Ok, Boomer :neutral_face:'
       description: '✅ Task:'
-      event: issue_comment.created
-      stepType: IssueComment
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: 2.9-Week 2 Step 9.md
