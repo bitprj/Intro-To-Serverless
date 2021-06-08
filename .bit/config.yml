@@ -98,7 +98,7 @@ steps:
         - type: respond
           with: 1-complete.md
         - type: createIssue
-          title: Fun with APIs
+          title: Getting Emotional with APIs
           body: 2.1-Week 2 Step 1.md
         - type: closeIssue
     - title: 'Week 2: Getting Emotional ~ With the Face API'
@@ -143,11 +143,15 @@ steps:
       stepType: checks
       actions:
         - type: respond
-          with: 2.6-Week 2 Step 6.md
+          with: getting-emotional.md
           files: ['n/a']
           scripts: test.2.5.js
-    - title: 'Week 2: Pose! Send a Pic to Functions'
-      description: 'Checkpoint 2'
+        - type: createIssue
+          title: Are you a Zoomer or Boomer?
+          body: 2.6-Week 2 Step 6.md
+        - type: closeIssue
+    - title: 'Week 2: Pose! Song Recomendation with Age Recognition'
+      description: '✅ Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -156,7 +160,7 @@ steps:
           files: ['n/a']
           scripts: test.2.6.js
     - title: 'Week 2: How old are you??'
-      description: 'Setting up the Twilio API'
+      description: '✅ Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -164,15 +168,15 @@ steps:
           with: 2.8-Week 2 Step 8.md
           files: ['n/a']
           scripts: test.2.7.js
-    - title: 'Week 2: Hit me baby, one more time!'
-      description: 'Connecting Locally to the Twillio API'
-      event: issue_comment.created
-      stepType: IssueComment
+    - title: 'Week 2: Ok, Boomer :neutral_face:'
+      description: '✅ Task:'
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: 2.9-Week 2 Step 9.md
           files: ['n/a']
-          scripts: n/a
+          scripts: test.2.8.js
     - title: 'Week 2: 📝 Week 2 Livestream Feedback'
       description: '📝 Week 2 Livestream Feedback'
       event: issue_comment.created
@@ -190,38 +194,38 @@ steps:
         - type: respond
           with: 2-complete.md
         - type: createIssue
-          title: Week 3
+          title: 'Bunnimage: File Storage & Retrieval'
           body: 3.1-Week 3 Step 1.md
         - type: closeIssue
-    - title: 'Week 3: Week 3 Step 1'
-      description: 'Learning Objectives'
-      event: issue_comment.created
-      stepType: IssueComment
+    - title: 'Week 3: Blob Storage & Me'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: 3.2-Week 3 Step 2.md
           files: ['n/a']
-          scripts: n/a
-    - title: 'Week 3: Week 3 Step 2'
-      description: 'Calling the Giphy API'
-      event: pull_request.closed
-      stepType: PRmerge
+          scripts: test.3.1.js
+    - title: 'Week 3: Upload it!'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: 3.3-Week 3 Step 3.md
-          files: ['index.js']
-          scripts: n/a
-    - title: 'Week 3: Week 3 Step 3'
-      description: 'Sending the GIF'
-      event: pull_request.closed
-      stepType: PRmerge
+          files: ['n/a']
+          scripts: test.3.2.js
+    - title: 'Week 3: Codename Blob + 3RR0R Handling'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: 3.4-Week 3 Step 4.md
-          files: ['index.js']
-          scripts: n/a
-    - title: 'Week 3: Week 3 Step 4'
-      description: 'Learning Objectives'
+          files: ['n/a']
+          scripts: test.3.3.js
+    - title: 'Week 3: Your times up....'
+      description: '✅  Task:'
       event: issue_comment.created
       stepType: IssueComment
       actions:
@@ -229,33 +233,46 @@ steps:
           with: 3.5-Week 3 Step 5.md
           files: ['n/a']
           scripts: n/a
-    - title: 'Week 3: Week 3 Step 5'
-      description: 'Setting Up Configuration'
+    - title: 'Week 3: Download it!'
+      description: '✅  Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
         - type: respond
-          with: 3.6-Week 3 Step 6.md
-          files: ['js/databaseContext.js']
-          scripts: test.databaseContext.js
-    - title: 'Week 3: Week 3 Step 6'
-      description: 'Modifying your Azure Function'
-      event: issue_comment.created
-      stepType: IssueComment
+          with: bunnimage.md
+          files: ['n/a']
+          scripts: test.3.5.js
+        - type: createIssue
+          title: 'Shhh... secrets!'
+          body: 3.6-Week 3 Step 6.md
+        - type: closeIssue
+    - title: 'Week 3: Can you keep a secret?'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: 3.7-Week 3 Step 7.md
           files: ['n/a']
-          scripts: n/a
-    - title: 'Week 3: Week 3 Step 7'
-      description: '📝 Week 3 Livestream Feedback'
-      event: issue_comment.created
-      stepType: feedback
+          scripts: test.3.6.js
+    - title: 'Week 3: Leaky secrets'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 3.8-Week 3 Step 8.md
+          files: ['n/a']
+          scripts: test.3.7.js
+    - title: 'Week 3: Exposed!!'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: feedback.md
           files: ['n/a']
-          scripts: n/a
+          scripts: test.3.8.js
     - title: 'Week 3: Feedback'
       description: Provide your feedback for Week 3!
       event: issue_comment.created
@@ -267,15 +284,15 @@ steps:
           title: Week 4
           body: 4.1-Week 4 Step 1.md
         - type: closeIssue
-    - title: 'Week 4: Week 4 Step 1'
-      description: 'Submitting Final Project Proposals'
-      event: issue_comment.created
-      stepType: IssueComment
+    - title: 'Week 4: Adding an Event Handler to your HTML Form!'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: 4.2-Week 4 Step 2.md
           files: ['n/a']
-          scripts: n/a
+          scripts: 4.1.spec.js
     - title: 'Week 4: Week 4 Step 2'
       description: 'Submitting an MVP'
       event: 
@@ -310,4 +327,69 @@ steps:
       actions:
         - type: respond
           with: 4-complete.md
+        - type: createIssue
+          title: Week 5
+          body: 5.1-Week 5 Step 1.md
+        - type: closeIssue
+    - title: 'Week 5: Laying out the groundwork'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 5.2-Week 5 Step 2.md
+          files: ['n/a']
+          scripts: test.5.1.js
+    - title: 'Week 5: Laying out the groundwork'
+      description: '✅  Task:'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 5.3-Week 5 Step 3.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 5: Reviewing your Flowchart'
+      description: '✅  Task:'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 5.4-Week 5 Step 4.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 5: Timeline'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 5.5-Week 5 Step 5.md
+          files: ['n/a']
+          scripts: test.5.4.js
+    - title: 'Week 5: Start Coding!'
+      description: '✅  Task:'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 5.6-Week 5 Step 6.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 5: Documentation'
+      description: '✅  Task:'
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: feedback.md
+          files: ['n/a']
+          scripts: n/a
+    - title: 'Week 5: Feedback'
+      description: Provide your feedback for Week 5!
+      event: issue_comment.created
+      stepType: IssueComment
+      actions:
+        - type: respond
+          with: 5-complete.md
         - type: closeIssue

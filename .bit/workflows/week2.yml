@@ -73,3 +73,11 @@ jobs:
           npm install node-fetch
           node .bit/tests/test.2.7.js
 
+      - name: Step 8
+        if: ${{steps.vars.outputs.count == 16 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          SONGREC_ENDPOINT: ${{ secrets.SONGREC_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          node .bit/tests/test.2.8.js
+
