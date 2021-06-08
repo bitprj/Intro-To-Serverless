@@ -293,7 +293,7 @@ steps:
           with: 4.2-Week 4 Step 2.md
           files: ['n/a']
           scripts: 4.1.spec.js
-    - title: 'Week 4: Error Handling ~ Sir this is a Wendy's'
+    - title: 'Week 4: Error Handling ~ Sir this is a Wendys'
       description: '✅  Task:'
       event: workflow_run.completed
       stepType: checks
