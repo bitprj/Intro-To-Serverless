@@ -281,7 +281,7 @@ steps:
         - type: respond
           with: 3-complete.md
         - type: createIssue
-          title: Week 4
+          title: 'Building Bunnimage: The Frontend'
           body: 4.1-Week 4 Step 1.md
         - type: closeIssue
     - title: 'Week 4: Adding an Event Handler to your HTML Form!'
@@ -293,33 +293,64 @@ steps:
           with: 4.2-Week 4 Step 2.md
           files: ['n/a']
           scripts: 4.1.spec.js
-    - title: 'Week 4: Week 4 Step 2'
-      description: 'Submitting an MVP'
-      event: 
-      stepType: 
+    - title: 'Week 4: Error Handling ~ Sir this is a Wendy's'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: 4.3-Week 4 Step 3.md
-          files: ['']
-          scripts: 
-    - title: 'Week 4: Week 4 Step 3'
-      description: 'Submitting the Final Project'
-      event: 
-      stepType: 
+          files: ['n/a']
+          scripts: 4.2.spec.js
+    - title: 'Week 4: Making `fetch` Happen'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: 4.4-Week 4 Step 4.md
-          files: ['']
-          scripts: 
-    - title: 'Week 4: Week 4 Step 4'
-      description: 'The Lightning Talk'
-      event: 
-      stepType: 
+          files: ['n/a']
+          scripts: 4.3.spec.js
+    - title: 'Week 4: Downloading your image!'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: bunnimage.md
+          files: ['n/a']
+          scripts: 4.4.spec.js
+        - type: createIssue
+          title: 'Showing off your twoCatz API'
+          body: 4.5-Week 4 Step 5.md
+        - type: closeIssue
+    - title: 'Week 4: Create the CataaS Website ~ meow'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 4.6-Week 4 Step 6.md
+          files: ['n/a']
+          scripts: 4.5.spec.js
+    - title: 'Week 4: One Cat isn't enough ~ Meow'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
+      actions:
+        - type: respond
+          with: 4.7-Week 4 Step 7.md
+          files: ['n/a']
+          scripts: 4.6.spec.js
+    - title: 'Week 4: Ultimate CAT INVASION! ~'
+      description: '✅  Task:'
+      event: workflow_run.completed
+      stepType: checks
       actions:
         - type: respond
           with: feedback.md
-          files: ['']
-          scripts: 
+          files: ['n/a']
+          scripts: 4.7.spec.js
     - title: 'Week 4: Feedback'
       description: Provide your feedback for Week 4!
       event: issue_comment.created
