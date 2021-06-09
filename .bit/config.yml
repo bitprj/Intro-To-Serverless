@@ -10,7 +10,7 @@ before:
       body: 1.1-Week 1 Step 1.md
 steps:
     - title: 'Week 1: GitHub'
-      description: '✅  Task:'
+      description: 'Task:'
       event: pull_request.closed
       stepType: PRmerge
       actions:
@@ -19,7 +19,7 @@ steps:
           files: ['blog.md']
           scripts: n/a
     - title: 'Week 1: Say Hello to VSCode'
-      description: '✅  Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -27,8 +27,8 @@ steps:
           with: 1.3-Week 1 Step 3.md
           files: ['n/a']
           scripts: test.1.2.js
-    - title: 'Week 1: Getting Cat Pics with Postman 🐱'
-      description: '✅  Task:'
+    - title: 'Week 1: Getting Cat Pics with Postman'
+      description: 'Task:'
       event: issue_comment.created
       stepType: IssueComment
       actions:
@@ -46,7 +46,7 @@ steps:
           files: ['n/a']
           scripts: test.1.4.js
     - title: 'Week 1: Let me in!'
-      description: '✅ Tasks:'
+      description: 'Tasks:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -55,7 +55,7 @@ steps:
           files: ['n/a']
           scripts: test.1.5.js
     - title: 'Week 1: Trying to make node-fetch happen'
-      description: '✅ Tasks:'
+      description: 'Tasks:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -64,7 +64,7 @@ steps:
           files: ['n/a']
           scripts: test.1.6.js
     - title: 'Week 1: Name your Cat'
-      description: '✅  Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -73,7 +73,7 @@ steps:
           files: ['n/a']
           scripts: test.1.7.js
     - title: 'Week 1: [TOP SECRET] Morse Code Converter'
-      description: '✅  Tasks:'
+      description: 'Tasks:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -82,7 +82,7 @@ steps:
           files: ['n/a']
           scripts: test.1.8.js
     - title: 'Week 1: Week 1 Step 9'
-      description: '📝 Week 1 Livestream Feedback'
+      description: ' Week 1 Livestream Feedback'
       event: issue_comment.created
       stepType: feedback
       actions:
@@ -101,8 +101,8 @@ steps:
           title: Getting Emotional with APIs
           body: 2.1-Week 2 Step 1.md
         - type: closeIssue
-    - title: 'Week 2: Getting Emotional ~ With the Face API'
-      description: '✅ Task:'
+    - title: 'Week 2: Getting Emotional With the Face API'
+      description: 'Task:'
       event: issue_comment.created
       stepType: IssueComment
       actions:
@@ -110,8 +110,8 @@ steps:
           with: 2.2-Week 2 Step 2.md
           files: ['n/a']
           scripts: n/a
-    - title: 'Week 2: Getting Emotional ~ With Parse-Multipart'
-      description: '✅ Task:'
+    - title: 'Week 2: Getting Emotional With Parse-Multipart'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -119,8 +119,8 @@ steps:
           with: 2.3-Week 2 Step 3.md
           files: ['n/a']
           scripts: test.2.2.js
-    - title: 'Week 2: Getting Emotional ~ With the Face API'
-      description: '✅ Task:'
+    - title: 'Week 2: Getting Emotional With the Face API'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -128,8 +128,8 @@ steps:
           with: 2.4-Week 2 Step 4.md
           files: ['n/a']
           scripts: test.2.3.js
-    - title: 'Week 2: Getting Emotional ~ Returning the Dominant Emotion'
-      description: '✅ Task:'
+    - title: 'Week 2: Getting Emotional Returning the Dominant Emotion'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -137,8 +137,8 @@ steps:
           with: 2.5-Week 2 Step 5.md
           files: ['n/a']
           scripts: test.2.4.js
-    - title: 'Week 2: Getting Emotional ~ Calling the Giphy API'
-      description: '✅ Task:'
+    - title: 'Week 2: Getting Emotional Calling the Giphy API'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -151,7 +151,7 @@ steps:
           body: 2.6-Week 2 Step 6.md
         - type: closeIssue
     - title: 'Week 2: Pose! Song Recomendation with Age Recognition'
-      description: '✅ Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -160,7 +160,7 @@ steps:
           files: ['n/a']
           scripts: test.2.6.js
     - title: 'Week 2: How old are you??'
-      description: '✅ Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -169,7 +169,7 @@ steps:
           files: ['n/a']
           scripts: test.2.7.js
     - title: 'Week 2: Ok, Boomer :neutral_face:'
-      description: '✅ Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -177,8 +177,8 @@ steps:
           with: 2.9-Week 2 Step 9.md
           files: ['n/a']
           scripts: test.2.8.js
-    - title: 'Week 2: 📝 Week 2 Livestream Feedback'
-      description: '📝 Week 2 Livestream Feedback'
+    - title: 'Week 2:  Week 2 Livestream Feedback'
+      description: ' Week 2 Livestream Feedback'
       event: issue_comment.created
       stepType: feedback
       actions:
@@ -198,7 +198,7 @@ steps:
           body: 3.1-Week 3 Step 1.md
         - type: closeIssue
     - title: 'Week 3: Blob Storage & Me'
-      description: '✅  Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -207,7 +207,7 @@ steps:
           files: ['n/a']
           scripts: test.3.1.js
     - title: 'Week 3: Upload it!'
-      description: '✅  Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -216,7 +216,7 @@ steps:
           files: ['n/a']
           scripts: test.3.2.js
     - title: 'Week 3: Codename Blob + 3RR0R Handling'
-      description: '✅  Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -225,7 +225,7 @@ steps:
           files: ['n/a']
           scripts: test.3.3.js
     - title: 'Week 3: Your times up....'
-      description: '✅  Task:'
+      description: 'Task:'
       event: issue_comment.created
       stepType: IssueComment
       actions:
@@ -234,7 +234,7 @@ steps:
           files: ['n/a']
           scripts: n/a
     - title: 'Week 3: Download it!'
-      description: '✅  Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -247,7 +247,7 @@ steps:
           body: 3.6-Week 3 Step 6.md
         - type: closeIssue
     - title: 'Week 3: Can you keep a secret?'
-      description: '✅  Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -256,7 +256,7 @@ steps:
           files: ['n/a']
           scripts: test.3.6.js
     - title: 'Week 3: Leaky secrets'
-      description: '✅  Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -265,7 +265,7 @@ steps:
           files: ['n/a']
           scripts: test.3.7.js
     - title: 'Week 3: Exposed!!'
-      description: '✅  Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -285,7 +285,7 @@ steps:
           body: 4.1-Week 4 Step 1.md
         - type: closeIssue
     - title: 'Week 4: Adding an Event Handler to your HTML Form!'
-      description: '✅  Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -293,8 +293,8 @@ steps:
           with: 4.2-Week 4 Step 2.md
           files: ['n/a']
           scripts: 4.1.spec.js
-    - title: 'Week 4: Error Handling ~ Sir this is a Wendys'
-      description: '✅  Task:'
+    - title: 'Week 4: Error Handling Sir this is a Wendys'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -302,8 +302,8 @@ steps:
           with: 4.3-Week 4 Step 3.md
           files: ['n/a']
           scripts: 4.2.spec.js
-    - title: 'Week 4: Making `fetch` Happen'
-      description: '✅  Task:'
+    - title: 'Week 4: Making fetch Happen'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -312,7 +312,7 @@ steps:
           files: ['n/a']
           scripts: 4.3.spec.js
     - title: 'Week 4: Downloading your image!'
-      description: '✅  Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -324,8 +324,8 @@ steps:
           title: 'Showing off your twoCatz API'
           body: 4.5-Week 4 Step 5.md
         - type: closeIssue
-    - title: 'Week 4: Create the CataaS Website ~ meow'
-      description: '✅  Task:'
+    - title: 'Week 4: Create the CataaS Website meow'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -333,8 +333,8 @@ steps:
           with: 4.6-Week 4 Step 6.md
           files: ['n/a']
           scripts: 4.5.spec.js
-    - title: 'Week 4: One Cat isn't enough ~ Meow'
-      description: '✅  Task:'
+    - title: 'Week 4: One Cat is not enough Meow'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -342,8 +342,8 @@ steps:
           with: 4.7-Week 4 Step 7.md
           files: ['n/a']
           scripts: 4.6.spec.js
-    - title: 'Week 4: Ultimate CAT INVASION! ~'
-      description: '✅  Task:'
+    - title: 'Week 4: Ultimate CAT INVASION!'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -363,7 +363,7 @@ steps:
           body: 5.1-Week 5 Step 1.md
         - type: closeIssue
     - title: 'Week 5: Laying out the groundwork'
-      description: '✅  Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -372,7 +372,7 @@ steps:
           files: ['n/a']
           scripts: test.5.1.js
     - title: 'Week 5: Laying out the groundwork'
-      description: '✅  Task:'
+      description: 'Task:'
       event: issue_comment.created
       stepType: IssueComment
       actions:
@@ -381,7 +381,7 @@ steps:
           files: ['n/a']
           scripts: n/a
     - title: 'Week 5: Reviewing your Flowchart'
-      description: '✅  Task:'
+      description: 'Task:'
       event: issue_comment.created
       stepType: IssueComment
       actions:
@@ -390,7 +390,7 @@ steps:
           files: ['n/a']
           scripts: n/a
     - title: 'Week 5: Timeline'
-      description: '✅  Task:'
+      description: 'Task:'
       event: workflow_run.completed
       stepType: checks
       actions:
@@ -399,7 +399,7 @@ steps:
           files: ['n/a']
           scripts: test.5.4.js
     - title: 'Week 5: Start Coding!'
-      description: '✅  Task:'
+      description: 'Task:'
       event: issue_comment.created
       stepType: IssueComment
       actions:
@@ -408,7 +408,7 @@ steps:
           files: ['n/a']
           scripts: n/a
     - title: 'Week 5: Documentation'
-      description: '✅  Task:'
+      description: 'Task:'
       event: issue_comment.created
       stepType: IssueComment
       actions:
