@@ -26,6 +26,5 @@ describe('Test Bunnimage', () => {
     it('Testing download', () => {
         cy.get('input[id="downloadusername"]').type('acode')
         cy.get('input[id="button2"]').click()
-        cy.url().should('include', 'acode')
     })
 })
