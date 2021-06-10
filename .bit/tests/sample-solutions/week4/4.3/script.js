@@ -20,7 +20,7 @@ async function getImage(event) {
             console.log(data);
             $('#output').text("Your image has been stored successfully!")
         } catch (e) {
-            alert("Backend error!"
+            alert("Backend error!")
         }
     } else {
         alert("No name error.")
