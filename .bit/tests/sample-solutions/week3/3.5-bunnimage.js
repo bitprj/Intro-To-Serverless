@@ -20,15 +20,12 @@ module.exports = async function (context, req, inputBlob) {
     
     if (pngdata.statusText == "The specified blob does not exist." || jpgdata.statusText == "The specified blob does not exist." ) {
         success = false;
-        context.log("Does not exist: " + data)
     } else if (pngdata.statusText != "The specified blob does not exist.") {
         success = true;
         download = downloadpng
-        context.log("Does exist: " + data)
     } else if (jpgdata.statusText != "The specified blob does not exist.") {
         success = true;
         download = downloadjpg
-        context.log("Does exist: " + data)
     }
 
     context.res = {
@@ -42,6 +39,5 @@ module.exports = async function (context, req, inputBlob) {
     // receive the response
 
     context.log(download);
-    context.log(data)
     context.done();
 }
