@@ -1,5 +1,5 @@
 async function y1k3s() {
-    let url = `https://bitcamptest.azurewebsites.net/api/CATAPI?code=RHxPea96VINl8YXs69Hh2ax4oky0GLHGTzNhlKDDwyRjPa5oPxk1qQ==&name1=${document.getElementById("name1").value}&name2=${document.getElementById("name2").value}&name3=${document.getElementById("name3").value}&name4=${document.getElementById("name4").value}`
+    let url = `${AZURE_URL}&name1=${document.getElementById("name1").value}&name2=${document.getElementById("name2").value}&name3=${document.getElementById("name3").value}&name4=${document.getElementById("name4").value}`
     let resp = await fetch(url, {
             method: 'GET'
         });

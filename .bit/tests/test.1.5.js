@@ -38,7 +38,8 @@ try {
                 console.log("Yay! 🎉 You didn't let the bad guys in.")
             } else {
                 console.log("Try again!")
-                console.log(`We go ${correct} and ${incorrect}, but it should be "Access granted." and "Access denied."`)
+                console.log(`We submitted "letmein" and got ${correct}, which should equal "Access granted."`)
+                console.log(`We submitted "incorrect" and got ${incorrect}, which should equal "Access granted."`)
                 process.exit(1)
             }
         } catch (e) {
