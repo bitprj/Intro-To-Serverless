@@ -14,7 +14,17 @@ module.exports = async function (context, req) {
         var password = req.headers['codename'];
         context.log(password)
         var parsedBody = multipart.Parse(body, boundary);
-        responseMessage = await uploadFile(parsedBody, password);
+        var filetype = parsedBody[0].type;
+        var ext = ""
+        if (filetype == "image/png") {
+            ext = "png";
+        } else if (filetype == "image/jpeg") {
+            ext = "jpeg";
+        } else {
+            username = "invalidimage"
+            ext = "";
+        }
+        responseMessage = await uploadFile(parsedBody, password, ext);
     }
 
     context.res = {
@@ -23,7 +33,7 @@ module.exports = async function (context, req) {
     console.log(responseMessage)
 }
 
-async function uploadFile(parsedBody, password){
+async function uploadFile(parsedBody, password, ext){
     const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);
     // Create a unique name for the container
     const containerName = "resource";
@@ -35,7 +45,7 @@ async function uploadFile(parsedBody, password){
     const containerClient = blobServiceClient.getContainerClient(containerName);
     
     // Create the container
-    const blobName = password + '.png';
+    const blobName = password + '.' + ext;
 
     // Get a block blob client
     const blockBlobClient = containerClient.getBlockBlobClient(blobName);
