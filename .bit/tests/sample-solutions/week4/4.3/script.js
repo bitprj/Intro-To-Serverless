@@ -14,10 +14,14 @@ async function getImage(event) {
             },
             body: payload
         });
-  
-        var data = await resp.json();
-        console.log(data);
-        $('#output').text("Your image has been stored successfully!")
+        
+        try { 
+            var data = await resp.json();
+            console.log(data);
+            $('#output').text("Your image has been stored successfully!")
+        } catch (e) {
+            alert("Backend error!")
+        }
     } else {
         alert("No name error.")
     }
