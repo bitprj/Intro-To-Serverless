@@ -18,7 +18,7 @@ module.exports = async function (context, req, inputBlob) {
     })
     let jpgdata = await jpgresp;
     
-    if (pngdata.statusText == "The specified blob does not exist." || jpgdata.statusText == "The specified blob does not exist." ) {
+    if (pngdata.statusText == "The specified blob does not exist." && jpgdata.statusText == "The specified blob does not exist." ) {
         success = false;
     } else if (pngdata.statusText != "The specified blob does not exist.") {
         success = true;
