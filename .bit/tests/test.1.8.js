@@ -22,7 +22,7 @@ try {
         }
 
         if (data.length < 3) {
-            console.log("No response... Try again!")
+            console.log("No response... Try again! Is your function authorization level 'Function'?")
             process.exit(1)
         } else if (data == answer) {
             console.log("Yay!🎉 Success - thanks for helping us on this top secret mission. Welcome to the team.")

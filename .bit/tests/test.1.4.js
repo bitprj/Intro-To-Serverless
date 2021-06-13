@@ -40,9 +40,9 @@ try {
         let test = JSON.stringify(data)
 
         if (data == test1) {     
-            console.log("Yay! 🎉 We got: " + JSON.stringify(data))
+            console.log("Yay! 🎉 We got: " + JSON.stringify(data) + ", which matches our input.")
         } else {
-            console.log("We got this " + JSON.stringify(data) + " ... Try again!")
+            console.log("We got this " + JSON.stringify(data) + ". We should have gotten our input, 'fifiiscool' ... Try again!")
             process.exit(1)
         }
     })().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })
