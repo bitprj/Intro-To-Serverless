@@ -31,10 +31,10 @@ if (uri[0] == null) {
             if (test.length < 3) {
                 console.log("No response... Try again!")
                 process.exit(1)
-            } else if (result.includes("media.giphy.com")) {
-                console.log("Yay! 🎉 Thanks for the gif!")
+            } else if (result.includes("https://giphy.com/gifs/")) {
+                console.log("Yay! 🎉 Thanks for the gif! " + result)
             } else {
-                console.log("Try again! We didn't get a link to a gif back.")
+                console.log("Try again! We didn't get a link to a gif back. We got " + result + " instead.")
                 process.exit(1)
             }
         } catch (e) {

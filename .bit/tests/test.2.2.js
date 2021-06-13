@@ -40,7 +40,6 @@ for(var i = 0; i < commit_file.length; i++) {
             var result = await resp.text()
             let test = JSON.stringify(result)
     
-            console.log(result[0])
             if (test.length < 3) {
                 console.log("No response... Try again!")
                 process.exit(1)
