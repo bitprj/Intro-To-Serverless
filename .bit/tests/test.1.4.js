@@ -45,7 +45,7 @@ try {
             console.log("We got this " + JSON.stringify(data) + " ... Try again!")
             process.exit(1)
         }
-    })();
+    })().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })
 } catch (e) {
     throw new Error("You have not added your function url as a secret!");
 }
