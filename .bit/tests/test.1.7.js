@@ -5,17 +5,21 @@ uri = process.env.TWOCATZ_ENDPOINT
 
 try {
     (async () => {
-        const resp = await fetch(uri, {
-            method: 'GET'
-        });
-        var data = await resp.json()
-        let test = JSON.stringify(data)
-
-        if (test.length < 3) {
-            console.log("No response... Try again!")
+        try {
+            const resp = await fetch(uri, {
+                method: 'GET'
+            });
+            var data = await resp.json()
+            let test = JSON.stringify(data)
+    
+            if (test.length < 3) {
+                console.log("No response... Try again!")
+                process.exit(1)
+            }
+        } catch (e) {
+            console.log("Did you return valid JSON? Try again!")
             process.exit(1)
         }
-
         try {
             var catimage1 = data.cat1;
             var catimage2 = data.cat2;
@@ -41,7 +45,7 @@ try {
             throw new Error(`Sorry, your names, ${name1} and ${name2}, were not correct.`)  
         }
 
-    })().catch( e => { console.error(e) })
+    })().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })
 } catch (e) {
     throw new Error("You have not added your function url as a secret!");
 }
