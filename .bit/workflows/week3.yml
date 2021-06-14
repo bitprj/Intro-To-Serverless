@@ -22,7 +22,7 @@ jobs:
         run: echo ::set-output name=count::$(cat ./.bit/.progress)
 
       - name: Step 1
-        if: ${{steps.vars.outputs.count == 18 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 20 && github.event.head_commit.message != 'Update progress'}}
         env:
           storage_account_connection_string: ${{ secrets.storage_account_connection_string }}
           container_name: ${{ secrets.container_name }}
@@ -30,7 +30,7 @@ jobs:
           npm install @azure/storage-blob
           node .bit/tests/test.3.1.js
       - name: Step 2
-        if: ${{steps.vars.outputs.count == 19 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 21 && github.event.head_commit.message != 'Update progress'}}
         env:
           BUNNIMAGE_ENDPOINT: ${{ secrets.BUNNIMAGE_ENDPOINT }}
           container_name: ${{ secrets.container_name }}
@@ -40,7 +40,7 @@ jobs:
           npm install form-data
           node .bit/tests/test.3.2.js
       - name: Step 3
-        if: ${{steps.vars.outputs.count == 20 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 22 && github.event.head_commit.message != 'Update progress'}}
         env:
           BUNNIMAGE_ENDPOINT: ${{ secrets.BUNNIMAGE_ENDPOINT }}
           container_name: ${{ secrets.container_name }}
@@ -50,7 +50,7 @@ jobs:
           npm install form-data
           node .bit/tests/test.3.3.js
       - name: Step 5
-        if: ${{steps.vars.outputs.count == 22 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 23 && github.event.head_commit.message != 'Update progress'}}
         env:
           BUNNIMAGE_ENDPOINT: ${{ secrets.BUNNIMAGE_ENDPOINT }}
           BUNNIMAGE_ENDPOINT2: ${{ secrets.BUNNIMAGE_ENDPOINT2 }}
@@ -61,7 +61,7 @@ jobs:
           npm install form-data
           node .bit/tests/test.3.5.js
       - name: Step 6
-        if: ${{steps.vars.outputs.count == 23 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 24 && github.event.head_commit.message != 'Update progress'}}
         env:
           DEEPSECRETS_ENDPOINT: ${{ secrets.DEEPSECRETS_ENDPOINT }}
         run: |

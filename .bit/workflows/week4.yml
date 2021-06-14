@@ -23,36 +23,36 @@ jobs:
 
       - name: Step 1
         uses: cypress-io/github-action@v2
-        if: ${{steps.vars.outputs.count == 26 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 30 && github.event.head_commit.message != 'Update progress'}}
         with:
           spec: cypress/integration/4.1.spec.js
 
       - name: Step 2
         uses: cypress-io/github-action@v2
-        if: ${{steps.vars.outputs.count == 27 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 31 && github.event.head_commit.message != 'Update progress'}}
         with:
           spec: cypress/integration/4.2.spec.js
 
       - name: Step 3
         uses: cypress-io/github-action@v2
-        if: ${{steps.vars.outputs.count == 28 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 32 && github.event.head_commit.message != 'Update progress'}}
         with:
           spec: cypress/integration/4.3.spec.js
 
       - name: Step 4
         uses: cypress-io/github-action@v2
-        if: ${{steps.vars.outputs.count == 29 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 33 && github.event.head_commit.message != 'Update progress'}}
         with:
           spec: cypress/integration/4.4.spec.js
 
       - name: Step 5
         uses: cypress-io/github-action@v2
-        if: ${{steps.vars.outputs.count == 30 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 34 && github.event.head_commit.message != 'Update progress'}}
         with:
           spec: cypress/integration/4.5.spec.js
 
       - name: Step 6
-        if: ${{steps.vars.outputs.count == 31 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 35 && github.event.head_commit.message != 'Update progress'}}
         env:
           TWOCATZ_ENDPOINT: ${{ secrets.TWOCATZ_ENDPOINT }}
         run: |
@@ -60,6 +60,6 @@ jobs:
           node .bit/tests/test.4.6.js
       - name: Step 7
         uses: cypress-io/github-action@v2
-        if: ${{steps.vars.outputs.count == 32 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 36 && github.event.head_commit.message != 'Update progress'}}
         with:
           spec: cypress/integration/4.7.spec.js
