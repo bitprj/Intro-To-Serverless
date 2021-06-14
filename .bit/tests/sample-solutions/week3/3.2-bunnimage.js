@@ -29,7 +29,7 @@ module.exports = async function (context, req) {
 async function uploadFile(parsedBody, ext){
     const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);
     // Create a unique name for the container
-    const containerName = "resource";
+    const containerName = //your container name;
     
     console.log('\nCreating container...');
     console.log('\t', containerName);
@@ -38,7 +38,7 @@ async function uploadFile(parsedBody, ext){
     const containerClient = blobServiceClient.getContainerClient(containerName);
     
     // Create the container
-    const blobName = 'test' + ext;
+    const blobName = 'test' + "." + ext;
 
     // Get a block blob client
     const blockBlobClient = containerClient.getBlockBlobClient(blobName);

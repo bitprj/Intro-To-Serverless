@@ -27,10 +27,10 @@ if (uri[0] == null) {
                     "codename" : "bunnimagetestrun1000"
                   },        
             });
-            var result1 = await resp1.json()
-            let test1 = JSON.stringify(result)
+            var result1 = await resp1.text()
+            let test1 = JSON.stringify(result1)
     
-            var download = `${blob_url}/${containerName}/bunnimagetestrun1000.jpg`;
+            var download = `${blob_url}/${containerName}/bunnimagetestrun1000.jpeg`;
         
             let resp = await fetch(download, {
                 method: 'GET',
@@ -44,8 +44,7 @@ if (uri[0] == null) {
             }
     
             const testresp = await fetch(uri, {
-                method: 'POST',
-                body: ""       
+                method: 'POST'
             });
             var message = await testresp.text()
     

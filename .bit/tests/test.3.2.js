@@ -26,10 +26,10 @@ if (uri[0] == null || blob_url[0] == null) {
                     ...formHeaders,
                   },        
             });
-            var result1 = await resp1.json()
-            let test1 = JSON.stringify(result)
+            var result1 = await resp1.text()
+            let test1 = JSON.stringify(result1)
     
-            var download = `${blob_url}/${containerName}/test.jpg`;
+            var download = `${blob_url}/${containerName}/test.jpeg`;
         
             let resp = await fetch(download, {
                 method: 'GET',

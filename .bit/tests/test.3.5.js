@@ -29,8 +29,8 @@ if (uri1[0] == null || uri2[1] == null) {
                     "codename" : "bunnimagetestrun1001"
                   },        
             });
-            var result1 = await resp1.json()
-            let test1 = JSON.stringify(result)
+            var result1 = await resp1.text()
+            let test1 = JSON.stringify(result1)
     
             const testresp = await fetch(uri2, {
                 method: 'GET',
@@ -40,10 +40,12 @@ if (uri1[0] == null || uri2[1] == null) {
             });
             var message = await testresp.json()
     
-            if (message.downloadUri == `${blob_url}/${containerName}/bunnimagetestrun1001.jpeg`) {
+            if (JSON.stringify(message.downloadUri).includes(`${blob_url}/${containerName}/bunnimagetestrun1001.jpeg`)) {
                 console.log("Yay! 🎉 We got our picture!")
             } else {
                 console.log("Hmmm... Maybe take another look at that download function.")
+                console.log(message.downloadUri)
+                console.log(`${blob_url}/${containerName}/bunnimagetestrun1001.jpeg`)
                 process.exit(1)
             }
         } catch (e) {
