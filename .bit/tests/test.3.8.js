@@ -2,7 +2,6 @@ let uri = undefined
 const fetch = require('node-fetch');
 
 uri = process.env.DEEPSECRETS_ENDPOINT
-
 if (uri[0] == null) {
     throw new Error("You have not added your function url as a secret!");
 }
@@ -25,10 +24,10 @@ if (uri[0] == null) {
         console.log("No response... Try again!")
         process.exit(1)
     } else if ( result != `Thanks 😊! Stored your secret "testmessage3". 😯 Someone confessed that: "testmessage2"`) {
-        console.log("Yay! 🎉 Thanks for returning our message!")
+        console.log("Yay! 🎉 Thanks for returning a random message!")
     } else {
         console.log("Hey... Make sure it's random!.")
         console.log(`We got ${result}, which proves it was not random.`)
         process.exit(1)
     }
-})();
+})().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })

@@ -24,4 +24,4 @@ if (uri[0] == null) {
         console.log("Try again! We didn't get the correct generation/age back.")
         process.exit(1)
     }
-})();
+})().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })

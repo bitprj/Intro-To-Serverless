@@ -270,9 +270,18 @@ steps:
       stepType: checks
       actions:
         - type: respond
-          with: feedback.md
+          with: 3.9-Week 3 Step 9.md
           files: ['n/a']
           scripts: test.3.8.js
+    - title: 'Week 3: Week 3 Livestream Feedback'
+      description: 'Week 3 Livestream Feedback'
+      event: issue_comment.created
+      stepType: feedback
+      actions:
+        - type: respond
+          with: feedback.md
+          files: ['n/a']
+          scripts: n/a
     - title: 'Week 3: Feedback'
       description: Provide your feedback for Week 3!
       event: issue_comment.created
@@ -348,9 +357,18 @@ steps:
       stepType: checks
       actions:
         - type: respond
-          with: feedback.md
+          with: 4.8-Week 4 Step 8.md
           files: ['n/a']
           scripts: 4.7.spec.js
+    - title: 'Week 4: Week 4 Livestream Feedback'
+      description: 'Week 4 Livestream Feedback'
+      event: issue_comment.created
+      stepType: feedback
+      actions:
+        - type: respond
+          with: feedback.md
+          files: ['n/a']
+          scripts: n/a
     - title: 'Week 4: Feedback'
       description: Provide your feedback for Week 4!
       event: issue_comment.created
@@ -359,7 +377,7 @@ steps:
         - type: respond
           with: 4-complete.md
         - type: createIssue
-          title: Week 5
+          title: Planning your Final Project
           body: 5.1-Week 5 Step 1.md
         - type: closeIssue
     - title: 'Week 5: Laying out the groundwork'

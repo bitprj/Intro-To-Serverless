@@ -8,8 +8,8 @@ if (connectionString[0] == null || containerName[0] == null) {
 }
 
 (async () => {
-    try {
-        fs.readFile(`${__dirname}/testimage.jpg`, async function(err, content) {
+    fs.readFile(`${__dirname}/testimage.jpg`, async function(err, content) {
+        try {
             const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);
             // Create a unique name for the container            
             console.log('\nCreating container...');
@@ -28,10 +28,10 @@ if (connectionString[0] == null || containerName[0] == null) {
             
             // Upload data to the blob
             const uploadBlobResponse = await blockBlobClient.upload(content, content.length);
-      })
-    } catch (e) {
-        console.log("Sorry! You haven't created your blob storage account yet. Check your secrets!")
-        console.log(`Here's the error: ${e}`)
-        process.exit(1)
-    }
-})();
+        } catch (e) {
+            console.log("Sorry! You haven't created your blob storage account yet. Check your secrets!")
+            console.log(`Here's the error: ${e}`)
+            process.exit(1)
+        }
+    })
+})().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })

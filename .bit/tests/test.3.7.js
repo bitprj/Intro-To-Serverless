@@ -25,10 +25,10 @@ if (uri[0] == null) {
         console.log("No response... Try again!")
         process.exit(1)
     } else if ( result == `Thanks 😊! Stored your secret "testmessage3". 😯 Someone confessed that: "testmessage2"`) {
-        console.log("Yay! 🎉 Thanks for returning our message!")
+        console.log("Yay! 🎉 Thanks for returning our message from your database!")
     } else {
         console.log("Try again! We didn't get our most recent secret back.")
         console.log(`We got ${result}, which is incorrect.`)
         process.exit(1)
     }
-})();
+})().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })
