@@ -16,9 +16,9 @@ async function getImage(event) {
           body: payload
       });
 
-      var data = await resp.json();
+      var data = await resp.text();
       console.log(data);
-      $('#output').text("Your image has been stored!")
+      $('#output').text("Your image has been stored successfully!")
   } else {
       alert("No name error.")
   }
