@@ -64,6 +64,6 @@ jobs:
         with:
           spec: cypress/integration/4.7.spec.js
       - name: Check for branch
-        if: ${{steps.vars.outputs.count > 38 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 38 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/wrongbranch.js

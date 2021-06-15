@@ -81,6 +81,6 @@ jobs:
           npm install node-fetch
           node .bit/tests/test.2.8.js
       - name: Check for branch
-        if: ${{steps.vars.outputs.count > 19 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 19 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/wrongbranch.js
