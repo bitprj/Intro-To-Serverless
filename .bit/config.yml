@@ -360,7 +360,7 @@ steps:
           with: 4.8-Week 4 Step 8.md
           files: ['n/a']
           scripts: 4.7.spec.js
-  - title: 'Week 4: Week 4 Livestream Feedback'
+    - title: 'Week 4: Week 4 Livestream Feedback'
       description: 'Week 4 Livestream Feedback'
       event: issue_comment.created
       stepType: feedback
