@@ -1,4 +1,4 @@
-# You're ready for Serverless!
+# ⚡️ You're ready for Serverless!
 
 Move on to the next issue.
 
