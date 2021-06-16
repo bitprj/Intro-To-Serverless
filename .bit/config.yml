@@ -22,6 +22,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: hello
       actions:
         - type: respond
           with: 1.3-Week 1 Step 3.md
@@ -31,15 +32,30 @@ steps:
       description: 'Task:'
       event: issue_comment.created
       stepType: IssueComment
+      branch: hello
       actions:
         - type: respond
-          with: 1.4-Week 1 Step 4.md
+          with: mergepr.md
           files: ['n/a']
           scripts: n/a
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: hello.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: Open up!
+          body: 1.4-Week 1 Step 4.md
+        - type: closeIssue
     - title: 'Week 1: Week 1 Step 4'
       description: 'Building our first function ⚡[HackerVoice]'
       event: workflow_run.completed
       stepType: checks
+      branch: hackervoice
       actions:
         - type: respond
           with: 1.5-Week 1 Step 5.md
@@ -49,15 +65,30 @@ steps:
       description: 'Tasks:'
       event: workflow_run.completed
       stepType: checks
+      branch: hackervoice
       actions:
         - type: respond
-          with: 1.6-Week 1 Step 6.md
+          with: mergepr.md
           files: ['n/a']
           scripts: test.1.5.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: hackervoice.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: One cat, two cats, red cat, blue cat
+          body: 1.6-Week 1 Step 6.md
+        - type: closeIssue
     - title: 'Week 1: Trying to make node-fetch happen'
       description: 'Tasks:'
       event: workflow_run.completed
       stepType: checks
+      branch: twocatz
       actions:
         - type: respond
           with: 1.7-Week 1 Step 7.md
@@ -67,24 +98,40 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: twocatz
       actions:
         - type: respond
-          with: 1.8-Week 1 Step 8.md
+          with: mergepr.md
           files: ['n/a']
           scripts: test.1.7.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: twocatz.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: '[TOP SECRET] Please open'
+          body: 1.8-Week 1 Step 8.md
+        - type: closeIssue
     - title: 'Week 1: [TOP SECRET] Morse Code Converter'
       description: 'Tasks:'
       event: workflow_run.completed
       stepType: checks
+      branch: morse
       actions:
         - type: respond
           with: 1.9-Week 1 Step 9.md
           files: ['n/a']
           scripts: test.1.8.js
     - title: 'Week 1: Week 1 Step 9'
-      description: ' Week 1 Livestream Feedback'
+      description: 'Week 1 Livestream Feedback'
       event: issue_comment.created
       stepType: feedback
+      branch: morse
       actions:
         - type: respond
           with: feedback.md
@@ -93,10 +140,22 @@ steps:
     - title: 'Week 1: Feedback'
       description: Provide your feedback for Week 1!
       event: issue_comment.created
-      stepType: IssueComment
+      stepType: feedback
+      branch: morse
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
         - type: respond
           with: 1-complete.md
+          files: ['n/a']
+          scripts: n/a
         - type: createIssue
           title: Getting Emotional with APIs
           body: 2.1-Week 2 Step 1.md
@@ -114,6 +173,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: emotionalgifs
       actions:
         - type: respond
           with: 2.3-Week 2 Step 3.md
@@ -123,6 +183,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: emotionalgifs
       actions:
         - type: respond
           with: 2.4-Week 2 Step 4.md
@@ -132,6 +193,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: emotionalgifs
       actions:
         - type: respond
           with: 2.5-Week 2 Step 5.md
@@ -141,19 +203,30 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: emotionalgifs
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: test.2.5.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
         - type: respond
           with: getting-emotional.md
           files: ['n/a']
-          scripts: test.2.5.js
+          scripts: n/a
         - type: createIssue
-          title: Are you a Zoomer or Boomer?
+          title: A Song 4 U
           body: 2.6-Week 2 Step 6.md
         - type: closeIssue
     - title: 'Week 2: Pose! Song Recomendation with Age Recognition'
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: song4u
       actions:
         - type: respond
           with: 2.7-Week 2 Step 7.md
@@ -163,6 +236,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: song4u
       actions:
         - type: respond
           with: 2.8-Week 2 Step 8.md
@@ -172,6 +246,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: song4u
       actions:
         - type: respond
           with: 2.9-Week 2 Step 9.md
@@ -181,6 +256,7 @@ steps:
       description: ' Week 2 Livestream Feedback'
       event: issue_comment.created
       stepType: feedback
+      branch: song4u
       actions:
         - type: respond
           with: feedback.md
@@ -189,18 +265,31 @@ steps:
     - title: 'Week 2: Feedback'
       description: Provide your feedback for Week 2!
       event: issue_comment.created
-      stepType: IssueComment
+      stepType: feedback
+      branch: song4u
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
         - type: respond
           with: 2-complete.md
+          files: ['n/a']
+          scripts: n/a
         - type: createIssue
-          title: 'Bunnimage: File Storage & Retrieval'
+          title: 'Storing files and things with DB'
           body: 3.1-Week 3 Step 1.md
         - type: closeIssue
     - title: 'Week 3: Blob Storage & Me'
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: bunnimage
       actions:
         - type: respond
           with: 3.2-Week 3 Step 2.md
@@ -210,6 +299,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: bunnimage
       actions:
         - type: respond
           with: 3.3-Week 3 Step 3.md
@@ -219,6 +309,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: bunnimage
       actions:
         - type: respond
           with: 3.4-Week 3 Step 4.md
@@ -228,6 +319,7 @@ steps:
       description: 'Task:'
       event: issue_comment.created
       stepType: IssueComment
+      branch: bunnimage
       actions:
         - type: respond
           with: 3.5-Week 3 Step 5.md
@@ -237,19 +329,30 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: bunnimage
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: test.3.5.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
         - type: respond
           with: bunnimage.md
           files: ['n/a']
-          scripts: test.3.5.js
+          scripts: n/a
         - type: createIssue
-          title: 'Shhh... secrets!'
+          title: 'What is your deepest secret? The API'
           body: 3.6-Week 3 Step 6.md
         - type: closeIssue
     - title: 'Week 3: Can you keep a secret?'
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: deepsecrets
       actions:
         - type: respond
           with: 3.7-Week 3 Step 7.md
@@ -259,6 +362,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: deepsecrets
       actions:
         - type: respond
           with: 3.8-Week 3 Step 8.md
@@ -268,6 +372,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: deepsecrets
       actions:
         - type: respond
           with: 3.9-Week 3 Step 9.md
@@ -277,6 +382,7 @@ steps:
       description: 'Week 3 Livestream Feedback'
       event: issue_comment.created
       stepType: feedback
+      branch: deepsecrets
       actions:
         - type: respond
           with: feedback.md
@@ -286,9 +392,21 @@ steps:
       description: Provide your feedback for Week 3!
       event: issue_comment.created
       stepType: IssueComment
+      branch: deepsecrets
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
         - type: respond
           with: 3-complete.md
+          files: ['n/a']
+          scripts: n/a
         - type: createIssue
           title: 'Building Bunnimage: The Frontend'
           body: 4.1-Week 4 Step 1.md
@@ -297,6 +415,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: bunnimage-frontend
       actions:
         - type: respond
           with: 4.2-Week 4 Step 2.md
@@ -306,6 +425,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: bunnimage-frontend
       actions:
         - type: respond
           with: 4.3-Week 4 Step 3.md
@@ -315,6 +435,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: bunnimage-frontend
       actions:
         - type: respond
           with: 4.4-Week 4 Step 4.md
@@ -324,11 +445,21 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: bunnimage-frontend
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: 4.4.spec.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
         - type: respond
           with: bunnimage.md
           files: ['n/a']
-          scripts: 4.4.spec.js
+          scripts: n/a
         - type: createIssue
           title: 'Showing off your twoCatz API'
           body: 4.5-Week 4 Step 5.md
@@ -337,6 +468,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: twocatz-frontend
       actions:
         - type: respond
           with: 4.6-Week 4 Step 6.md
@@ -346,6 +478,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: twocatz-frontend
       actions:
         - type: respond
           with: 4.7-Week 4 Step 7.md
@@ -355,6 +488,7 @@ steps:
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
+      branch: twocatz-frontend
       actions:
         - type: respond
           with: 4.8-Week 4 Step 8.md
@@ -364,6 +498,7 @@ steps:
       description: 'Week 4 Livestream Feedback'
       event: issue_comment.created
       stepType: feedback
+      branch: twocatz-frontend
       actions:
         - type: respond
           with: feedback.md
@@ -373,9 +508,19 @@ steps:
       description: Provide your feedback for Week 4!
       event: issue_comment.created
       stepType: IssueComment
+      branch: twocatz-frontend
+      actions:
+        - type: respond
+          with: mergepr.md
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
         - type: respond
           with: 4-complete.md
+          files: ['n/a']
+          scripts: n/a
         - type: createIssue
           title: Planning your Final Project
           body: 5.1-Week 5 Step 1.md

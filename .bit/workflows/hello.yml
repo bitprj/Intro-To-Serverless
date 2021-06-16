@@ -1,0 +1,31 @@
+name: Getting Started
+on:
+  push:
+    branches:
+      - hello
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Node Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Get Count
+        id: vars
+        run: echo ::set-output name=count::$(cat ./.bit/.progress)
+
+      - name: Step 2
+        if: ${{steps.vars.outputs.count == 1 && github.event.head_commit.message != 'Update progress'}}
+        run: |
+          node .bit/tests/test.1.2.js
+      - name: Check for branch
+        if: ${{steps.vars.outputs.count > 2 && github.event.head_commit.message != 'Update progress'}}
+        run: |
+          node .bit/tests/wrongbranch.js
