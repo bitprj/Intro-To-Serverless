@@ -1,0 +1,50 @@
+name: Song 4 U
+on:
+  push:
+    branches:
+      - song4u
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Node Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Get Count
+        id: vars
+        run: echo ::set-output name=count::$(cat ./.bit/.progress)
+
+      - name: Step 6
+        if: ${{steps.vars.outputs.count == 20 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          SONGREC_ENDPOINT: ${{ secrets.SONGREC_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          node .bit/tests/test.2.6.js
+
+      - name: Step 7
+        if: ${{steps.vars.outputs.count == 21 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          SONGREC_ENDPOINT: ${{ secrets.SONGREC_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          node .bit/tests/test.2.7.js
+
+      - name: Step 8
+        if: ${{steps.vars.outputs.count == 22 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          SONGREC_ENDPOINT: ${{ secrets.SONGREC_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          node .bit/tests/test.2.8.js
+      - name: Check for branch
+        if: ${{steps.vars.outputs.count > 22 && github.event.head_commit.message != 'Update progress'}}
+        run: |
+          node .bit/tests/wrongbranch.js
