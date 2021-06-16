@@ -1,0 +1,51 @@
+name: Bunnimage Frontend
+on:
+  push:
+    branches:
+      - bunnimage-frontend
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Node Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Get Count
+        id: vars
+        run: echo ::set-output name=count::$(cat ./.bit/.progress)
+
+      - name: Step 1
+        uses: cypress-io/github-action@v2
+        if: ${{steps.vars.outputs.count == 38 && github.event.head_commit.message != 'Update progress'}}
+        with:
+          spec: cypress/integration/4.1.spec.js
+
+      - name: Step 2
+        uses: cypress-io/github-action@v2
+        if: ${{steps.vars.outputs.count == 39 && github.event.head_commit.message != 'Update progress'}}
+        with:
+          spec: cypress/integration/4.2.spec.js
+
+      - name: Step 3
+        uses: cypress-io/github-action@v2
+        if: ${{steps.vars.outputs.count == 40 && github.event.head_commit.message != 'Update progress'}}
+        with:
+          spec: cypress/integration/4.3.spec.js
+
+      - name: Step 4
+        uses: cypress-io/github-action@v2
+        if: ${{steps.vars.outputs.count == 41 && github.event.head_commit.message != 'Update progress'}}
+        with:
+          spec: cypress/integration/4.4.spec.js
+
+      - name: Check for branch
+        if: ${{steps.vars.outputs.count > 41 && github.event.head_commit.message != 'Update progress'}}
+        run: |
+          node .bit/tests/wrongbranch.js

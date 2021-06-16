@@ -271,7 +271,7 @@ steps:
         - type: respond
           with: 2-complete.md
         - type: createIssue
-          title: 'Bunnimage: File Storage & Retrieval'
+          title: 'Storing files and things with DB'
           body: 3.1-Week 3 Step 1.md
         - type: closeIssue
     - title: 'Week 3: Blob Storage & Me'
@@ -332,7 +332,7 @@ steps:
         - type: respond
           with: bunnimage.md
         - type: createIssue
-          title: 'Shhh... secrets!'
+          title: 'What is your deepest secret? The API'
           body: 3.6-Week 3 Step 6.md
         - type: closeIssue
     - title: 'Week 3: Can you keep a secret?'

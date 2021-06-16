@@ -1,0 +1,63 @@
+name: Emotional Gifs
+on:
+  push:
+    branches:
+      - emotionalgifs
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Node Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Get Count
+        id: vars
+        run: echo ::set-output name=count::$(cat ./.bit/.progress)
+
+      - name: Step 2
+        if: ${{steps.vars.outputs.count == 15 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          npm install form-data
+          node .bit/tests/test.2.2.js
+
+      - name: Step 3
+        if: ${{steps.vars.outputs.count == 16 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          npm install form-data
+          node .bit/tests/test.2.3.js
+
+      - name: Step 4
+        if: ${{steps.vars.outputs.count == 17 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          npm install form-data
+          node .bit/tests/test.2.4.js
+
+      - name: Step 5
+        if: ${{steps.vars.outputs.count == 18 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          npm install form-data
+          node .bit/tests/test.2.5.js
+
+      - name: Check for branch
+        if: ${{steps.vars.outputs.count > 18 && github.event.head_commit.message != 'Update progress'}}
+        run: |
+          node .bit/tests/wrongbranch.js

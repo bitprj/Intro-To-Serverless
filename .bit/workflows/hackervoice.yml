@@ -1,4 +1,4 @@
-name: Week 1
+name: Hacker Voice
 on:
   push:
     branches:
@@ -22,20 +22,20 @@ jobs:
         run: echo ::set-output name=count::$(cat ./.bit/.progress)
 
       - name: Step 4
-        if: ${{steps.vars.outputs.count == 3 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 4 && github.event.head_commit.message != 'Update progress'}}
         env:
           HACKERVOICE_ENDPOINT: ${{ secrets.HACKERVOICE_ENDPOINT }}
         run: |
           npm install node-fetch
           node .bit/tests/test.1.4.js
       - name: Step 5
-        if: ${{steps.vars.outputs.count == 4 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 5 && github.event.head_commit.message != 'Update progress'}}
         env:
           HACKERVOICE_ENDPOINT: ${{ secrets.HACKERVOICE_ENDPOINT }}
         run: |
           npm install node-fetch
           node .bit/tests/test.1.5.js
       - name: Check for branch
-        if: ${{steps.vars.outputs.count > 4 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count > 5 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/wrongbranch.js

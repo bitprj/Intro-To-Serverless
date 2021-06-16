@@ -1,4 +1,4 @@
-name: Week 1
+name: Morse
 on:
   push:
     branches:
@@ -22,13 +22,13 @@ jobs:
         run: echo ::set-output name=count::$(cat ./.bit/.progress)
 
       - name: Step 8
-        if: ${{steps.vars.outputs.count == 7 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 10 && github.event.head_commit.message != 'Update progress'}}
         env:
           MORSE_ENDPOINT: ${{ secrets.MORSE_ENDPOINT }}
         run: |
           npm install node-fetch
           node .bit/tests/test.1.8.js
       - name: Check for branch
-        if: ${{steps.vars.outputs.count > 7 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count > 10 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/wrongbranch.js
