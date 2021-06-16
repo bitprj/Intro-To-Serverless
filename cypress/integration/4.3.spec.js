@@ -18,8 +18,9 @@ describe('Test Bunnimage', () => {
         cy.visit('bunnimage/index.html')
         const fileName = "testimage.jpg"
         cy.get('input[type="text"]').type('mysecret')
-        uploadFile(fileName, 'image/jpg', 'input[name="image"]')
+        uploadFile(fileName, 'image/jpeg', 'input[name="image"]')
         cy.get('input[type="submit"]').click()
+        cy.wait(5000)
         cy.get('#output').contains('Your image has been stored successfully!')    
     })
 })
