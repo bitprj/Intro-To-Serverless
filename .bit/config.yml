@@ -32,6 +32,7 @@ steps:
       description: 'Task:'
       event: issue_comment.created
       stepType: IssueComment
+      branch: hello
       actions:
         - type: respond
           with: mergepr.md
@@ -130,6 +131,7 @@ steps:
       description: 'Week 1 Livestream Feedback'
       event: issue_comment.created
       stepType: feedback
+      branch: morse
       actions:
         - type: respond
           with: feedback.md
@@ -139,6 +141,7 @@ steps:
       description: Provide your feedback for Week 1!
       event: issue_comment.created
       stepType: feedback
+      branch: morse
       actions:
         - type: respond
           with: mergepr.md
@@ -249,6 +252,7 @@ steps:
       description: ' Week 2 Livestream Feedback'
       event: issue_comment.created
       stepType: feedback
+      branch: song4u
       actions:
         - type: respond
           with: feedback.md
@@ -258,6 +262,7 @@ steps:
       description: Provide your feedback for Week 2!
       event: issue_comment.created
       stepType: feedback
+      branch: song4u
       actions:
         - type: respond
           with: mergepr.md
@@ -369,6 +374,7 @@ steps:
       description: 'Week 3 Livestream Feedback'
       event: issue_comment.created
       stepType: feedback
+      branch: deepsecrets
       actions:
         - type: respond
           with: feedback.md
@@ -378,6 +384,7 @@ steps:
       description: Provide your feedback for Week 3!
       event: issue_comment.created
       stepType: IssueComment
+      branch: deepsecrets
       actions:
         - type: respond
           with: mergepr.md
@@ -479,6 +486,7 @@ steps:
       description: 'Week 4 Livestream Feedback'
       event: issue_comment.created
       stepType: feedback
+      branch: twocatz-frontend
       actions:
         - type: respond
           with: feedback.md
@@ -488,6 +496,7 @@ steps:
       description: Provide your feedback for Week 4!
       event: issue_comment.created
       stepType: IssueComment
+      branch: twocatz-frontend
       actions:
         - type: respond
           with: mergepr.md
