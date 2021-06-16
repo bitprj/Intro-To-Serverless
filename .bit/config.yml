@@ -33,9 +33,22 @@ steps:
       stepType: IssueComment
       actions:
         - type: respond
-          with: 1.4-Week 1 Step 4.md
+          with: mergepr.md
           files: ['n/a']
           scripts: n/a
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: hello.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: Open up!
+          body: 1.4-Week 1 Step 4.md
+        - type: closeIssue
     - title: 'Week 1: Week 1 Step 4'
       description: 'Building our first function ⚡[HackerVoice]'
       event: workflow_run.completed
@@ -51,9 +64,22 @@ steps:
       stepType: checks
       actions:
         - type: respond
-          with: 1.6-Week 1 Step 6.md
+          with: mergepr.md
           files: ['n/a']
           scripts: test.1.5.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: hackervoice.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: One cat, two cats, red cat, blue cat
+          body: 1.6-Week 1 Step 6.md
+        - type: closeIssue
     - title: 'Week 1: Trying to make node-fetch happen'
       description: 'Tasks:'
       event: workflow_run.completed
@@ -69,9 +95,22 @@ steps:
       stepType: checks
       actions:
         - type: respond
-          with: 1.8-Week 1 Step 8.md
+          with: mergepr.md
           files: ['n/a']
           scripts: test.1.7.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: twocatz.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: '[TOP SECRET] Please open'
+          body: 1.8-Week 1 Step 8.md
+        - type: closeIssue
     - title: 'Week 1: [TOP SECRET] Morse Code Converter'
       description: 'Tasks:'
       event: workflow_run.completed
@@ -82,7 +121,7 @@ steps:
           files: ['n/a']
           scripts: test.1.8.js
     - title: 'Week 1: Week 1 Step 9'
-      description: ' Week 1 Livestream Feedback'
+      description: 'Week 1 Livestream Feedback'
       event: issue_comment.created
       stepType: feedback
       actions:
@@ -93,7 +132,16 @@ steps:
     - title: 'Week 1: Feedback'
       description: Provide your feedback for Week 1!
       event: issue_comment.created
-      stepType: IssueComment
+      stepType: feedback
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
         - type: respond
           with: 1-complete.md
@@ -143,9 +191,16 @@ steps:
       stepType: checks
       actions:
         - type: respond
-          with: getting-emotional.md
+          with: mergepr.md
           files: ['n/a']
           scripts: test.2.5.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: getting-emotional.md
         - type: createIssue
           title: Are you a Zoomer or Boomer?
           body: 2.6-Week 2 Step 6.md
@@ -189,7 +244,16 @@ steps:
     - title: 'Week 2: Feedback'
       description: Provide your feedback for Week 2!
       event: issue_comment.created
-      stepType: IssueComment
+      stepType: feedback
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
         - type: respond
           with: 2-complete.md
@@ -239,9 +303,16 @@ steps:
       stepType: checks
       actions:
         - type: respond
-          with: bunnimage.md
+          with: mergepr.md
           files: ['n/a']
           scripts: test.3.5.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: bunnimage.md
         - type: createIssue
           title: 'Shhh... secrets!'
           body: 3.6-Week 3 Step 6.md
@@ -288,6 +359,15 @@ steps:
       stepType: IssueComment
       actions:
         - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
           with: 3-complete.md
         - type: createIssue
           title: 'Building Bunnimage: The Frontend'
@@ -326,9 +406,16 @@ steps:
       stepType: checks
       actions:
         - type: respond
-          with: bunnimage.md
+          with: mergepr.md
           files: ['n/a']
           scripts: 4.4.spec.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: bunnimage.md
         - type: createIssue
           title: 'Showing off your twoCatz API'
           body: 4.5-Week 4 Step 5.md
@@ -373,6 +460,13 @@ steps:
       description: Provide your feedback for Week 4!
       event: issue_comment.created
       stepType: IssueComment
+      actions:
+        - type: respond
+          with: mergepr.md
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
         - type: respond
           with: 4-complete.md
