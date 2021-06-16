@@ -154,6 +154,8 @@ steps:
       actions:
         - type: respond
           with: 1-complete.md
+          files: ['n/a']
+          scripts: n/a
         - type: createIssue
           title: Getting Emotional with APIs
           body: 2.1-Week 2 Step 1.md
@@ -214,6 +216,8 @@ steps:
       actions:
         - type: respond
           with: getting-emotional.md
+          files: ['n/a']
+          scripts: n/a
         - type: createIssue
           title: A Song 4 U
           body: 2.6-Week 2 Step 6.md
@@ -275,6 +279,8 @@ steps:
       actions:
         - type: respond
           with: 2-complete.md
+          files: ['n/a']
+          scripts: n/a
         - type: createIssue
           title: 'Storing files and things with DB'
           body: 3.1-Week 3 Step 1.md
@@ -336,6 +342,8 @@ steps:
       actions:
         - type: respond
           with: bunnimage.md
+          files: ['n/a']
+          scripts: n/a
         - type: createIssue
           title: 'What is your deepest secret? The API'
           body: 3.6-Week 3 Step 6.md
@@ -397,6 +405,8 @@ steps:
       actions:
         - type: respond
           with: 3-complete.md
+          files: ['n/a']
+          scripts: n/a
         - type: createIssue
           title: 'Building Bunnimage: The Frontend'
           body: 4.1-Week 4 Step 1.md
@@ -448,6 +458,8 @@ steps:
       actions:
         - type: respond
           with: bunnimage.md
+          files: ['n/a']
+          scripts: n/a
         - type: createIssue
           title: 'Showing off your twoCatz API'
           body: 4.5-Week 4 Step 5.md
@@ -507,6 +519,8 @@ steps:
       actions:
         - type: respond
           with: 4-complete.md
+          files: ['n/a']
+          scripts: n/a
         - type: createIssue
           title: Planning your Final Project
           body: 5.1-Week 5 Step 1.md
