@@ -11,7 +11,7 @@ if (uri[0] != "h") {
 
 
 // if you wanna add more files, just put a comma after the filename (array)
-const commit_file = ['Getting-Emotional/index.js']
+const commit_file = ['emotionalgifs/index.js']
 
 for(var i = 0; i < commit_file.length; i++) {
     var a = commit_file[i];
