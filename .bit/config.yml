@@ -522,58 +522,67 @@ steps:
           files: ['n/a']
           scripts: n/a
         - type: createIssue
-          title: Planning your Final Project
+          title: Starting your Final Project
           body: 5.1-Week 5 Step 1.md
         - type: closeIssue
     - title: 'Week 5: Laying out the groundwork'
-      description: 'Task:'
-      event: workflow_run.completed
-      stepType: checks
+      description: '✅  Task:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
-        - type: respond
-          with: 5.2-Week 5 Step 2.md
-          files: ['n/a']
-          scripts: test.5.1.js
+        - type: createIssue
+          title: Laying out the groundwork
+          body: 5.2-Week 5 Step 2.md
+        - type: closeIssue
     - title: 'Week 5: Laying out the groundwork'
-      description: 'Task:'
-      event: issue_comment.created
-      stepType: IssueComment
+      description: '✅  Task:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
-        - type: respond
-          with: 5.3-Week 5 Step 3.md
-          files: ['n/a']
-          scripts: n/a
+        - type: createIssue
+          title: Reviewing your Flowchart
+          body: 5.3-Week 5 Step 3.md
+        - type: closeIssue
     - title: 'Week 5: Reviewing your Flowchart'
-      description: 'Task:'
-      event: issue_comment.created
-      stepType: IssueComment
+      description: '✅  Task:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
-        - type: respond
-          with: 5.4-Week 5 Step 4.md
-          files: ['n/a']
-          scripts: n/a
+        - type: createIssue
+          title: Timeline
+          body: 5.4-Week 5 Step 4.md
+        - type: closeIssue
     - title: 'Week 5: Timeline'
-      description: 'Task:'
-      event: workflow_run.completed
-      stepType: checks
+      description: '✅  Task:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
-        - type: respond
-          with: 5.5-Week 5 Step 5.md
-          files: ['n/a']
-          scripts: test.5.4.js
+        - type: createIssue
+          title: Start Coding!
+          body: 5.5-Week 5 Step 5.md
+        - type: closeIssue
     - title: 'Week 5: Start Coding!'
-      description: 'Task:'
-      event: issue_comment.created
-      stepType: IssueComment
+      description: '✅  Task:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
-        - type: respond
-          with: 5.6-Week 5 Step 6.md
-          files: ['n/a']
-          scripts: n/a
+        - type: createIssue
+          title: Documentation
+          body: 5.6-Week 5 Step 6.md
+        - type: closeIssue
     - title: 'Week 5: Documentation'
-      description: 'Task:'
-      event: issue_comment.created
-      stepType: IssueComment
+      description: '✅  Task:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: createIssue
+          title: Continuing your work
+          body: 5.7-Week 5 Step 7.md
+        - type: closeIssue
+    - title: 'Week 5: Laying out the groundwork'
+      description: '✅  Task:'
+      event: pull_request.closed
+      stepType: PRmerge
       actions:
         - type: respond
           with: feedback.md
@@ -585,5 +594,5 @@ steps:
       stepType: IssueComment
       actions:
         - type: respond
-          with: 5-complete.md
+          with: finalproject.md
         - type: closeIssue
