@@ -44,7 +44,8 @@ if (uri[0] == null) {
             }
     
             const testresp = await fetch(uri, {
-                method: 'POST'
+                method: 'POST',
+                body: ""
             });
             var message = await testresp.text()
     
