@@ -4,29 +4,34 @@ const { BlobServiceClient } = require("@azure/storage-blob");
 
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
+    var boundary = multipart.getBoundary(req.headers['content-type']);
     var body = req.body;
 
     var responseMessage = ""
-    context.log(body)
-    if (body == null) {
-        responseMessage = "Sorry! No image attached."
-    } else {
-        var boundary = multipart.getBoundary(req.headers['content-type']);
-        var password = req.headers['codename'];
-        context.log(password)
+    try {
         var parsedBody = multipart.Parse(body, boundary);
+        // get the file extension
         var filetype = parsedBody[0].type;
-        var ext = ""
         if (filetype == "image/png") {
             ext = "png";
         } else if (filetype == "image/jpeg") {
             ext = "jpeg";
+        } else if (filetype == "image/jpg") {
+            ext = "jpg"
         } else {
             username = "invalidimage"
             ext = "";
         }
+        var password = req.headers['codename'];
+        // upload the file to blob
         responseMessage = await uploadFile(parsedBody, password, ext);
     }
+    catch(err) {
+        context.log(err)
+        context.log("Undefined body image");
+        responseMessage = "Sorry! No image attached."
+    }
+
 
     context.res = {
         body: responseMessage
@@ -37,7 +42,7 @@ module.exports = async function (context, req) {
 async function uploadFile(parsedBody, password, ext){
     const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);
     // Create a unique name for the container
-    const containerName = "yourcontainer";
+    const containerName = "images";
     
     console.log('\nCreating container...');
     console.log('\t', containerName);

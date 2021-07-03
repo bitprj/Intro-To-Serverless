@@ -21,7 +21,7 @@ Build projects to get started with Azure Functions, Cloud Engineering, and Javas
 
 | Category  | Assignment       | Description                                                                         | Learning Objectives                                                                  |
 |-----------|------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| Project   | ServerlessOracle | HTTP Trigger Azure Function to return the answer to life, written in Javascript.    |  <ul><li>VSCode</li><li>Github</li><li>Postman</li><li>Azure functions Locally</li><li>Testing Javascript Knowledge</li></ul> |
+| Project   | HackerVoice | Build your first HTTP Trigger Azure Function that may or may not let you pass, written in Javascript.    |  <ul><li>VSCode</li><li>Github</li><li>Postman</li><li>Azure functions Locally</li><li>Testing Javascript Knowledge</li></ul> |
 | Project   | twoCatz API      | Create a REST API that returns multiple pictures of cats, named after your friends. | <ul><li>Consuming API</li><li>Azure functions Locally</li><li>Vanilla JS</li></ul>|
 | Challenge | [Top Secret]     | Build a Serverless Function that converts English to Morse Code                     | - npm packages - Writing HTTP Trigger Functions                                      |
 
