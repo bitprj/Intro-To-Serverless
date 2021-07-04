@@ -26,11 +26,23 @@ try {
         const resp = await fetch(uri + "&password=letmein", {
             method: 'GET'
         });
+
+        if(resp.status == 404){
+            console.error(`Your function could not be found at "${uri}" check function url secret 🔍`);
+            process.exit(1)
+        }
+
+        if(resp.status == 500){
+            console.error("Your function has an error and could not be run 🐛");
+            process.exit(1)
+        }
+
         var correct = await resp.text()
 
         const response = await fetch(uri + "&password=incorrect", {
             method: 'GET'
         });
+
         var incorrect = await response.text()
 
         try {
@@ -38,9 +50,9 @@ try {
                 console.log("Yay! 🎉 You didn't let the bad guys in.")
             } else {
                 console.log("Try again!")
-                console.log(`We submitted "letmein" and got ${correct}, which should equal "Access granted."`)
-                console.log(`We submitted "incorrect" and got ${incorrect}, which should equal "Access granted."`)
-                console.log("Make sure your function has an authorization level of 'Function.'")
+                console.log(`We submitted "letmein" and got "${correct}", which should equal "Access granted."`)
+                console.log(`We submitted "incorrect" and got "${incorrect}", which should equal "Access denied."`)
+                console.log("Make sure your function has an authorization level of 'anonymous'")
                 process.exit(1)
             }
         } catch (e) {
