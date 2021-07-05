@@ -23,12 +23,15 @@ if (uri[0] != "h") {
 
 try {
     (async () => {
-        const resp = await fetch(uri + "&password=letmein", {
+
+        const uriWithQuery  = uri + "&password=letmein"
+
+        const resp = await fetch(uriWithQuery, {
             method: 'GET'
         });
 
         if(resp.status == 404){
-            console.error(`Your function could not be found at "${uri}" check function url secret 🔍`);
+            console.error(`Your function could not be found at "${uriWithQuery}" check function url secret 🔍`);
             process.exit(1)
         }
 
