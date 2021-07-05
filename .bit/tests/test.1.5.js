@@ -21,6 +21,13 @@ if (uri[0] != "h") {
    throw new Error("You have not added your function url as a secret!");
 }
 
+//If we have no query string then add one
+//this allows us to append without error
+if(uri.indexOf("?") === -1)
+{
+    uri = uri + "?x=1"
+}
+
 try {
     (async () => {
 
