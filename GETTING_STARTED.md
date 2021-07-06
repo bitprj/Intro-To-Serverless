@@ -63,7 +63,7 @@ There are insecure directories:
 if so:
 * run sudo chown -R yourusername /usr/local/share/zsh/site-functions
 * run sudo chown -R yourusername /usr/local/share/zsh
-4. Run compaudit and you should see the error message(s) cleared
+* run compaudit and you should see the error message(s) cleared
 
 </details>
 <hr>
