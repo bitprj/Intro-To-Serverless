@@ -283,7 +283,7 @@ echo -e "${lightblue}${sweat_smile} You're enjoying watching me do all the work,
 echo -e "Now I'm going to use NVM to install the latest stable version of Node.js${clear}"
 read -p "${green}Hit return to start the install (return)${clear}"
 echo -e "${lightblue}Installing the latest stable version of Node.js...${clear}"
-nvm install --lts
+nvm install v14.16.0 
 
 # Set up the git config to have the right authors for commits
 
@@ -295,11 +295,6 @@ sleep 2
 
 # Install Git bash completion and change terminal prompt to include working dir and branch name
 echo -e "Setting up git completion and branch in prompt...${clear}"
-
-# The official one had a bug in it from the latest update, so we've copied the original to our S3 account
-# curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
-
-# zsh comes with completion built in, just need to enable it.
 
 # Add git bash completion scripts to bash_profile
 if grep -Fq '# Git tab completion' ~/.bash_profile
