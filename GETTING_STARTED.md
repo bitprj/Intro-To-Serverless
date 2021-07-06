@@ -12,6 +12,62 @@
 | Counselor | Github Bot |
 <hr>
 
+### :computer: Computer Setup
+
+<details>
+<summary>Step by step instructions to setup your computer</summary>
+ 
+First, download or update to the newest version of MacOS or Windows. 
+Next, ensure that you have a [Github](https://github.com/) account and make note of the email address that you used to sign up for the account.   
+Then, download [Slack](https://slack.com/) if you haven't already. 
+Then, download [VS Code](https://code.visualstudio.com/download) for your operating system. 
+Next, enable Azure Account and Azure Functions extensions on VS Code. 
+
+![Azure](https://user-images.githubusercontent.com/57218090/124665871-dff5d480-de72-11eb-86f0-35c3acf07db4.PNG)
+
+Next, install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+Finally, you are ready for the setup script. Follow the steps listed below:
+
+Open Terminal: Run sudo chown -R $(whoami) /usr/local/var/homebrew
+
+Open Terminal and run the following:
+
+```
+bash <(curl -s https://raw.githubusercontent.com/<insert path here>.sh)
+```
+The script should guide you much of the way. Make sure to read the instructions it gives carefully. The script will do the following 
+automatically for you:
+- Checks if you already have an SSH key
+- If not, it creates one for you, using your github email address.
+- Copies the SSH key to your clipboard so you can paste it into your Github SSH key settings
+- Installs Homebrew
+- ets up the folder structure and .bash_profile commands necessary to ensure nvm works correctly
+- Uses nvm to install a version of Node which is compatible with Azure
+- Sets up git command tab completion and modifies your terminal prompt to show your current git branch if you're inside a git repository.
+- Closes the Terminal program to ensure that all changes are applied.
+
+When everything completes successfully, close and re-open Terminal. You will see the following insecure directories error message:
+```
+zsh compinit: insecure directories, run compaudit for list.
+Ignore insecure directories and continue [y] or abort compinit [n]? yzsh compinit: insecure directories, run compaudit for list.
+Ignore insecure directories and continue [y] or abort compinit [n]? y%     ~ $ 
+```
+Type ‘y’ two times
+Run compaudit to see the affected directories
+you may then see:
+```
+There are insecure directories:
+/usr/local/share/zsh/site-functions
+/usr/local/share/zsh
+```
+if so:
+* run sudo chown -R yourusername /usr/local/share/zsh/site-functions
+* run sudo chown -R yourusername /usr/local/share/zsh
+4. Run compaudit and you should see the error message(s) cleared
+
+</details>
+<hr>
+
 ### :robot: Installing the CounselorBot
 
 <details>
