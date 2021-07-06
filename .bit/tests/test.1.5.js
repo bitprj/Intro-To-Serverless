@@ -62,7 +62,6 @@ try {
                 console.log("Try again!")
                 console.log(`We submitted "letmein" and got "${correct}", which should equal "Access granted."`)
                 console.log(`We submitted "incorrect" and got "${incorrect}", which should equal "Access denied."`)
-                console.log("Make sure your function has an authorization level of 'anonymous'")
                 process.exit(1)
             }
         } catch (e) {
