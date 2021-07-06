@@ -1,6 +1,7 @@
 ## :camping: Camp Orientation
 
 *Follow these instructions to get started with your counselor in your new cabin!*
+<hr>
 
 ### :book: Camp Vocabulary
 
@@ -9,6 +10,7 @@
 | Cabin     | Repository |
 | Issues    | Weeks      |
 | Counselor | Github Bot |
+<hr>
 
 ### :robot: Installing the CounselorBot
 
@@ -40,6 +42,7 @@ You should then be **automatically** redirected to [this repository](https://git
 ![image](https://user-images.githubusercontent.com/69332964/114478884-4d27ff80-9bcd-11eb-905c-1c271069ea51.png)
 <br>
 </details>
+<hr>
 
 ### :house: Moving into your cabin
 
@@ -73,6 +76,7 @@ Click on `Issues` to find your first Week in the camp: `Getting Started`.
 ![image](https://user-images.githubusercontent.com/69332964/114479022-8fe9d780-9bcd-11eb-956f-6e4132220e11.png)
 <br>
 </details>
+<hr>
 
 ### :x: The Step Failed. What do I do?
 No worries, we all make mistakes - now is the time to fix it! The CounselorBot will provide feedback on what went wrong with your code.
@@ -101,6 +105,7 @@ In this case, the student should probably take another look at the capitalizatio
 </details>
 
 > :bulb: Using this feedback, fix your code. Every time you commit, the action will run again to check your code!
+<hr>
 
 ### :question: Do I have to push a commit to run a check?
 
@@ -116,3 +121,56 @@ Nope! Here's how to manually trigger a check for your code to move on:
 #### Re-running the check
 Click on `Re-run jobs`. If your code is successful, the check will work and you will be able to move on.
 <img width="1400" alt="Screen Shot 2021-06-06 at 1 15 32 PM" src="https://user-images.githubusercontent.com/69332964/120933780-a2622800-c6c9-11eb-8b66-8fd28e55e56e.png">
+<hr>
+
+### :question: Can I run a check on my own computer?
+Yes! You absolutely can. Here is how to configure VScode to allow local checking. This is optional, and is useful if you want to check your code without first commiting for the counselor bot to check. 
+
+1. Go into the `.vscode` folder and click into the `launch.json` file. 
+2. Edit the `launch.json` file to be:
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to Node Functions",
+            "type": "node",
+            "request": "attach",
+            "port": 9229,
+            "preLaunchTask": "func: host start"
+        },
+        {
+            "name": "Run Tests",
+            "type": "node",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "program": "${workspaceRoot}/.bit/tests/test.${input:week}.${input:step}.js",
+            "envFile": "${workspaceRoot}/.env",
+            "preLaunchTask": "func: host start"
+        }    
+    ],
+    "inputs": [
+        {
+          "id": "week",
+          "description": "Please select the current week as a number",
+          "type": "pickString",
+          "options": ["1", "2", "3", "4"],
+        },
+        {
+            "id": "step",
+            "description": "Please enter the current step as a number",
+            "type": "pickString",
+            "options": ["1", "2", "3", "4","5", "6", "7", "8", "9", "10", "11"],
+        }
+    ]
+}
+```
+3. Create a `.env` file to the root of your project. If done correctly, the `.env` file will show up next to the `.funcignore` file. 
+4. Add all the secrets you have in GitHub for that step and any Azure function settings you have in Azure to the `.env` file in the format:
+```json
+KEY=value
+KEY2=value2
+```
+5. You are all setup. To run this go to the "Run and Debug" tab on the left panel. At the top, where it says, `Attach to Node Functions`, click the dropdown and select `Run Tests`. Now, you can click the green arrow, and follow the prompted steps to test your function locally!
+
+❗❗ This is not required, as you can always commit your code to the counselor bot to check, but is definitely good to know. 
