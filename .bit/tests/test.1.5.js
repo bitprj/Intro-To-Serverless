@@ -21,16 +21,38 @@ if (uri[0] != "h") {
    throw new Error("You have not added your function url as a secret!");
 }
 
+//If we have no query string then add one
+//this allows us to append without error
+if(uri.indexOf("?") === -1)
+{
+    uri = uri + "?x=1"
+}
+
 try {
     (async () => {
-        const resp = await fetch(uri + "&password=letmein", {
+
+        const uriWithQuery  = uri + "&password=letmein"
+
+        const resp = await fetch(uriWithQuery, {
             method: 'GET'
         });
+
+        if(resp.status == 404){
+            console.error(`Your function could not be found at "${uriWithQuery}" check function url secret 🔍`);
+            process.exit(1)
+        }
+
+        if(resp.status == 500){
+            console.error("Your function has an error and could not be run 🐛");
+            process.exit(1)
+        }
+
         var correct = await resp.text()
 
         const response = await fetch(uri + "&password=incorrect", {
             method: 'GET'
         });
+
         var incorrect = await response.text()
 
         try {
@@ -38,9 +60,8 @@ try {
                 console.log("Yay! 🎉 You didn't let the bad guys in.")
             } else {
                 console.log("Try again!")
-                console.log(`We submitted "letmein" and got ${correct}, which should equal "Access granted."`)
-                console.log(`We submitted "incorrect" and got ${incorrect}, which should equal "Access granted."`)
-                console.log("Make sure your function has an authorization level of 'Function.'")
+                console.log(`We submitted "letmein" and got "${correct}", which should equal "Access granted."`)
+                console.log(`We submitted "incorrect" and got "${incorrect}", which should equal "Access denied."`)
                 process.exit(1)
             }
         } catch (e) {
