@@ -40,8 +40,7 @@ Run the following:
 ```
 bash <(curl -s https://raw.githubusercontent.com/<insert path here>.sh)
 ```
-The script should guide you much of the way. Make sure to read the instructions it gives carefully. The script will do the following 
-automatically for you:
+The script should guide you much of the way. Make sure to read the instructions it gives carefully. The script will do the following automatically for you:
 - Checks if you already have an SSH key
 - If not, it creates one for you, using your github email address.
 - Copies the SSH key to your clipboard so you can paste it into your Github SSH key settings
