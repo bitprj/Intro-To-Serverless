@@ -17,20 +17,25 @@
 <details>
 <summary>Step by step instructions to setup your computer</summary>
  
-First, download or update to the newest version of MacOS or Windows. 
+First, download or update to the newest version of MacOS or Windows.
+If you are using Windows, it highly recommended that you use WSL. [Here's](https://docs.microsoft.com/en-us/windows/wsl/install-win10) how.  
+Next, install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). If you are on Windows, you can install Git on Windows and WSL. [Here's](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-git) how. 
 Next, ensure that you have a [Github](https://github.com/) account and make note of the email address that you used to sign up for the account.   
 Then, download [Slack](https://slack.com/) if you haven't already. 
 Then, download [VS Code](https://code.visualstudio.com/download) for your operating system. 
-Next, enable Azure Account and Azure Functions extensions on VS Code. 
+If you are on Windows, [here's](https://code.visualstudio.com/docs/remote/wsl#:~:text=From%20the%20WSL%20terminal%201%20Open%20a%20WSL,3%20Type%20code%20.%20...%20More%20items...%20) how to use VS Code with WSL
+Next, enable Azure Account and Azure Functions extensions in VS Code. See below: 
 
 ![Azure](https://user-images.githubusercontent.com/57218090/124665871-dff5d480-de72-11eb-86f0-35c3acf07db4.PNG)
 
-Next, install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 Finally, you are ready for the setup script. Follow the steps listed below:
 
-Open Terminal: Run sudo chown -R $(whoami) /usr/local/var/homebrew
+Open MAC or WSL Terminal: Run 
+```
+sudo chown -R $(whoami) /usr/local/var/homebrew
+```
 
-Open Terminal and run the following:
+Run the following:
 
 ```
 bash <(curl -s https://raw.githubusercontent.com/<insert path here>.sh)
