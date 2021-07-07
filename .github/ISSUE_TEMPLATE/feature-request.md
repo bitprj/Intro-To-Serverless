@@ -1,6 +1,6 @@
 ---
 name: ⭐️ Feature or Content Request
-about: Suggest new features or content to the curriculum or bot tests
+about: Suggest new features to bot tests or new content to the curriculum.
 title: '[Feature]'
 labels: 'triage, new-content, low-priority'
 
