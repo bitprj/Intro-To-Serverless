@@ -20,7 +20,7 @@
  
 1. Download or update to the newest version of MacOS or Windows.
 > 🚩 If you are using Windows, it highly recommended that you use WSL. [Here's](https://docs.microsoft.com/en-us/windows/wsl/install-win10) how.  
-2. Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). If you are on Windows, you can install Git on Windows and WSL. [Here's](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-git) how. 
+2. Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). If you are on Windows, you can install Git on Windows and it should come with WSL (Ubuntu). [Here's](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-git) how. 
 3. Ensure that you have a [Github](https://github.com/) account and make note of the email address that you used to sign up for the account.   
 4. Download [VS Code](https://code.visualstudio.com/download) for your operating system. 
 > 🚩 If you are on Windows, [here's](https://code.visualstudio.com/docs/remote/wsl#:~:text=From%20the%20WSL%20terminal%201%20Open%20a%20WSL,3%20Type%20code%20.%20...%20More%20items...%20) how to use VS Code with WSL
