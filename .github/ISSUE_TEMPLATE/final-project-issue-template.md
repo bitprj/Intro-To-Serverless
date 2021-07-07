@@ -1,5 +1,5 @@
 ---
-name: Final Project Issue Template
+name: [FOR STUDENTS] Final Project Issue Template
 about: Use this template to create new tasks for your final project
 title: "[Task Name]"
 labels: ''
