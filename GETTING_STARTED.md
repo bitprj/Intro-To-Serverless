@@ -15,37 +15,35 @@
 ### :computer: Computer Setup
 
 <details>
-<summary>Step by step instructions to setup your computer</summary>
+<summary>Step by step instructions to setup your computer ▶️</summary>
+<br>
  
-First, download or update to the newest version of MacOS or Windows.
-If you are using Windows, it highly recommended that you use WSL. [Here's](https://docs.microsoft.com/en-us/windows/wsl/install-win10) how.  
-Next, install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). If you are on Windows, you can install Git on Windows and WSL. [Here's](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-git) how. 
-Next, ensure that you have a [Github](https://github.com/) account and make note of the email address that you used to sign up for the account.   
-Then, download [Slack](https://slack.com/) if you haven't already. 
-Then, download [VS Code](https://code.visualstudio.com/download) for your operating system. 
-If you are on Windows, [here's](https://code.visualstudio.com/docs/remote/wsl#:~:text=From%20the%20WSL%20terminal%201%20Open%20a%20WSL,3%20Type%20code%20.%20...%20More%20items...%20) how to use VS Code with WSL
-Next, enable Azure Account and Azure Functions extensions in VS Code. See below: 
+1. Download or update to the newest version of MacOS or Windows.
+> 🚩 If you are using Windows, it highly recommended that you use WSL. [Here's](https://docs.microsoft.com/en-us/windows/wsl/install-win10) how.  
+2. Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). If you are on Windows, you can install Git on Windows and WSL. [Here's](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-git) how. 
+3. Ensure that you have a [Github](https://github.com/) account and make note of the email address that you used to sign up for the account.   
+4. Download [VS Code](https://code.visualstudio.com/download) for your operating system. 
+> 🚩 If you are on Windows, [here's](https://code.visualstudio.com/docs/remote/wsl#:~:text=From%20the%20WSL%20terminal%201%20Open%20a%20WSL,3%20Type%20code%20.%20...%20More%20items...%20) how to use VS Code with WSL
+5. Enable Azure Account and Azure Functions extensions in VS Code. See below: 
 
 ![Azure](https://user-images.githubusercontent.com/57218090/124665871-dff5d480-de72-11eb-86f0-35c3acf07db4.PNG)
 
 Finally, you are ready for the setup script. Follow the steps listed below:
 
-Open MAC or WSL Terminal: Run 
+### Open MAC or WSL Terminal: 
+Run: 
 ```
 sudo chown -R $(whoami) /usr/local/var/homebrew
 ```
-
-Run the following:
-
 ```
 bash <(curl -s https://raw.githubusercontent.com/<insert path here>.sh)
 ```
-The script should guide you much of the way. Make sure to read the instructions it gives carefully. The script will do the following automatically for you:
+_The script should guide you much of the way._ Make sure to read the instructions it gives carefully. The script **will do the following automatically for you:**
 - Checks if you already have an SSH key
 - If not, it creates one for you, using your github email address.
 - Copies the SSH key to your clipboard so you can paste it into your Github SSH key settings
 - Installs Homebrew
-- ets up the folder structure and .bash_profile commands necessary to ensure nvm works correctly
+- Sets up the folder structure and .bash_profile commands necessary to ensure nvm works correctly
 - Uses nvm to install a version of Node which is compatible with Azure
 - Sets up git command tab completion and modifies your terminal prompt to show your current git branch if you're inside a git repository.
 - Closes the Terminal program to ensure that all changes are applied.
@@ -64,10 +62,12 @@ There are insecure directories:
 /usr/local/share/zsh/site-functions
 /usr/local/share/zsh
 ```
-if so:
-* run sudo chown -R yourusername /usr/local/share/zsh/site-functions
-* run sudo chown -R yourusername /usr/local/share/zsh
-* run compaudit and you should see the error message(s) cleared
+If this happens, run these commands and you should see the error message(s) cleared
+```
+sudo chown -R yourusername /usr/local/share/zsh/site-functions
+sudo chown -R yourusername /usr/local/share/zsh
+compaudit
+```
 
 </details>
 <hr>
