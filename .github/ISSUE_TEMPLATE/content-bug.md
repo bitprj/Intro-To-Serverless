@@ -1,6 +1,6 @@
 ---
 name: "🐛 Content Bug Report"
-about: Report a bug in our instructions, whether it be needing to adding or modifying content
+about: Report a bug in our instructions, whether it be needing to adding or modifying content.
 title: '[Content Bug]'
 labels: 'triage, bug'
 
