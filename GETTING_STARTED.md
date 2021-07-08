@@ -31,6 +31,7 @@
 6. Enable Azure Account and Azure Functions extensions in VS Code. See below: 
 
 ![Azure](https://user-images.githubusercontent.com/57218090/124665871-dff5d480-de72-11eb-86f0-35c3acf07db4.PNG)
+<br>
 7. Install homebrew if you're on Mac. You can find the instructions [here](https://brew.sh/)
 
 Finally, you are ready for the setup script. Follow the steps listed below:
