@@ -55,7 +55,7 @@ The script should guide you much of the way._ Make sure to read the instructions
 - Sets up git command tab completion and modifies your terminal prompt to show your current git branch if you're inside a git repository.
 - Closes the Terminal program to ensure that all changes are applied.
 
-When everything completes successfully, close and re-open Terminal. You will see the following insecure directories error message:
+When everything completes successfully, close and re-open Terminal. Depending on your operating system, you may see the following insecure directories error message:
 ```
 zsh compinit: insecure directories, run compaudit for list.
 Ignore insecure directories and continue [y] or abort compinit [n]? yzsh compinit: insecure directories, run compaudit for list.
@@ -69,7 +69,7 @@ There are insecure directories:
 /usr/local/share/zsh/site-functions
 /usr/local/share/zsh
 ```
-If this happens, run these commands and you should see the error message(s) cleared
+If this happens on Mac, run these commands and you should see the error message(s) cleared
 ```
 sudo chown -R yourusername /usr/local/share/zsh/site-functions
 sudo chown -R yourusername /usr/local/share/zsh
