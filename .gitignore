@@ -92,3 +92,6 @@ bin
 obj
 appsettings.json
 local.settings.json
+
+# local history vscode extension
+.history/
