@@ -278,11 +278,11 @@ fi
 source ~/.zshrc
 source ~/.bash_profile
 
-# Install the latest stable version of node.js
+# Install node.js v14.16.0
 echo -e "${lightblue}${sweat_smile} You're enjoying watching me do all the work, aren't you?"
-echo -e "Now I'm going to use NVM to install the latest stable version of Node.js${clear}"
+echo -e "Now I'm going to use NVM to install Node.js v14.16.0 which works with Azure${clear}"
 read -p "${green}Hit return to start the install (return)${clear}"
-echo -e "${lightblue}Installing the latest stable version of Node.js...${clear}"
+echo -e "${lightblue}Installing Node.js node. v14.16.0...${clear}"
 nvm install v14.16.0 
 
 # Set up the git config to have the right authors for commits
