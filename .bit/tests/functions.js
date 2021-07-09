@@ -1,14 +1,12 @@
 const fs = require('fs') //get the methods in the fs package
 
-const getStatus = (resp) => {
+const getStatus = (resp, uri) => {
     if(resp.status == 404){
-        console.error(`Your function could not be found at "${uri}" check function url secret 🔍`);
-        process.exit(1)
+        console.log(`Your function could not be found at "${uri}" check function url secret 🔍`);
     }
 
     if(resp.status == 500){
-        console.error("Your function has an error and could not be run 🐛");
-        process.exit(1)
+        console.log("Your function has an error and could not be run 🐛");
     }
 }
 

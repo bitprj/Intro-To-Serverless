@@ -11,14 +11,7 @@ functions.checkSecret(uri, "EMOTIONAL_ENDPOINT")
 // if you wanna add more files, just put a comma after the filename (array)
 const commit_file = ['emotionalgifs/index.js']
 
-for(var i = 0; i < commit_file.length; i++) {
-    var a = commit_file[i];
-    fs.access(commit_file[i], err => {
-        if (err) {
-          throw new Error("You did not commit '" + a + "'")
-        }
-    })
-}
+functions.checkCommit(commit_file)
 
 (async () => {
     fs.readFile(`${__dirname}/testimage.jpg`, async function(err, content) {
@@ -37,7 +30,9 @@ for(var i = 0; i < commit_file.length; i++) {
             });
             var result = await resp.text()
             let test = JSON.stringify(result)
-    
+            
+            functions.getStatus(resp, uri)
+
             if (test.length < 3) {
                 console.log("No response... Try again!")
                 process.exit(1)

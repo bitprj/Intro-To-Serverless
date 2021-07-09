@@ -2,10 +2,6 @@ let uri = undefined
 const fetch = require('node-fetch');
 const functions = require('./functions.js')
 
-const fs = require('fs') //get the methods in the fs package
-
-let endpoint = undefined
-
 uri = process.env.HACKERVOICE_ENDPOINT;
 
 functions.checkSecret(uri, "HACKERVOICE_ENDPOINT")
@@ -13,16 +9,9 @@ functions.checkSecret(uri, "HACKERVOICE_ENDPOINT")
 //if you wanna add more files, just put a comma after the filename (array)
 
 const commit_file = ['hackervoice/index.js']
+functions.checkCommit(commit_file)
 
-for(var i = 0; i < commit_file.length; i++) {
-    var a = commit_file[i];
-    fs.access(commit_file[i], err => {
-        if (err) {
-            throw new Error("You did not commit '" + a + "'")
-        }
-    })
-}
-
+uri = functions.queryString(uri)
 
 test1 = "fifiiscool";
 uri1 = uri + "&password=" + test1;
@@ -37,6 +26,8 @@ try {
         });
         var data = await resp.text()
         let test = JSON.stringify(data)
+
+        functions.getStatus(resp, uri)
 
         if (data == test1) {     
             console.log("Yay! 🎉 We got: " + JSON.stringify(data) + ", which matches our input.")

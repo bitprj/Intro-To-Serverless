@@ -4,18 +4,10 @@ uri = process.env.TWOCATZ_ENDPOINT
 
 functions.checkSecret(uri, "TWOCATZ_ENDPOINT")
 
-const fs = require('fs') //get the methods in the fs package
 //if you wanna add more files, just put a comma after the filename (array)
 const commit_file = ['twocatz/index.js']
 
-for(var i = 0; i < commit_file.length; i++) {
-    var a = commit_file[i];
-    fs.access(commit_file[i], err => {
-        if (err) {
-          throw new Error("You did not commit '" + a + "'")
-        }
-    })
-}
+functions.checkCommit(commit_file)
 
 try {
   (async () => {
@@ -25,6 +17,8 @@ try {
       var data = await resp.json()
       let test = JSON.stringify(data)
 
+      functions.getStatus(resp, uri)
+      
       if (test.length < 3) {
           console.log("No response... Try again!")
           process.exit(1)

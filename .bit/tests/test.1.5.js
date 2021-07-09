@@ -1,19 +1,8 @@
 let uri = undefined
 const fetch = require('node-fetch');
 const functions = require('./functions.js')
-const fs = require('fs') //get the methods in the fs package
 
 //if you wanna add more files, just put a comma after the filename (array)
-const commit_file = ['hackervoice/index.js']
-
-for(var i = 0; i < commit_file.length; i++) {
-    var a = commit_file[i];
-    fs.access(commit_file[i], err => {
-        if (err) {
-            throw new Error("You did not commit '" + a + "'")
-        }
-    })
-}
 
 uri = process.env.HACKERVOICE_ENDPOINT
 
@@ -21,10 +10,7 @@ functions.checkSecret(uri, "HACKERVOICE_ENDPOINT")
 
 //If we have no query string then add one
 //this allows us to append without error
-if(uri.indexOf("?") === -1)
-{
-    uri = uri + "?x=1"
-}
+uri = functions.queryString(uri)
 
 try {
     (async () => {
@@ -35,15 +21,7 @@ try {
             method: 'GET'
         });
 
-        if(resp.status == 404){
-            console.error(`Your function could not be found at "${uriWithQuery}" check function url secret 🔍`);
-            process.exit(1)
-        }
-
-        if(resp.status == 500){
-            console.error("Your function has an error and could not be run 🐛");
-            process.exit(1)
-        }
+        functions.getStatus(resp, uri)
 
         var correct = await resp.text()
 

@@ -28,6 +28,8 @@ functions.checkSecret(containerName, "containerName")
             });
             var result1 = await resp1.text()
             let test1 = JSON.stringify(result1)
+
+            functions.getStatus(resp1, uri)
     
             var download = `${blob_url}/${containerName}/test.jpeg`;
         
@@ -37,6 +39,7 @@ functions.checkSecret(containerName, "containerName")
             let data = await resp;
             if (data.statusText == "The specified blob does not exist.") {
                 console.log("Hmm... We couldn't find our image. Try again?")
+                console.log(`We tried using ${download} to find the image, but did not receive a response.`)
                 process.exit(1)
             } else {
                 console.log("Yay! 🎉 We got our picture!")

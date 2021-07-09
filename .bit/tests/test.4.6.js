@@ -3,6 +3,7 @@ const fetch = require('node-fetch');
 const functions = require('./functions.js')
 
 uri = process.env.TWOCATZ_ENDPOINT
+uri = functions.queryString(uri)
 
 try {
     (async () => {
@@ -11,6 +12,8 @@ try {
         });
         var data = await resp.json()
         let test = JSON.stringify(data)
+
+        functions.getStatus(resp, uri)
 
         if (test.length < 3) {
             console.log("No response... Try again!")

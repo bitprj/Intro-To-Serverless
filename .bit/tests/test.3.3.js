@@ -28,6 +28,8 @@ functions.checkSecret(uri, "BUNNIMAGE_ENDPOINT")
             });
             var result1 = await resp1.text()
             let test1 = JSON.stringify(result1)
+
+            functions.getStatus(resp1, uri)
     
             var download = `${blob_url}/${containerName}/bunnimagetestrun1000.jpeg`;
         

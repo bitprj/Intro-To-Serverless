@@ -13,6 +13,8 @@ functions.checkSecret(uri, "DEEPSECRETS_ENDPOINT")
     });
     var result1 = await resp1.text()
 
+    functions.getStatus(resp1, uri)
+
     const resp = await fetch(uri, {
         method: 'POST',
         body: "Body=testmessage3"      

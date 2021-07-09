@@ -13,7 +13,9 @@ try {
             });
             var data = await resp.json()
             let test = JSON.stringify(data)
-    
+            
+            functions.getStatus(resp, uri)
+
             if (test.length < 3) {
                 console.log("No response... Try again!")
                 process.exit(1)
