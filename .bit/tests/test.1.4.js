@@ -8,9 +8,7 @@ let endpoint = undefined
 
 uri = process.env.HACKERVOICE_ENDPOINT;
 
-if (uri[0] != "h") {
-   throw new Error("You have not added your function url as a secret!");
-}
+functions.checkSecret(uri, "HACKERVOICE_ENDPOINT")
 
 //if you wanna add more files, just put a comma after the filename (array)
 

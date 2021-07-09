@@ -1,11 +1,10 @@
 let uri = undefined
 const fetch = require('node-fetch');
+const functions = require('./functions.js')
 
 uri = process.env.DEEPSECRETS_ENDPOINT
 
-if (uri[0] == null) {
-    throw new Error("You have not added your function url as a secret!");
-}
+functions.checkSecret(uri, "DEEPSECRETS_ENDPOINT")
 
 (async () => {
     const resp = await fetch(uri, {

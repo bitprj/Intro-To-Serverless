@@ -1,7 +1,9 @@
 let uri = undefined
 const fetch = require('node-fetch');
+const functions = require('./functions.js')
 
 uri = process.env.TWOCATZ_ENDPOINT
+functions.checkSecret(uri, "TWOCATZ_ENDPOINT")
 
 try {
     (async () => {

@@ -1,8 +1,8 @@
 const fetch = require('node-fetch');
+const functions = require('./functions.js')
 uri = process.env.TWOCATZ_ENDPOINT
-if (uri[0] != "h") {
-   throw new Error("You have not added your function url as a secret!");
-}
+
+functions.checkSecret(uri, "TWOCATZ_ENDPOINT")
 
 const fs = require('fs') //get the methods in the fs package
 //if you wanna add more files, just put a comma after the filename (array)

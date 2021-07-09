@@ -2,13 +2,11 @@ let uri = undefined
 const fetch = require('node-fetch');
 const fs = require('fs');
 const FormData = require('form-data');
+const functions = require('./functions.js')
 
 uri = process.env.EMOTIONAL_ENDPOINT
 
-if (uri[0] != "h") {
-   throw new Error("You have not added your function url as a secret!");
-}
-
+functions.checkSecret(uri, "EMOTIONAL_ENDPOINT")
 
 // if you wanna add more files, just put a comma after the filename (array)
 const commit_file = ['emotionalgifs/index.js']

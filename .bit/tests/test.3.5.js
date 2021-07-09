@@ -3,15 +3,14 @@ let uri2 = undefined
 const fetch = require('node-fetch');
 const fs = require('fs');
 const FormData = require('form-data');
+const functions = require('./functions.js')
 
 uri1 = process.env.BUNNIMAGE_ENDPOINT
 uri2 = process.env.BUNNIMAGE_ENDPOINT2
 const blob_url = process.env.blob_url
 const containerName = process.env.container_name
 
-if (uri1[0] == null || uri2[1] == null) {
-    throw new Error("You have not added your function url as a secret!");
-}
+functions.checkSecret(uri2, "BUNNIMAGE_ENDPOINT2")
 
 (async () => {
     fs.readFile(`${__dirname}/testimage.jpg`, async function(err, content) {

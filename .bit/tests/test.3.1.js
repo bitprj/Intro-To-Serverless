@@ -2,10 +2,10 @@ const connectionString = process.env.storage_account_connection_string;
 const containerName = process.env.container_name;
 const { BlobServiceClient } = require("@azure/storage-blob");
 const fs = require("fs")
+const functions = require('./functions.js')
 
-if (connectionString[0] == null || containerName[0] == null) {
-    throw new Error("You have not added your container name or connection string as a secret!");
-}
+functions.checkSecret(connectionString, "connectionString")
+functions.checkSecret(containerName, "containerName")
 
 (async () => {
     fs.readFile(`${__dirname}/testimage.jpg`, async function(err, content) {

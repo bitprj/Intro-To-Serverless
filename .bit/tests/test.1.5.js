@@ -1,6 +1,6 @@
 let uri = undefined
 const fetch = require('node-fetch');
-
+const functions = require('./functions.js')
 const fs = require('fs') //get the methods in the fs package
 
 //if you wanna add more files, just put a comma after the filename (array)
@@ -17,9 +17,7 @@ for(var i = 0; i < commit_file.length; i++) {
 
 uri = process.env.HACKERVOICE_ENDPOINT
 
-if (uri[0] != "h") {
-   throw new Error("You have not added your function url as a secret!");
-}
+functions.checkSecret(uri, "HACKERVOICE_ENDPOINT")
 
 //If we have no query string then add one
 //this allows us to append without error
