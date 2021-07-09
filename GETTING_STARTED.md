@@ -80,6 +80,19 @@ compaudit
 </details>
 <hr>
 
+### ⚙️ Installing VScode Extensions
+
+<details>
+<summary>Step by step instructions to install the Vscode extensions ▶️ </summary>
+The features that Visual Studio Code includes out-of-the-box are just the start. VS Code extensions let you add languages, debuggers, and tools to your installation to support your development workflow. Take a look at these [instructions](https://code.visualstudio.com/docs/editor/extension-marketplace) on how to install Vscode extensions. The extensions we will need are:
+ 
+- [Azure Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint). 
+ 
+ > Watch this [video](https://www.youtube.com/watch?v=5IGVeq2DdsA) on how to use ESLint with Vscode.
+</details>
+<hr>
+
 ### :robot: Installing the CounselorBot
 
 <details>
