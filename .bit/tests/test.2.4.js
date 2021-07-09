@@ -25,7 +25,7 @@ functions.checkSecret(uri, "EMOTIONAL_ENDPOINT")
             });
             var result = await resp.text()
             let test = JSON.stringify(result)
-            
+
             functions.getStatus(resp, uri)
     
             if (test.length < 3) {
@@ -35,6 +35,7 @@ functions.checkSecret(uri, "EMOTIONAL_ENDPOINT")
                 console.log("Yay! 🎉 You're right, we're super happy (that was the main emotion in our test picture)")
             } else {
                 console.log("Try again! We didn't get the correct main emotion back.")
+                console.log(`We got ${result} instead.`)
                 process.exit(1)
             }
         } catch (e) {

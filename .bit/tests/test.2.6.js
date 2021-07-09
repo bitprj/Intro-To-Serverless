@@ -23,6 +23,7 @@ functions.checkSecret(uri, "SONGREC_ENDPOINT")
         console.log("Yay! 🎉 Thanks for the image link!")
     } else {
         console.log("Try again! We didn't get the image link back.")
+        console.log(`We got "${result}" instead.`)
         process.exit(1)
     }
 })().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })

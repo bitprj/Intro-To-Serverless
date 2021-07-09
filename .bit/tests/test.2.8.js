@@ -22,7 +22,7 @@ functions.checkSecret(uri, "SONGREC_ENDPOINT")
     } else if ( result == "We guessed you're part of this generation: GenY! Happy listening! https://open.spotify.com/track/1Je1IMUlBXcx1Fz0WE7oPT?si=a04bbdf6ec4948b9") {
         console.log("Yay! 🎉 You're right, you guessed the generation correctly AND returned the right song!")
     } else {
-        console.log("Try again! We didn't get the correct generation/age back or the song.")
+        console.log(`Try again! We received "${result}" instead of the correct response, "We guessed you're part of this generation: GenY! Happy listening! https://open.spotify.com/track/1Je1IMUlBXcx1Fz0WE7oPT?si=a04bbdf6ec4948b9".`)
         process.exit(1)
     }
 })().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })

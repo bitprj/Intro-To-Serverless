@@ -45,8 +45,7 @@ functions.checkSecret(uri2, "BUNNIMAGE_ENDPOINT2")
                 console.log("Yay! 🎉 We got our picture!")
             } else {
                 console.log("Hmmm... Maybe take another look at that download function.")
-                console.log(message.downloadUri)
-                console.log(`${blob_url}/${containerName}/bunnimagetestrun1001.jpeg`)
+                console.log("Check to make sure you don't have extra characters in your secrets, and test your function yourself as well.")
                 process.exit(1)
             }
         } catch (e) {
