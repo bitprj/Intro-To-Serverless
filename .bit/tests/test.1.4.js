@@ -1,5 +1,6 @@
 let uri = undefined
 const fetch = require('node-fetch');
+const functions = require('./functions.js')
 
 const fs = require('fs') //get the methods in the fs package
 
