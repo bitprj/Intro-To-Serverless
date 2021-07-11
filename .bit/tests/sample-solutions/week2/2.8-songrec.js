@@ -1,4 +1,4 @@
-const querystring = require('querystring');
+const querystring = require('qs');
 var fetch = require("node-fetch");
 
 async function analyzeImage(img){
