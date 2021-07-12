@@ -44,7 +44,7 @@ sudo chown -R $(whoami) /usr/local/var/homebrew
 
 ### Run the following command in your terminal (WSL terminal if you're on windows)
 ```
-bash <(curl -s https://raw.githubusercontent.com/<insert path here>.sh)
+bash <(curl -s https://raw.githubusercontent.com/bitprj/Intro-To-Serverless/fbec8b26e9b51152d389442d2d34dabc42d5923a/setup.sh)
 ```
 The script should guide you much of the way._ Make sure to read the instructions it gives carefully. The script **will do the following automatically for you:**
 - Checks if you already have an SSH key
