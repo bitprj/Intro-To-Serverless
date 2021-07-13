@@ -26,26 +26,28 @@ Our curriculum consists of several parts:
 > Response files are located in the `.bit/responses` folder named `{week number}.{step number}-{step title}.md` Example: `.bit/responses/1.1-Week 1 Step 1.md`.
 - Use the [step template file](.bit/step-template.md).
 - Give the lesson a short but descriptive title. (Make it fun!)
-- Create a task list for the student
-- Use the Test Your Work section if applicable
-- Place long explanations and/or more detailed step by step instructions in dropdowns
+- Create a **task list** for the student
+- Use the `Test Your Work` section if applicable
+- Place long explanations and/or more detailed step by step instructions in **dropdowns**
 - Split the step into clearly marked and digestable sections
-- Try your best to make the curriculum not "copy-paste." Ask students to read documentation instead of directly providing them the answer!
+- Try your best to make the curriculum **not "copy-paste."** Ask students to read documentation instead of directly providing them the answer!
 - Use code samples and plenty of :exclamation:, :question: and :bulb: call-outs. (Examples are in the template)
-- Use gender-neutral language and avoid words such as 'easy' or 'simple'.
 
 Yes, this is a long list, but you don't have to do everything by yourself, we can work together on this! 💪
 
 #### :two: Formatting and Configuring the Step
 > To ensure your response files will be able to work with the bot and automations, please adhere to the formats specified below and in the template!
 
-File name format: `[Week#].[Step#]-[Step title].md`
+**File name format:** `[Week#].[Step#]-[Step title].md`
 
-> Example: `1.1-Week Step 1.md`
+Example: `1.1-Week Step 1.md`
 
-File path: `/.bit/responses/[all response files]`
+**File path:** `/.bit/responses/[all response files]`
+
+**Starting the response file:**
 
 * Response files should begin with a **markdown table**
+* There should be a subtitle that includes a progress bar, the week and step number, and an estimated completion time.
 * The **title** should be formatted with **h2**.
 * The Task list title must be formatted in **h3**.
 
@@ -59,6 +61,7 @@ week: 1
 step: 1
 name: Week 1 Step 1
 ---
+Week 1 Step 1 ⬤◯◯◯◯◯ | 🕐 Estimated completion: 10-30 minutes
 
 ## Week 1 Step 1
 
@@ -74,7 +77,7 @@ name: Week 1 Step 1
   * Ex: If you place `index.js` in the table for the first step of Week 1, a student will need to merge a pull request containing the file `index.js` in order for the bot to comment the second step of Week 1.
 
 `checks`
-  * Place scripts that should be in the `.bit/tests` folder in the `scripts` field.
+  * Place a script that should be in the `.bit/tests` folder in the `scripts` field. Ex: `scripts: test.1.2.js`
   * Leave the `files` field as `n/a`
   * These scripts will run every time a student makes a commit.
   * If the script passes, then the student will be able to move on.
@@ -86,3 +89,5 @@ name: Week 1 Step 1
 `feedback`
   * Leave both the `files` and `scripts` field as `n/a`
   * The bot will comment the new step once a student comments something AND save their comment as a custom event for instructors to refer back to
+
+#### :three: Writing Tests
