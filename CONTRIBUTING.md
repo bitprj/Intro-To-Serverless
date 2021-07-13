@@ -38,11 +38,11 @@ Yes, this is a long list, but you don't have to do everything by yourself, we ca
 #### :two: Formatting and Configuring the Step
 > To ensure your response files will be able to work with the bot and automations, please adhere to the formats specified below and in the template!
 
-**File name format:** `[Week#].[Step#]-[Step title].md`
+**File name format:** `{week #}.{step #}-{step name}.md`
 
 Example: `1.1-Week Step 1.md`
 
-**File path:** `/.bit/responses/[all response files]`
+**File path:** `.bit/responses/{week #}.{step #}-{step name}.md`
 
 **Starting the response file:**
 
@@ -90,4 +90,21 @@ Week 1 Step 1 ⬤◯◯◯◯◯ | 🕐 Estimated completion: 10-30 minutes
   * Leave both the `files` and `scripts` field as `n/a`
   * The bot will comment the new step once a student comments something AND save their comment as a custom event for instructors to refer back to
 
-#### :three: Writing Tests
+#### :three: Solution Code
+> If you add additional projects or steps to the curriculum, please place your solution code in this directory. If you modify step instructions that impact the code, please update the solution code as well.
+
+**File name format:** `{week #}.{step #}-{project name}.js`
+
+Example: `1.1-github.js`
+
+**File path:** [`.bit/tests/sample-solutions/week{week#}/{week #}.{step #}-{project name}.js`](.bit/tests/sample-solutions)
+
+:bulb: **Note:** For frontend curriculum (HTML/JS), associated files will be placed in folders.
+#### :four: Writing Tests
+> To ensure your response files will be able to work with the bot and automations, please adhere to the formats specified below and in the template!
+
+**File name format:** `test.{week #}.{step #}.js`
+
+Example: `1.1-Week Step 1.md`
+
+**File path:** [`.bit/tests/test.{week #}.{step #}.js`](.bit/tests)
