@@ -22,21 +22,52 @@ If you are contributing to create a lesson, please take into account the length 
 
 Our curriculum consists of several parts:
 
-- A lesson markdown file named `{topic}-{language}.md` in the `lessons/{language}/{topic}` folder. Example: _lessons/dotnetcore31/http/http-dotnet.md_.
-  - Use the [lesson template file](lessons/_lesson_template.md).
-  - Give the lesson a short but descriptive title.
-  - Describe the goal of the lesson.
-  - Break up the lesson in small exercises.
-  - Each exercise has a clear sub goal and steps how to achieve that sub goal.
-  - Use code samples and plenty of 📝, 🔎 and ❔ call-outs.
-  - Use gender-neutral language and avoid words such as 'easy' or 'simple'.
-- A new Functions project to the `src/{language}/AzureFunctions.{Topic}` folder with a completely working and running example. E.g. _src/dotnetcore31/AzureFunctions.Http_.
-- [CodeTour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour) files (one per exercise) to the `tours./{language}/{topic}/.tours` folder.
-- A [VSCode workspace](https://code.visualstudio.com/docs/editor/multi-root-workspaces#_workspace-file-schema) file in the `workspace/{language}` folder for the lesson. The workspace should contain these folders:
-  - `lessons/{language}/prerequisites`
-  - `lessons/{language}/{topic}`
-  - `src/{language}/AzureFunctions.{Topic}`
-  - `test/{language}/{topic}` (REST Client files, if applicable)
-  - `.tours/{language}/{topic}` (CodeTour files, if applicable)
+#### :one: Response Files
+> Response files are located in the `.bit/responses` folder named `{week number}.{step number}-{step title}.md` Example: `.bit/responses/1.1-Week 1 Step 1.md`.
+- Use the [step template file](.bit/step-template.md).
+- Give the lesson a short but descriptive title. (Make it fun!)
+- Create a task list for the student
+- Use the Test Your Work section if applicable
+- Place long explanations and/or more detailed step by step instructions in dropdowns
+- Split the step into clearly marked and digestable sections
+- Try your best to make the curriculum not "copy-paste." Ask students to read documentation instead of directly providing them the answer!
+- Use code samples and plenty of :exclamation:, :question: and :bulb: call-outs. (Examples are in the template)
+- Use gender-neutral language and avoid words such as 'easy' or 'simple'.
 
 Yes, this is a long list, but you don't have to do everything by yourself, we can work together on this! 💪
+
+### Formatting Requirements
+
+In order for the template to successfully sync and parse content, the files **must** be named and formatted like so:
+
+#### :file_folder: [Response files](https://github.com/bitprj/cabin/tree/main/.bit/responses)
+
+File name format: `[Week#].[Step#]-[Step title].md`
+
+> Example: `1.1-Week Step 1.md`
+
+File path: `/.bit/responses/[all response files]`
+
+File content:
+* Response files should begin with a **markdown table**
+  * Place files here that the student should **include in the pull request** to move on to the next step.
+  * Ex: If you place `index.js` in the table for the first step of Week 1, a student will need to merge a pull request containing the file `index.js` in order for the bot to comment the second step of Week 2.
+  * Also, place the **week, step number, and step name** in this table.
+* The **title** should be formatted with **h2**.
+* The **description** of the step should be placed directly under formatted in **h3**.
+
+> Example:
+```md
+---
+files: index.html, js/config.js, README.md
+week: 1
+step: 1
+name: Week 1 Step 1
+---
+
+## Week 1 Step 1
+
+### This is the description
+```
+
+**Note: Pay special attention to how the files are spaced and where slashes are put.**
