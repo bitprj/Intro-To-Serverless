@@ -36,11 +36,8 @@ Our curriculum consists of several parts:
 
 Yes, this is a long list, but you don't have to do everything by yourself, we can work together on this! 💪
 
-### Formatting Requirements
-
-In order for the template to successfully sync and parse content, the files **must** be named and formatted like so:
-
-#### :file_folder: [Response files](https://github.com/bitprj/cabin/tree/main/.bit/responses)
+#### :two: Formatting and Configuring the Step
+> To ensure your response files will be able to work with the bot and automations, please adhere to the formats specified below and in the template!
 
 File name format: `[Week#].[Step#]-[Step title].md`
 
@@ -48,18 +45,16 @@ File name format: `[Week#].[Step#]-[Step title].md`
 
 File path: `/.bit/responses/[all response files]`
 
-File content:
 * Response files should begin with a **markdown table**
-  * Place files here that the student should **include in the pull request** to move on to the next step.
-  * Ex: If you place `index.js` in the table for the first step of Week 1, a student will need to merge a pull request containing the file `index.js` in order for the bot to comment the second step of Week 2.
-  * Also, place the **week, step number, and step name** in this table.
 * The **title** should be formatted with **h2**.
-* The **description** of the step should be placed directly under formatted in **h3**.
+* The Task list title must be formatted in **h3**.
 
-> Example:
-```md
+Example:
+```
 ---
 files: index.html, js/config.js, README.md
+stepType: PRmerge
+scripts: n/a
 week: 1
 step: 1
 name: Week 1 Step 1
@@ -67,7 +62,27 @@ name: Week 1 Step 1
 
 ## Week 1 Step 1
 
-### This is the description
+### ✅ Tasks:
 ```
 
-**Note: Pay special attention to how the files are spaced and where slashes are put.**
+**Step Types**
+> :exclamation: You can only have one stepType per step. Place the name of the step type in the `stepType` field. Ex: `stepType: checks`
+
+`PRmerge`
+  * Place files paths in the `files` field on the table that the student should **include in the pull request** to move on to the next step.
+  * Leave the `scripts` field as `n/a`
+  * Ex: If you place `index.js` in the table for the first step of Week 1, a student will need to merge a pull request containing the file `index.js` in order for the bot to comment the second step of Week 1.
+
+`checks`
+  * Place scripts that should be in the `.bit/tests` folder in the `scripts` field.
+  * Leave the `files` field as `n/a`
+  * These scripts will run every time a student makes a commit.
+  * If the script passes, then the student will be able to move on.
+
+`IssueComment`
+  * Leave both the `files` and `scripts` field as `n/a`
+  * The bot will comment the new step once a student comments something on the issue or pull request.
+
+`feedback`
+  * Leave both the `files` and `scripts` field as `n/a`
+  * The bot will comment the new step once a student comments something AND save their comment as a custom event for instructors to refer back to
