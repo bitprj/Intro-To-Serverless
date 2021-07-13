@@ -108,3 +108,10 @@ Example: `1.1-github.js`
 Example: `1.1-Week Step 1.md`
 
 **File path:** [`.bit/tests/test.{week #}.{step #}.js`](.bit/tests)
+
+To make the test throw an error, please use these statements:
+
+```js
+console.error("Log the error for the student. Give a specific message that will be helpful!")
+process.exit(1)
+```
