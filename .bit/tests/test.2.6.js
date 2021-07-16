@@ -17,13 +17,13 @@ functions.checkSecret(uri, "SONGREC_ENDPOINT")
     functions.validateResponseStatus(resp, uri)
 
     if (test.length < 3) {
-        console.log("No response... Try again!")
+        console.error("No response... Try again!")
         process.exit(1)
     } else if ( result == "https://api.twilio.com/2010-04-01/Accounts/ACee62fed677d382600b621e6f24de9bb0/Messages/MM0fe83458b74a1f626eb0da4685ab28b5/Media/ME29644fd97901859108bc35e210b588f6") {
-        console.log("Yay! 🎉 Thanks for the image link!")
+        console.info("Yay! 🎉 Thanks for the image link!")
     } else {
-        console.log("Try again! We didn't get the image link back.")
-        console.log(`We got "${result}" instead.`)
+        console.error("Try again! We didn't get the image link back.")
+        console.error(`We got "${result}" instead.`)
         process.exit(1)
     }
 })().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })

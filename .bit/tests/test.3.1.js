@@ -12,8 +12,8 @@ functions.checkSecret(containerName, "containerName")
         try {
             const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);
             // Create a unique name for the container            
-            console.log('\nCreating container...');
-            console.log('\t', containerName);
+            console.error('\nCreating container...');
+            console.error('\t', containerName);
             
             // Get a reference to a container
             const containerClient = blobServiceClient.getContainerClient(containerName);
@@ -24,13 +24,13 @@ functions.checkSecret(containerName, "containerName")
             // Get a block blob client
             const blockBlobClient = containerClient.getBlockBlobClient(blobName);
             
-            console.log('\nUploading to Azure storage as blob:\n\t', blobName);
+            console.error('\nUploading to Azure storage as blob:\n\t', blobName);
             
             // Upload data to the blob
             const uploadBlobResponse = await blockBlobClient.upload(content, content.length);
         } catch (e) {
-            console.log("Sorry! You haven't created your blob storage account yet. Check your secrets!")
-            console.log(`Here's the error: ${e}`)
+            console.error("Sorry! You haven't created your blob storage account yet. Check your secrets!")
+            console.error(`Here's the error: ${e}`)
             process.exit(1)
         }
     })

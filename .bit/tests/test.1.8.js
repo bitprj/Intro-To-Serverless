@@ -20,18 +20,18 @@ try {
             let test = JSON.stringify(data)
             functions.validateResponseStatus(resp, uri)
         } catch (e) {
-            console.log("We're having trouble making a request to your endpoint. Try again?")
+            console.error("We're having trouble making a request to your endpoint. Try again?")
             process.exit(1)
         }
 
         if (data.length < 3) {
-            console.log("No response... Try again!")
+            console.error("No response... Try again!")
             process.exit(1)
         } else if (data == answer) {
-            console.log("Yay!🎉 Success - thanks for helping us on this top secret mission. Welcome to the team.")
-            console.log(`We got ${answer} with the input of ilovebitproject`)
+            console.info("Yay!🎉 Success - thanks for helping us on this top secret mission. Welcome to the team.")
+            console.info(`We got ${answer} with the input of ilovebitproject`)
         } else {
-            console.log(`YIKES! We got ${data} instead of ${answer}. Try again!`)
+            console.error(`YIKES! We got ${data} instead of ${answer}. Try again!`)
             process.exit(1)
         }
 
@@ -43,20 +43,21 @@ try {
             let test2 = JSON.stringify(data2)
             functions.validateResponseStatus(resp2, uri)
         } catch (e) {
-            console.log("We're having trouble making a request to your endpoint when plaintext is blank. Try again?")
+            console.error("We're having trouble making a request to your endpoint when plaintext is blank. Try again?")
             process.exit(1)
         }
 
         if (data2.length < 3) {
-            console.log("No response... Try again!")
+            console.error("No response... Try again!")
             process.exit(1)
         } else if (data2 == "Please enter some text to convert!") {
-            console.log("Also, great work catching a blank plaintext parameter value.")
+            console.info("Also, great work catching a blank plaintext parameter value.")
         } else {
-            console.log(`Sorry! You forgot to check for a blank plaintext. If we sending nothing in "plaintext," we should get "Please enter some text to convert!" Instead, we got ${data2}`)
+            console.error(`Sorry! You forgot to check for a blank plaintext. If we sending nothing in "plaintext," we should get "Please enter some text to convert!" Instead, we got ${data2}`)
             process.exit(1)
         }
     })().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })
 } catch (e) {
-    throw new Error("You have not added your function url as a secret!");
+    console.error("You have not added your function url as a secret!");
+    process.exit(1)
 }

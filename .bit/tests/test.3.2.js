@@ -38,14 +38,14 @@ functions.checkSecret(containerName, "containerName")
             })
             let data = await resp;
             if (data.statusText == "The specified blob does not exist.") {
-                console.log("Hmm... We couldn't find our image. Try again?")
-                console.log(`We tried using ${download} to find the image, but did not receive a response.`)
+                console.error("Hmm... We couldn't find our image. Try again?")
+                console.error(`We tried using ${download} to find the image, but did not receive a response.`)
                 process.exit(1)
             } else {
-                console.log("Yay! 🎉 We got our picture!")
+                console.info("Yay! 🎉 We got our picture!")
             }
         } catch (e) {
-            console.log("Try again! We got this error when trying to make a request: " + e)
+            console.error("Try again! We got this error when trying to make a request: " + e)
             process.exit(1)
         }
   })

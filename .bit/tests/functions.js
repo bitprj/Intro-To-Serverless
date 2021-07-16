@@ -21,7 +21,8 @@ const queryString = (uri) => {
 
 const checkSecret = (secret, secretName) => {
     if (!secret || !secret.trim()) {
-        throw new Error(`You forgot to add your "${secretName}" secret!`);
+        console.error(`You forgot to add your "${secretName}" secret!`);
+        process.exit(1)
     }
 }
 
@@ -30,7 +31,8 @@ const checkCommit = (commit_file) => {
         var a = commit_file[i];
         fs.access(commit_file[i], err => {
             if (err) {
-                throw new Error("You did not commit '" + a + "'")
+                console.error("You did not commit '" + a + "'")
+                process.exit(1)
             }
         })
     }

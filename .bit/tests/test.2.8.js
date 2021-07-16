@@ -17,12 +17,12 @@ functions.checkSecret(uri, "SONGREC_ENDPOINT")
     functions.validateResponseStatus(resp, uri)
 
     if (test.length < 3) {
-        console.log("No response... Try again!")
+        console.error("No response... Try again!")
         process.exit(1)
     } else if ( result == "We guessed you're part of this generation: GenY! Happy listening! https://open.spotify.com/track/1Je1IMUlBXcx1Fz0WE7oPT?si=a04bbdf6ec4948b9") {
-        console.log("Yay! 🎉 You're right, you guessed the generation correctly AND returned the right song!")
+        console.info("Yay! 🎉 You're right, you guessed the generation correctly AND returned the right song!")
     } else {
-        console.log(`Try again! We received "${result}" instead of the correct response, "We guessed you're part of this generation: GenY! Happy listening! https://open.spotify.com/track/1Je1IMUlBXcx1Fz0WE7oPT?si=a04bbdf6ec4948b9".`)
+        console.error(`Try again! We received "${result}" instead of the correct response, "We guessed you're part of this generation: GenY! Happy listening! https://open.spotify.com/track/1Je1IMUlBXcx1Fz0WE7oPT?si=a04bbdf6ec4948b9".`)
         process.exit(1)
     }
 })().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })

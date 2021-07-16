@@ -42,14 +42,14 @@ functions.checkSecret(uri2, "BUNNIMAGE_ENDPOINT2")
             functions.validateResponseStatus(testresp, uri)
     
             if (JSON.stringify(message.downloadUri).includes(`${blob_url}/${containerName}/bunnimagetestrun1001.jpeg`)) {
-                console.log("Yay! 🎉 We got our picture!")
+                console.info("Yay! 🎉 We got our picture!")
             } else {
-                console.log("Hmmm... Maybe take another look at that download function.")
-                console.log("Check to make sure you don't have extra characters in your secrets, and test your function yourself as well.")
+                console.error("Hmmm... Maybe take another look at that download function.")
+                console.error("Check to make sure you don't have extra characters in your secrets, and test your function yourself as well.")
                 process.exit(1)
             }
         } catch (e) {
-            console.log("Try again! We got this error when trying to make a request: " + e)
+            console.error("Try again! We got this error when trying to make a request: " + e)
             process.exit(1)
         }
   })

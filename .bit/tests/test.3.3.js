@@ -38,10 +38,10 @@ functions.checkSecret(uri, "BUNNIMAGE_ENDPOINT")
             })
             let data = await resp;
             if (data.statusText == "The specified blob does not exist.") {
-                console.log("Hmm... We couldn't find our image with the correct name. Try again?")
+                console.error("Hmm... We couldn't find our image with the correct name. Try again?")
                 process.exit(1)
             } else {
-                console.log("Yay! 🎉 We got our picture!")
+                console.info("Yay! 🎉 We got our picture!")
             }
     
             const testresp = await fetch(uri, {
@@ -51,13 +51,13 @@ functions.checkSecret(uri, "BUNNIMAGE_ENDPOINT")
             var message = await testresp.text()
     
             if (message == "Sorry! No image attached.") {
-                console.log("Nice job catching those exceptions.")
+                console.error("Nice job catching those exceptions.")
             } else {
-                console.log("You missed something. What if someone didn't submit an image in the body?")
+                console.error("You missed something. What if someone didn't submit an image in the body?")
                 process.exit(1)
             }
         } catch (e) {
-            console.log("Try again! We got this error when trying to make a request: " + e)
+            console.error("Try again! We got this error when trying to make a request: " + e)
             process.exit(1)
         }
   })
