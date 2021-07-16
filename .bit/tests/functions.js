@@ -1,12 +1,14 @@
 const fs = require('fs') //get the methods in the fs package
 
-const getStatus = (resp, uri) => {
+const validateResponseStatus = (resp, uri) => {
     if(resp.status == 404){
-        console.log(`Your function could not be found at "${uri}" check function url secret 🔍`);
+        console.error(`Your function could not be found at "${uri}" check function url secret 🔍`);
+        process.exit(1)
     }
 
     if(resp.status == 500){
-        console.log("Your function has an error and could not be run 🐛");
+        console.error("Your function has an error and could not be run 🐛");
+        process.exit(1)
     }
 }
 
@@ -18,8 +20,8 @@ const queryString = (uri) => {
 }
 
 const checkSecret = (secret, secretName) => {
-    if (secret[0] == undefined) {
-        throw new Error(`You forgot to add your ${secretName} secret!`);
+    if (!secret || !secret.trim()) {
+        throw new Error(`You forgot to add your "${secretName}" secret!`);
     }
 }
 
@@ -35,6 +37,6 @@ const checkCommit = (commit_file) => {
 }
 
 exports.queryString = queryString
-exports.getStatus = getStatus
+exports.validateResponseStatus = validateResponseStatus
 exports.checkSecret = checkSecret
 exports.checkCommit = checkCommit

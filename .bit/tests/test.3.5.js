@@ -39,7 +39,7 @@ functions.checkSecret(uri2, "BUNNIMAGE_ENDPOINT2")
             });
             var message = await testresp.json()
 
-            functions.getStatus(testresp, uri)
+            functions.validateResponseStatus(testresp, uri)
     
             if (JSON.stringify(message.downloadUri).includes(`${blob_url}/${containerName}/bunnimagetestrun1001.jpeg`)) {
                 console.log("Yay! 🎉 We got our picture!")

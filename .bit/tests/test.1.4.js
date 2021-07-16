@@ -27,7 +27,7 @@ try {
         var data = await resp.text()
         let test = JSON.stringify(data)
 
-        functions.getStatus(resp, uri)
+        functions.validateResponseStatus(resp, uri)
 
         if (data == test1) {     
             console.log("Yay! 🎉 We got: " + JSON.stringify(data) + ", which matches our input.")

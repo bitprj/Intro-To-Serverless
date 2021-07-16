@@ -18,7 +18,7 @@ try {
             });
             var data = await resp.text()
             let test = JSON.stringify(data)
-            functions.getStatus(resp, uri)
+            functions.validateResponseStatus(resp, uri)
         } catch (e) {
             console.log("We're having trouble making a request to your endpoint. Try again?")
             process.exit(1)
@@ -41,7 +41,7 @@ try {
             });
             var data2 = await resp2.text()
             let test2 = JSON.stringify(data2)
-            functions.getStatus(resp2, uri)
+            functions.validateResponseStatus(resp2, uri)
         } catch (e) {
             console.log("We're having trouble making a request to your endpoint when plaintext is blank. Try again?")
             process.exit(1)

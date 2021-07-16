@@ -14,7 +14,7 @@ functions.checkSecret(uri, "SONGREC_ENDPOINT")
     var result = await resp.text()
     let test = JSON.stringify(result)
 
-    functions.getStatus(resp, uri)
+    functions.validateResponseStatus(resp, uri)
 
     if (test.length < 3) {
         console.log("No response... Try again!")

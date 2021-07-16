@@ -29,7 +29,7 @@ functions.checkSecret(containerName, "containerName")
             var result1 = await resp1.text()
             let test1 = JSON.stringify(result1)
 
-            functions.getStatus(resp1, uri)
+            functions.validateResponseStatus(resp1, uri)
     
             var download = `${blob_url}/${containerName}/test.jpeg`;
         

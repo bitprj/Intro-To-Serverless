@@ -21,7 +21,7 @@ try {
             method: 'GET'
         });
 
-        functions.getStatus(resp, uri)
+        functions.validateResponseStatus(resp, uri)
 
         var correct = await resp.text()
 
