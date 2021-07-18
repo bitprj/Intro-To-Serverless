@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "ms-azuretools.vscode-azurefunctions",
+    "streetsidesoftware.code-spell-checker",
+    "davidanson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
+    "DavidAnson.vscode-markdownlint",
+    "robertohuertasm.vscode-icons",
+    "coenraads.bracket-pair-colorizer",
+    "formulahendry.auto-rename-tag",
+    "eamodio.gitlens",
+    "live server",
+    "material icon theme",
+    "ms-vscode.azure-account",
+    "ms-azuretools.vscode-azurestorage",
+    "hookyqr.beautify",
+    "esbenp.prettier-vscode",
+    "christian-kohler.path-intellisense"
+  ]
+}
