@@ -1,7 +1,7 @@
-function getImage() {
-    if (document.getElementById("name").value != '') {
-        $('#output').text(document.getElementById("name").value + "❤️")
-        console.log("high")
-    }
-  }
-  
+const bunnForm = document.getElementById('bunnForm');
+bunnForm.addEventListener('submit, function (event) {
+   event.preventDefault();
+   const username = document.getElementById("username").value
+   const output = document.getElementById("output")
+   output.textContent = username + "❤"
+});
