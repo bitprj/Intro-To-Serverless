@@ -1,6 +1,6 @@
 const bunnForm = document.getElementById('bunnForm');
 
-bunnForm.addEventListener('submit, function (event) {
+bunnForm.addEventListener('submit', function (event) {
    event.preventDefault();
    const payload = new FormData(bunnForm);
 
