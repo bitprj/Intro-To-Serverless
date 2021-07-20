@@ -29,6 +29,11 @@ bunnForm.addEventListener('submit', function (event) {
   }
 });
   
+let downloadButton = document.getElementById("button2");
+
+downloadButton.addEventListener("click", () => downloadImage())
+
+
   async function downloadImage() {
     var username = document.getElementById("downloadusername").value;
     console.log("Attempting to get your pdf...");
