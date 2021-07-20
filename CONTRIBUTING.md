@@ -8,7 +8,9 @@ We're currently focussed on creating beginner content for Azure Functions writte
 
 🔎 Please check if there's an [existing issue](https://github.com/bitprj/Intro-To-Serverless/issues) which matches your idea. Perhaps you can collaborate with someone on this.
 
-💡 If you have  new idea, please [create a new __Content Request__ issue](https://github.com/bitprj/Intro-To-Serverless/issues/new) first where you can describe the topic.
+💡 If you have new idea, please [create a new __Content Request__ issue](https://github.com/bitprj/Intro-To-Serverless/issues/new) first where you can describe the topic.
+
+🤝 Want to help out? Get started on an issue [labeled as `Good First Issue`](https://github.com/bitprj/Intro-To-Serverless/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) and open a pull request to contribute.
 
 ## Step 2 - Process
 
@@ -18,7 +20,7 @@ Once you've created the lesson, submit a PR with the lesson, source code, and re
 
 ### Curriculum Structure
 
-If you are contributing to create a lesson, please take into account the length and the tone of the existing lessons. We want to have a uniform experience across all of our lessons.
+> Students advance through the curriculum by committing code, merging pull requests, and commenting on issues. These commits are checked by the CounselorBot and students advance next section where further instructions are provided by the bot through comments. For this to work, the curriculum stages need to be created in a specific format.
 
 Our curriculum consists of several parts:
 
