@@ -35,7 +35,7 @@ functions.checkSecret(uri, "EMOTIONAL_ENDPOINT")
                 console.info("Yay! 🎉 We got the happiness as: " + result.result[0].faceAttributes.emotion.happiness)
             } else {
                 console.error("Try again! We didn't get an emotion back. Make sure you are returning in JSON format.")
-                console.error(`We got ${result}, and could not get happiness from the JSON object.`)
+                console.error(`We got "${result}", and could not get happiness from the JSON object.`)
                 process.exit(1)
             }
         } catch (e) {

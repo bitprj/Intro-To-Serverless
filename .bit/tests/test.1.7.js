@@ -42,13 +42,13 @@ try {
 
         try {
             if (array.includes(name1) && array.includes(name2)) {
-                console.info(`Yay! 🎉 Thanks for getting our names right. We got: ${name1} and ${name2}`)
+                console.info(`Yay! 🎉 Thanks for getting our names right. We got: "${name1}" and "${name2}"`)
             } else {
-                console.error(`Sorry, your names, ${name1} and ${name2}, were not correct.`)
+                console.error(`Sorry, your names, "${name1}" and "${name2}", were not correct.`)
                 process.exit(1)
             }
         } catch(e) {
-            console.error(`Sorry, your names, ${name1} and ${name2}, were not correct.`)  
+            console.error(`Sorry, your names, "${name1}" and "${name2}", were not correct.`)  
             process.exit(1)
         }
 

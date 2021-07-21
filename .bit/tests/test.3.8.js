@@ -29,7 +29,7 @@ functions.checkSecret(uri, "DEEPSECRETS_ENDPOINT")
         console.info("Yay! 🎉 Thanks for returning a random message!")
     } else {
         console.error("Hey... Make sure it's random!.")
-        console.error(`We got ${result}, which proves it was not random.`)
+        console.error(`We got "${result}", which proves it was not random.`)
         process.exit(1)
     }
 })().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })

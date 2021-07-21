@@ -29,9 +29,9 @@ try {
             process.exit(1)
         } else if (data == answer) {
             console.info("Yay!🎉 Success - thanks for helping us on this top secret mission. Welcome to the team.")
-            console.info(`We got ${answer} with the input of ilovebitproject`)
+            console.info(`We got "${answer}" with the input of ilovebitproject`)
         } else {
-            console.error(`YIKES! We got ${data} instead of ${answer}. Try again!`)
+            console.error(`YIKES! We got "${data}" instead of "${answer}". Try again!`)
             process.exit(1)
         }
 
@@ -53,7 +53,7 @@ try {
         } else if (data2 == "Please enter some text to convert!") {
             console.info("Also, great work catching a blank plaintext parameter value.")
         } else {
-            console.error(`Sorry! You forgot to check for a blank plaintext. If we sending nothing in "plaintext," we should get "Please enter some text to convert!" Instead, we got ${data2}`)
+            console.error(`Sorry! You forgot to check for a blank plaintext. If we sending nothing in "plaintext," we should get "Please enter some text to convert!" Instead, we got "${data2}"`)
             process.exit(1)
         }
     })().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })

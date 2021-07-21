@@ -39,7 +39,7 @@ functions.checkSecret(containerName, "containerName")
             let data = await resp;
             if (data.statusText == "The specified blob does not exist.") {
                 console.error("Hmm... We couldn't find our image. Try again?")
-                console.error(`We tried using ${download} to find the image, but did not receive a response.`)
+                console.error(`We tried using "${download}" to find the image, but did not receive a response.`)
                 process.exit(1)
             } else {
                 console.info("Yay! 🎉 We got our picture!")

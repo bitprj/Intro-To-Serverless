@@ -29,7 +29,7 @@ functions.checkSecret(uri, "DEEPSECRETS_ENDPOINT")
         console.info("Yay! 🎉 Thanks for returning our message from your database!")
     } else {
         console.error("Try again! We didn't get our most recent secret back.")
-        console.error(`We got ${result}, which is incorrect.`)
+        console.error(`We got "${result}", which is incorrect.`)
         process.exit(1)
     }
 })().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })

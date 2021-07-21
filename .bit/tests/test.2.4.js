@@ -35,7 +35,7 @@ functions.checkSecret(uri, "EMOTIONAL_ENDPOINT")
                 console.info("Yay! 🎉 You're right, we're super happy (that was the main emotion in our test picture)")
             } else {
                 console.error("Try again! We didn't get the correct main emotion back.")
-                console.error(`We got ${result} instead.`)
+                console.error(`We got "${result}" instead.`)
                 process.exit(1)
             }
         } catch (e) {
