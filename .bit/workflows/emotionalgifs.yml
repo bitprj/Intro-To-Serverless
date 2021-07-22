@@ -17,6 +17,11 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Install Dependencies
+        run: |
+          npm install minimist
+          npm install node-fetch
+             
       - name: Get Count
         id: vars
         run: echo ::set-output name=count::$(node ./.bit/progressjs/getProgress.js --repo=${{github.event.repository.name}} --owner=${{github.repository_owner}} )
