@@ -67,3 +67,7 @@ Build a frontend with HTML/CSS/JS to interact with your serverless functions!
 > 
 > ### **Week 9** - Final Presentations 
 > Students will prepare a final presentation with a slidedeck on their project as well as write a blog post detailing their project and how they made it from start to finish.
+
+
+## Example final project
+![spotion](https://user-images.githubusercontent.com/62436772/125279355-da204900-e2e1-11eb-920c-73b1de26702d.gif)

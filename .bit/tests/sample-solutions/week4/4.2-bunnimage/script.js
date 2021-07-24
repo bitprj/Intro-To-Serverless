@@ -1,11 +1,14 @@
-function getImage(event) {
-    event.preventDefault()
-    var myform = document.getElementById("myform")
-    var payload = new FormData(myform);
-    console.log(payload)
-    if (document.getElementById("username").value != '') {
-        $('#output').text("Thanks!")
+const bunnForm = document.getElementById('bunnForm');
+
+bunnForm.addEventListener('submit', function (event) {
+   event.preventDefault();
+   const payload = new FormData(bunnForm);
+
+   const username = document.getElementById("username").value
+   const output = document.getElementById("output")
+   if (document.getElementById("username").value != '') {
+        output.textContent = "Thanks!"
     } else {
         alert("No name error.")
     }
-  }
+});
