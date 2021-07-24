@@ -1,11 +1,10 @@
 let uri = undefined
 const fetch = require('node-fetch');
+const functions = require('./functions.js')
 
 uri = process.env.DEEPSECRETS_ENDPOINT
 
-if (uri[0] == null) {
-    throw new Error("You have not added your function url as a secret!");
-}
+functions.checkSecret(uri, "DEEPSECRETS_ENDPOINT")
 
 (async () => {
     const resp = await fetch(uri, {
@@ -15,13 +14,16 @@ if (uri[0] == null) {
     var result = await resp.text()
     let test = JSON.stringify(result)
 
+    functions.validateResponseStatus(resp, uri)
+
     if (test.length < 3) {
-        console.log("No response... Try again!")
+        console.error("No response... Try again!")
         process.exit(1)
     } else if ( result == "Hi") {
-        console.log("Yay! 🎉 Thanks for returning our message!")
+        console.info("Yay! 🎉 Thanks for returning our message!")
     } else {
-        console.log("Try again! We didn't get our message back.")
+        console.error("Try again! We didn't get our message back.")
+        console.error(`We got "${result}" instead of "Hi", which is what we sent you.`)
         process.exit(1)
     }
 })().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })
