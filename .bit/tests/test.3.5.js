@@ -3,15 +3,14 @@ let uri2 = undefined
 const fetch = require('node-fetch');
 const fs = require('fs');
 const FormData = require('form-data');
+const functions = require('./functions.js')
 
 uri1 = process.env.BUNNIMAGE_ENDPOINT
 uri2 = process.env.BUNNIMAGE_ENDPOINT2
 const blob_url = process.env.blob_url
 const containerName = process.env.container_name
 
-if (uri1[0] == null || uri2[1] == null) {
-    throw new Error("You have not added your function url as a secret!");
-}
+functions.checkSecret(uri2, "BUNNIMAGE_ENDPOINT2")
 
 (async () => {
     fs.readFile(`${__dirname}/testimage.jpg`, async function(err, content) {
@@ -39,17 +38,18 @@ if (uri1[0] == null || uri2[1] == null) {
                 }      
             });
             var message = await testresp.json()
+
+            functions.validateResponseStatus(testresp, uri)
     
             if (JSON.stringify(message.downloadUri).includes(`${blob_url}/${containerName}/bunnimagetestrun1001.jpeg`)) {
-                console.log("Yay! 🎉 We got our picture!")
+                console.info("Yay! 🎉 We got our picture!")
             } else {
-                console.log("Hmmm... Maybe take another look at that download function.")
-                console.log(message.downloadUri)
-                console.log(`${blob_url}/${containerName}/bunnimagetestrun1001.jpeg`)
+                console.error("Hmmm... Maybe take another look at that download function.")
+                console.error("Check to make sure you don't have extra characters in your secrets, and test your function yourself as well.")
                 process.exit(1)
             }
         } catch (e) {
-            console.log("Try again! We got this error when trying to make a request: " + e)
+            console.error("Try again! We got this error when trying to make a request: " + e)
             process.exit(1)
         }
   })

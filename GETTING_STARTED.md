@@ -44,7 +44,7 @@ sudo chown -R $(whoami) /usr/local/var/homebrew
 
 ### Run the following command in your terminal (WSL terminal if you're on windows)
 ```
-bash <(curl -s https://raw.githubusercontent.com/<insert path here>.sh)
+bash <(curl -s https://raw.githubusercontent.com/bitprj/Intro-To-Serverless/fbec8b26e9b51152d389442d2d34dabc42d5923a/setup.sh)
 ```
 The script should guide you much of the way._ Make sure to read the instructions it gives carefully. The script **will do the following automatically for you:**
 - Checks if you already have an SSH key
@@ -80,19 +80,19 @@ compaudit
 </details>
 <hr>
 
-### ⚙️ Installing VScode Extensions
+### ⚙️ Installing VS Code Extensions
 
 <details>
 <summary>Step by step instructions to install the Vscode extensions ▶️ </summary>
 The features that Visual Studio Code includes out-of-the-box are just the start. VS Code extensions let you add languages, debuggers, and tools to your installation to support your development workflow. 
  
-Take a look at these [instructions](https://code.visualstudio.com/docs/editor/extension-marketplace) on how to install Vscode extensions. The extensions we will need are:
+Take a look at these [instructions](https://code.visualstudio.com/docs/editor/extension-marketplace) on how to install VS Code extensions. If you already forked the Intro-To-Serverless repo, and opened it in Vs Code, you may have gotten a pop-up  which recommended some extensions. Some of the extensions we will need are:
  
 - [Azure Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint). 
 - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
  
- > Watch this [video](https://www.youtube.com/watch?v=5IGVeq2DdsA) on how to use ESLint with Vscode.
+ > Watch this [video](https://www.youtube.com/watch?v=5IGVeq2DdsA) on how to use ESLint with VS Code.
 </details>
 <hr>
 

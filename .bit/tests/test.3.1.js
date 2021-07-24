@@ -2,18 +2,18 @@ const connectionString = process.env.storage_account_connection_string;
 const containerName = process.env.container_name;
 const { BlobServiceClient } = require("@azure/storage-blob");
 const fs = require("fs")
+const functions = require('./functions.js')
 
-if (connectionString[0] == null || containerName[0] == null) {
-    throw new Error("You have not added your container name or connection string as a secret!");
-}
+functions.checkSecret(connectionString, "connectionString")
+functions.checkSecret(containerName, "containerName")
 
 (async () => {
     fs.readFile(`${__dirname}/testimage.jpg`, async function(err, content) {
         try {
             const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);
             // Create a unique name for the container            
-            console.log('\nCreating container...');
-            console.log('\t', containerName);
+            console.error('\nCreating container...');
+            console.error('\t', containerName);
             
             // Get a reference to a container
             const containerClient = blobServiceClient.getContainerClient(containerName);
@@ -24,13 +24,13 @@ if (connectionString[0] == null || containerName[0] == null) {
             // Get a block blob client
             const blockBlobClient = containerClient.getBlockBlobClient(blobName);
             
-            console.log('\nUploading to Azure storage as blob:\n\t', blobName);
+            console.error('\nUploading to Azure storage as blob:\n\t', blobName);
             
             // Upload data to the blob
             const uploadBlobResponse = await blockBlobClient.upload(content, content.length);
         } catch (e) {
-            console.log("Sorry! You haven't created your blob storage account yet. Check your secrets!")
-            console.log(`Here's the error: ${e}`)
+            console.error("Sorry! You haven't created your blob storage account yet. Check your secrets!")
+            console.error(`Here's the error: ${e}`)
             process.exit(1)
         }
     })

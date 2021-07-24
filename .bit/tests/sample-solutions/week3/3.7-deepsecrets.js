@@ -1,4 +1,4 @@
-const querystring = require('querystring');
+const querystring = require('qs');
 const CosmosClient = require("@azure/cosmos").CosmosClient;
 // npm install @azure/cosmos
 
