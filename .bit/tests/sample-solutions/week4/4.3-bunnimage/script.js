@@ -10,7 +10,6 @@ bunnForm.addEventListener('submit', function (event) {
   
   if (username != '') {
       output.textContent = "Thanks!"
-
       console.log("Posting your image...");
       const resp = await fetch("YOUR_URL", {
           method: 'POST',
