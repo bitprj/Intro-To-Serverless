@@ -1,4 +1,5 @@
 const fs = require('fs') //get the methods in the fs package
+const fetch = require('node-fetch');
 
 const validateResponseStatus = (resp, uri) => {
     if(resp.status == 404){
@@ -38,7 +39,22 @@ const checkCommit = (commit_file) => {
     }
 }
 
+
+const throwError = async (error, user, repo) => {
+    const endpoint = "https://counselorbot.azurewebsites.net/api/hasuraErrorUpdate?code=qL2oUjo1aUIBdfJe3VhEF41qRQBSnShZwPGr3dujRwvtOGa855fLoA==";
+    options = {
+        method: "POST",
+        headers: {
+            user,
+            repo,
+            error
+        }
+    }
+    await fetch(endpoint, options)
+}
+
 exports.queryString = queryString
 exports.validateResponseStatus = validateResponseStatus
 exports.checkSecret = checkSecret
 exports.checkCommit = checkCommit
+exports.throwError = throwError
