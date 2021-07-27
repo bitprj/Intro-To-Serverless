@@ -29,7 +29,7 @@ jobs:
       - name: Step 2
         if: ${{steps.vars.outputs.count == 1 && github.event.head_commit.message != 'Update progress'}}
         run: |
-          node .bit/tests/test.1.2.js
+          node .bit/tests/test.1.2.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
       - name: Check for branch
         if: ${{steps.vars.outputs.count > 2 && github.event.head_commit.message != 'Update progress'}}
         run: |
