@@ -24,5 +24,5 @@ jobs:
           
       - name: Get Count
         id: vars
-        run: echo ::set-output name=count::$(node ./.bit/progressjs/getProgress.js --repo=${{github.event.repository.name}} --owner=${{github.repository_owner}} )
+        run: echo ::set-output name=count::$(node ./.bit/scripts/getProgress.js --repo=${{github.event.repository.name}} --owner=${{github.repository_owner}} )
 
