@@ -7,7 +7,7 @@ async function main() {
     try { hello = require('./../../week1/helloworld.js') }
     catch (e) {
         await functions.throwError("Searching for 'helloworld.js'... file cannot be found", user, repo)
-        console.error("Searching for 'helloworld.js'... file cannot be found");
+        console.log("Searching for 'helloworld.js'... file cannot be found");
         process.exit(1)
     }
 
@@ -16,7 +16,7 @@ async function main() {
 
     if (helloworld != test_output) {
         await functions.throwError(`Got: '${helloworld}', was expecting: '${test_output}'.`, user, repo)
-        console.error(`Got: "${helloworld}", was expecting: "${test_output}".`)
+        console.log(`Got: "${helloworld}", was expecting: "${test_output}".`)
         process.exit(1)
     }
 
