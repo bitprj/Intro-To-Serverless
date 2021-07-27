@@ -41,6 +41,7 @@ const checkCommit = (commit_file) => {
 
 
 const throwError = async (error, user, repo) => {
+    console.log("going to send error")
     const endpoint = "https://counselorbot.azurewebsites.net/api/hasuraErrorUpdate?code=qL2oUjo1aUIBdfJe3VhEF41qRQBSnShZwPGr3dujRwvtOGa855fLoA==";
     options = {
         method: "POST",
@@ -51,6 +52,7 @@ const throwError = async (error, user, repo) => {
         }
     }
     await fetch(endpoint, options)
+    console.log("error has been sent")
 }
 
 exports.queryString = queryString
