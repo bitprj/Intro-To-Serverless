@@ -41,6 +41,8 @@ const checkCommit = (commit_file) => {
 
 
 const throwError = async (error, user, repo) => {
+    console.log('user: ' + user)
+    console.log('repo: ' + repo)
     console.log("going to send error")
     const endpoint = "https://counselorbot.azurewebsites.net/api/hasuraErrorUpdate?code=qL2oUjo1aUIBdfJe3VhEF41qRQBSnShZwPGr3dujRwvtOGa855fLoA==";
     options = {
