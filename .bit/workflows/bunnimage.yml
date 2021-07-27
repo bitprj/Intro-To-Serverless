@@ -17,9 +17,14 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Install Dependencies
+        run: |
+          npm install minimist
+          npm install node-fetch
+          
       - name: Get Count
         id: vars
-        run: echo ::set-output name=count::$(cat ./.bit/.progress)
+        run: echo ::set-output name=count::$(node ./.bit/progressjs/getProgress.js --repo=${{github.event.repository.name}} --owner=${{github.repository_owner}} )
 
       - name: Step 1
         if: ${{steps.vars.outputs.count == 26 && github.event.head_commit.message != 'Update progress'}}
