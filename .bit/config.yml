@@ -19,7 +19,7 @@ steps:
           files: ['blog.md']
           scripts: n/a
         - type: createIssue
-          title: Week 1: Say Hello to VSCode
+          title: 'Week 1: Say Hello to VSCode'
           body: 1.2-Week 1 Step 2.md
         - type: closeIssue
     - title: 'Week 1: Say Hello to VSCode'
