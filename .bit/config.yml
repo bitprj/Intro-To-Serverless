@@ -25,7 +25,7 @@ steps:
       actions:
         - type: respond
           with: hello.md
-          files: ['n/a']
+          files: ['blog.md']
           scripts: n/a
         - type: createIssue
           title: Open up!
