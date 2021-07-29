@@ -19,7 +19,7 @@ steps:
           files: ['blog.md']
           scripts: n/a
         - type: createIssue
-          title: Say "Hello" to VS Code
+          title: Open up!
           body: 1.2-Week 1 Step 2.md
         - type: closeIssue
     - title: 'Week 1: Say Hello to VSCode'
@@ -42,7 +42,7 @@ steps:
           files: ['n/a']
           scripts: n/a
         - type: createIssue
-          title: 'Week 1: Getting Cat Pics with Postman'
+          title: Say "Hello" to VS Code
           body: 1.3-Week 1 Step 3.md
         - type: closeIssue
     - title: 'Week 1: Getting Cat Pics with Postman'
