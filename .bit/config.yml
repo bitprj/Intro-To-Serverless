@@ -42,7 +42,7 @@ steps:
           files: ['n/a']
           scripts: n/a
         - type: createIssue
-          title: Week 1: Getting Cat Pics with Postman
+          title: 'Week 1: Getting Cat Pics with Postman'
           body: 1.3-Week 1 Step 3.md
         - type: closeIssue
     - title: 'Week 1: Getting Cat Pics with Postman'
