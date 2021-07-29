@@ -66,9 +66,22 @@ steps:
       branch: hackervoice
       actions:
         - type: respond
-          with: 1.5-Week 1 Step 5.md
+          with: mergepr.md
           files: ['n/a']
           scripts: test.1.4.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: hello.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 1: Let me in!'
+          body: 1.5-Week 1 Step 5.md
+        - type: closeIssue
     - title: 'Week 1: Let me in!'
       description: 'Tasks:'
       event: workflow_run.completed
