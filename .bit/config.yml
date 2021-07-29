@@ -15,17 +15,8 @@ steps:
       stepType: PRmerge
       actions:
         - type: respond
-          with: mergepr.md
-          files: ['blog.md']
-          scripts: n/a
-    - title: Merge the PR
-      description: 'Tasks:'
-      event: pull_request.closed
-      stepType: PRmerge
-      actions:
-        - type: respond
           with: hello.md
-          files: ['n/a']
+          files: ['blog.md']
           scripts: n/a
         - type: createIssue
           title: Open up!
