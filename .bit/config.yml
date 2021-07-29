@@ -23,16 +23,6 @@ steps:
           body: 1.2-Week 1 Step 2.md
         - type: closeIssue
     - title: 'Week 1: Say Hello to VSCode'
-
-    
-        
-          
-    
-
-        
-    
-    @@ -42,7 +42,7 @@ steps:
-  
       description: 'Task:'
       event: workflow_run.completed
       stepType: checks
