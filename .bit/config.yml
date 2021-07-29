@@ -55,15 +55,6 @@ steps:
           with: mergepr.md
           files: ['n/a']
           scripts: n/a
-    - title: Merge the PR
-      description: 'Tasks:'
-      event: pull_request.closed
-      stepType: PRmerge
-      actions:
-        - type: respond
-          with: hello.md
-          files: ['n/a']
-          scripts: n/a
         - type: createIssue
           title: Open up!
           body: 1.4-Week 1 Step 4.md
