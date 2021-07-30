@@ -1,0 +1,46 @@
+name: Hacker Voice
+on:
+  push:
+    branches:
+      - hackervoice
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Node Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: |
+          npm install minimist
+          npm install node-fetch
+          
+      - name: Get Count
+        id: vars
+        run: echo ::set-output name=count::$(node ./.bit/scripts/getProgress.js --repo=${{github.event.repository.name}} --owner=${{github.repository_owner}} )
+
+      - name: Step 4
+        if: ${{steps.vars.outputs.count == 4 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          HACKERVOICE_ENDPOINT: ${{ secrets.HACKERVOICE_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          node .bit/tests/test.1.4.js
+      - name: Step 5
+        if: ${{steps.vars.outputs.count == 5 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          HACKERVOICE_ENDPOINT: ${{ secrets.HACKERVOICE_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          node .bit/tests/test.1.5.js
+      - name: Check for branch
+        if: ${{steps.vars.outputs.count > 5 && github.event.head_commit.message != 'Update progress'}}
+        run: |
+          node .bit/tests/wrongbranch.js

@@ -1,0 +1,39 @@
+name: Morse
+on:
+  push:
+    branches:
+      - morse
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Node Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: |
+          npm install minimist
+          npm install node-fetch
+          
+      - name: Get Count
+        id: vars
+        run: echo ::set-output name=count::$(node ./.bit/scripts/getProgress.js --repo=${{github.event.repository.name}} --owner=${{github.repository_owner}} )
+
+      - name: Step 8
+        if: ${{steps.vars.outputs.count == 10 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          MORSE_ENDPOINT: ${{ secrets.MORSE_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          node .bit/tests/test.1.8.js
+      - name: Check for branch
+        if: ${{steps.vars.outputs.count > 10 && github.event.head_commit.message != 'Update progress'}}
+        run: |
+          node .bit/tests/wrongbranch.js

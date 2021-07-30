@@ -1,0 +1,53 @@
+name: twoCatz Frontend
+on:
+  push:
+    branches:
+      - twocatz-frontend
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Node Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: |
+          npm install minimist
+          npm install node-fetch
+          
+      - name: Get Count
+        id: vars
+        run: echo ::set-output name=count::$(node ./.bit/scripts/getProgress.js --repo=${{github.event.repository.name}} --owner=${{github.repository_owner}} )
+        
+      - name: Install Cypress
+        run: npm install cypress
+
+      - name: Step 5
+        uses: cypress-io/github-action@v2
+        if: ${{steps.vars.outputs.count == 43 && github.event.head_commit.message != 'Update progress'}}
+        with:
+          spec: cypress/integration/4.5.spec.js
+
+      - name: Step 6
+        if: ${{steps.vars.outputs.count == 44 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          TWOCATZ_ENDPOINT: ${{ secrets.TWOCATZ_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          node .bit/tests/test.4.6.js
+      - name: Step 7
+        uses: cypress-io/github-action@v2
+        if: ${{steps.vars.outputs.count == 45 && github.event.head_commit.message != 'Update progress'}}
+        with:
+          spec: cypress/integration/4.7.spec.js
+      - name: Check for branch
+        if: ${{steps.vars.outputs.count > 45 && github.event.head_commit.message != 'Update progress'}}
+        run: |
+          node .bit/tests/wrongbranch.js

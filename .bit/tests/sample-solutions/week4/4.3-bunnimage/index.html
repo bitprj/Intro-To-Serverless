@@ -13,12 +13,13 @@
   <body>
       <div class="container h-mt-5">
           <div class="c-well">
-              <h1 id="h1">Give your code some love ❤️</h1>
-              <form>
-                  <label class="c-form-label">Code: </label><br>
-                  <input type="text" id="name" class="c-form-input" name="name" /><br>
-                  <input onclick="getImage()" class="c-btn c-btn--primary" value="Submit" type="button" />
-              </form>
+              <h1 id="h1">Bunnimage 🐇</h1>
+                  <form id="bunnForm" enctype="multipart/form-data">
+                    <input class="label" type="file" accept="image/x-png,image/jpeg" name="image"></input>
+                    <input id="username" type="text" class="c-form-input" placeholder="Enter your file's name">
+                    <br></br>
+                    <input class="c-btn c-btn--primary" type="submit" value="Submit Your Picture 📷"></input>
+                </form>
               <br/>
               <div id="output" class="h-mb-4"></div>
               <img id="coffee" src="giphy.gif" />

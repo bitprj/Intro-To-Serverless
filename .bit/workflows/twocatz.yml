@@ -1,0 +1,45 @@
+name: TwoCatz
+on:
+  push:
+    branches:
+      - twocatz
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Node Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: |
+          npm install minimist
+          npm install node-fetch
+          
+      - name: Get Count
+        id: vars
+        run: echo ::set-output name=count::$(node ./.bit/scripts/getProgress.js --repo=${{github.event.repository.name}} --owner=${{github.repository_owner}} )
+      - name: Step 6
+        if: ${{steps.vars.outputs.count == 7 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          TWOCATZ_ENDPOINT: ${{ secrets.TWOCATZ_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          node .bit/tests/test.1.6.js
+      - name: Step 7
+        if: ${{steps.vars.outputs.count == 8 && github.event.head_commit.message != 'Update progress'}}
+        env:
+          TWOCATZ_ENDPOINT: ${{ secrets.TWOCATZ_ENDPOINT }}
+        run: |
+          npm install node-fetch
+          node .bit/tests/test.1.7.js
+      - name: Check for branch
+        if: ${{steps.vars.outputs.count > 8 && github.event.head_commit.message != 'Update progress'}}
+        run: |
+          node .bit/tests/wrongbranch.js
