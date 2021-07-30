@@ -51,10 +51,6 @@ steps:
       stepType: IssueComment
       branch: hello
       actions:
-        - type: respond
-          with: hello.md
-          files: ['n/a']
-          scripts: n/a
         - type: createIssue
           title: Open up!
           body: 1.4-Week 1 Step 4.md
