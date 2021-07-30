@@ -94,11 +94,11 @@ steps:
       stepType: PRmerge
       actions:
         - type: respond
-          with: hackervoice.md
+          with: hello.md
           files: ['n/a']
           scripts: n/a
         - type: createIssue
-          title: One cat, two cats, red cat, blue cat
+          title: 'Week 1: Trying to make node-fetch happen'
           body: 1.6-Week 1 Step 6.md
         - type: closeIssue
     - title: 'Week 1: Trying to make node-fetch happen'
@@ -108,9 +108,22 @@ steps:
       branch: twocatz
       actions:
         - type: respond
-          with: 1.7-Week 1 Step 7.md
+          with: mergepr.md
           files: ['n/a']
           scripts: test.1.6.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: hello.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 1: Let me in!'
+          body: 1.7-Week 1 Step 7.md
+        - type: closeIssue
     - title: 'Week 1: Name your Cat'
       description: 'Task:'
       event: workflow_run.completed
@@ -127,7 +140,7 @@ steps:
       stepType: PRmerge
       actions:
         - type: respond
-          with: twocatz.md
+          with: mergepr.md
           files: ['n/a']
           scripts: n/a
         - type: createIssue
