@@ -58,7 +58,7 @@ steps:
         - type: createIssue
           title: Open up!
           body: 1.4-Week 1 Step 4.md
-        - type: closeIssue
+        # - type: closeIssue
     - title: 'Week 1: Week 1 Step 4'
       description: 'Building our first function ⚡[HackerVoice]'
       event: workflow_run.completed
