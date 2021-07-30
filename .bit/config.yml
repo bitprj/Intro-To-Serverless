@@ -121,7 +121,7 @@ steps:
           files: ['n/a']
           scripts: n/a
         - type: createIssue
-          title: 'Week 1: Let me in!'
+          title: 'Week 1: Name your Cat'
           body: 1.7-Week 1 Step 7.md
         - type: closeIssue
     - title: 'Week 1: Name your Cat'
