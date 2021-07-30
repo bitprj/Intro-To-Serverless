@@ -198,7 +198,7 @@ steps:
         - type: createIssue
           title: 'Week 2: Getting Emotional With Parse-Multipart'
           body: 2.2-Week 2 Step 2.md
-        -type: closeIssue
+        - type: closeIssue
     - title: 'Week 2: Getting Emotional With Parse-Multipart'
       description: 'Task:'
       event: workflow_run.completed
