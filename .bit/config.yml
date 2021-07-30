@@ -187,7 +187,7 @@ steps:
           files: ['n/a']
           scripts: n/a
         - type: createIssue
-          title: Getting Emotional with APIs
+          title: 'Week 2: Getting Emotional With the Face API'
           body: 2.1-Week 2 Step 1.md
         - type: closeIssue
     - title: 'Week 2: Getting Emotional With the Face API'
@@ -195,10 +195,10 @@ steps:
       event: issue_comment.created
       stepType: IssueComment
       actions:
-        - type: respond
-          with: 2.2-Week 2 Step 2.md
-          files: ['n/a']
-          scripts: n/a
+        - type: createIssue
+          title: 'Week 2: Getting Emotional With Parse-Multipart'
+          body: 2.2-Week 2 Step 2.md
+        -type: closeIssue
     - title: 'Week 2: Getting Emotional With Parse-Multipart'
       description: 'Task:'
       event: workflow_run.completed
@@ -206,9 +206,22 @@ steps:
       branch: emotionalgifs
       actions:
         - type: respond
-          with: 2.3-Week 2 Step 3.md
+          with: hello.md
           files: ['n/a']
           scripts: test.2.2.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 2: Getting Emotional With the Face API'
+          body: 2.3-Week 2 Step 3.md
+        - type: closeIssue
     - title: 'Week 2: Getting Emotional With the Face API'
       description: 'Task:'
       event: workflow_run.completed
@@ -216,9 +229,22 @@ steps:
       branch: emotionalgifs
       actions:
         - type: respond
-          with: 2.4-Week 2 Step 4.md
+          with: hello.md
           files: ['n/a']
           scripts: test.2.3.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 2: Getting Emotional Returning the Dominant Emotion'
+          body: 2.4-Week 2 Step 4.md
+        - type: closeIssue
     - title: 'Week 2: Getting Emotional Returning the Dominant Emotion'
       description: 'Task:'
       event: workflow_run.completed
@@ -226,9 +252,22 @@ steps:
       branch: emotionalgifs
       actions:
         - type: respond
-          with: 2.5-Week 2 Step 5.md
+          with: hello.md
           files: ['n/a']
           scripts: test.2.4.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 2: Getting Emotional Calling the Giphy API'
+          body: 2.5-Week 2 Step 5.md
+        - type: closeIssue
     - title: 'Week 2: Getting Emotional Calling the Giphy API'
       description: 'Task:'
       event: workflow_run.completed
@@ -236,7 +275,7 @@ steps:
       branch: emotionalgifs
       actions:
         - type: respond
-          with: mergepr.md
+          with: hello.md
           files: ['n/a']
           scripts: test.2.5.js
     - title: Merge the PR
@@ -245,7 +284,7 @@ steps:
       stepType: PRmerge
       actions:
         - type: respond
-          with: getting-emotional.md
+          with: mergepr.md
           files: ['n/a']
           scripts: n/a
         - type: createIssue
@@ -259,9 +298,22 @@ steps:
       branch: song4u
       actions:
         - type: respond
-          with: 2.7-Week 2 Step 7.md
+          with: hello.md
           files: ['n/a']
           scripts: test.2.6.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 2: How old are you??'
+          body: 2.7-Week 2 Step 7.md
+        - type: closeIssue
     - title: 'Week 2: How old are you??'
       description: 'Task:'
       event: workflow_run.completed
@@ -269,9 +321,22 @@ steps:
       branch: song4u
       actions:
         - type: respond
-          with: 2.8-Week 2 Step 8.md
+          with: hello.md
           files: ['n/a']
           scripts: test.2.7.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 2: How old are you??'
+          body: 2.8-Week 2 Step 8.md
+        - type: closeIssue
     - title: 'Week 2: Ok, Boomer :neutral_face:'
       description: 'Task:'
       event: workflow_run.completed
