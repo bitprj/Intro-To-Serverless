@@ -33,8 +33,8 @@ jobs:
         run: |
           npm install node-fetch
           node .bit/tests/test.1.4.js
-      - name: Step 5
-        if: ${{steps.vars.outputs.count == 5 && github.event.head_commit.message != 'Update progress'}}
+      - name: Step 6
+        if: ${{steps.vars.outputs.count == 6 && github.event.head_commit.message != 'Update progress'}}
         env:
           HACKERVOICE_ENDPOINT: ${{ secrets.HACKERVOICE_ENDPOINT }}
         run: |
