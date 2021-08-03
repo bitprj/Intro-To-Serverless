@@ -470,7 +470,7 @@ steps:
           scripts: n/a
         - type: createIssue
           title: 'Week 3: Download it!'
-          body: 3.5-Week 3 Step 5
+          body: 3.5-Week 3 Step 5.md
         - type: closeIssue
     - title: 'Week 3: Download it!'
       description: 'Task:'
