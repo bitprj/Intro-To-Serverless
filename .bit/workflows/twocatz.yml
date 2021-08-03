@@ -25,15 +25,15 @@ jobs:
       - name: Get Count
         id: vars
         run: echo ::set-output name=count::$(node ./.bit/scripts/getProgress.js --repo=${{github.event.repository.name}} --owner=${{github.repository_owner}} )
-      - name: Step 6
-        if: ${{steps.vars.outputs.count == 7 && github.event.head_commit.message != 'Update progress'}}
+      - name: Step 8
+        if: ${{steps.vars.outputs.count == 8 && github.event.head_commit.message != 'Update progress'}}
         env:
           TWOCATZ_ENDPOINT: ${{ secrets.TWOCATZ_ENDPOINT }}
         run: |
           npm install node-fetch
           node .bit/tests/test.1.6.js
-      - name: Step 7
-        if: ${{steps.vars.outputs.count == 8 && github.event.head_commit.message != 'Update progress'}}
+      - name: Step 10
+        if: ${{steps.vars.outputs.count == 10 && github.event.head_commit.message != 'Update progress'}}
         env:
           TWOCATZ_ENDPOINT: ${{ secrets.TWOCATZ_ENDPOINT }}
         run: |
