@@ -26,7 +26,7 @@ jobs:
         id: vars
         run: echo ::set-output name=count::$(node ./.bit/scripts/getProgress.js --repo=${{github.event.repository.name}} --owner=${{github.repository_owner}} )
 
-      - name: Step 2
+      - name: Step 1
         if: ${{steps.vars.outputs.count == 1 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/test.1.2.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
