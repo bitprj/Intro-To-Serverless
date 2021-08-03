@@ -26,7 +26,7 @@ jobs:
         id: vars
         run: echo ::set-output name=count::$(node ./.bit/scripts/getProgress.js --repo=${{github.event.repository.name}} --owner=${{github.repository_owner}} )
 
-      - name: Step 2
+      - name: Step 17
         if: ${{steps.vars.outputs.count == 17 && github.event.head_commit.message != 'Update progress'}}
         env:
           EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
@@ -35,7 +35,7 @@ jobs:
           npm install form-data
           node .bit/tests/test.2.2.js
 
-      - name: Step 3
+      - name: Step 19
         if: ${{steps.vars.outputs.count == 19 && github.event.head_commit.message != 'Update progress'}}
         env:
           EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
@@ -44,7 +44,7 @@ jobs:
           npm install form-data
           node .bit/tests/test.2.3.js
 
-      - name: Step 4
+      - name: Step 21
         if: ${{steps.vars.outputs.count == 21 && github.event.head_commit.message != 'Update progress'}}
         env:
           EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
@@ -53,7 +53,7 @@ jobs:
           npm install form-data
           node .bit/tests/test.2.4.js
 
-      - name: Step 5
+      - name: Step 23
         if: ${{steps.vars.outputs.count == 23 && github.event.head_commit.message != 'Update progress'}}
         env:
           EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
