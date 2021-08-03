@@ -26,30 +26,30 @@ jobs:
         id: vars
         run: echo ::set-output name=count::$(node ./.bit/scripts/getProgress.js --repo=${{github.event.repository.name}} --owner=${{github.repository_owner}} )
 
-      - name: Step 26
-        if: ${{steps.vars.outputs.count == 26 && github.event.head_commit.message != 'Update progress'}}
+      - name: Step 25
+        if: ${{steps.vars.outputs.count == 25 && github.event.head_commit.message != 'Update progress'}}
         env:
           SONGREC_ENDPOINT: ${{ secrets.SONGREC_ENDPOINT }}
         run: |
           npm install node-fetch
           node .bit/tests/test.2.6.js
 
-      - name: Step 28
-        if: ${{steps.vars.outputs.count == 28 && github.event.head_commit.message != 'Update progress'}}
+      - name: Step 27
+        if: ${{steps.vars.outputs.count == 27 && github.event.head_commit.message != 'Update progress'}}
         env:
           SONGREC_ENDPOINT: ${{ secrets.SONGREC_ENDPOINT }}
         run: |
           npm install node-fetch
           node .bit/tests/test.2.7.js
 
-      - name: Step 30
-        if: ${{steps.vars.outputs.count == 30 && github.event.head_commit.message != 'Update progress'}}
+      - name: Step 29
+        if: ${{steps.vars.outputs.count == 29 && github.event.head_commit.message != 'Update progress'}}
         env:
           SONGREC_ENDPOINT: ${{ secrets.SONGREC_ENDPOINT }}
         run: |
           npm install node-fetch
           node .bit/tests/test.2.8.js
       - name: Check for branch
-        if: ${{steps.vars.outputs.count > 30 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count > 29 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/wrongbranch.js
