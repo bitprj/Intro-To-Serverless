@@ -27,7 +27,7 @@ jobs:
         run: echo ::set-output name=count::$(node ./.bit/scripts/getProgress.js --repo=${{github.event.repository.name}} --owner=${{github.repository_owner}} )
 
       - name: Step 2
-        if: ${{steps.vars.outputs.count == 15 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 17 && github.event.head_commit.message != 'Update progress'}}
         env:
           EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
         run: |
@@ -36,7 +36,7 @@ jobs:
           node .bit/tests/test.2.2.js
 
       - name: Step 3
-        if: ${{steps.vars.outputs.count == 16 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 19 && github.event.head_commit.message != 'Update progress'}}
         env:
           EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
         run: |
@@ -45,7 +45,7 @@ jobs:
           node .bit/tests/test.2.3.js
 
       - name: Step 4
-        if: ${{steps.vars.outputs.count == 17 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 21 && github.event.head_commit.message != 'Update progress'}}
         env:
           EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
         run: |
@@ -54,7 +54,7 @@ jobs:
           node .bit/tests/test.2.4.js
 
       - name: Step 5
-        if: ${{steps.vars.outputs.count == 18 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 23 && github.event.head_commit.message != 'Update progress'}}
         env:
           EMOTIONAL_ENDPOINT: ${{ secrets.EMOTIONAL_ENDPOINT }}
         run: |
@@ -63,6 +63,6 @@ jobs:
           node .bit/tests/test.2.5.js
 
       - name: Check for branch
-        if: ${{steps.vars.outputs.count > 18 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count > 23 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/wrongbranch.js
