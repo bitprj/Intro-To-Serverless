@@ -32,7 +32,7 @@ jobs:
           MORSE_ENDPOINT: ${{ secrets.MORSE_ENDPOINT }}
         run: |
           npm install node-fetch
-          node .bit/tests/test.1.8.js
+          node .bit/tests/test.1.8.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
       - name: Check for branch
         if: ${{steps.vars.outputs.count > 12 && github.event.head_commit.message != 'Update progress'}}
         run: |
