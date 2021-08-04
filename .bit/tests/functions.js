@@ -3,12 +3,12 @@ const fetch = require('node-fetch');
 
 const validateResponseStatus = (resp, uri) => {
     if (resp.status == 404) {
-        throw new Error(`Your function could not be found at '${uri}' check function url secret 🔍`);
+        throw new Error(`Your function could not be found at '${uri}' check function url secret`);
         process.exit(1)
     }
 
     if (resp.status == 500) {
-        throw new Error("Your function has an error and could not be run 🐛");
+        throw new Error("Your function has an error and could not be run ");
         process.exit(1)
     }
 }
