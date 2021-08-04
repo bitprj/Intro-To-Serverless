@@ -1,13 +1,17 @@
+const functions = require('../../.bit/tests/functions.js');
+const user = args['user'];
+const repo = args['repo'];
 
-Cypress.on('fail', (error, runnable) => {
+Cypress.on('fail', async (error, runnable) => {
     console.log("CUSTOM ERROR MESSSASGE")
     console.error("CUSTOM ERROR MESSSASGE")
 
     console.log(error)
     // we now have access to the err instance
     // and the mocha runnable this failed on
+    await functions.throwError(error, user, repo)
 
-    throw new Error("CUSTOME RRRORR") // throw error to have test still fail
+    throw error // throw error to have test still fail
 })
 
 describe('Testing Bunnimage', () => {
