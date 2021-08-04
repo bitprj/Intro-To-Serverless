@@ -22,7 +22,6 @@ jobs:
           npm install minimist
           npm install node-fetch
           npm install minimist
-          npm install cypress
           
       - name: Get Count
         id: vars
