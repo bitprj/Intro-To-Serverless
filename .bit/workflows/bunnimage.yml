@@ -33,7 +33,7 @@ jobs:
           container_name: ${{ secrets.container_name }}
         run: |
           npm install @azure/storage-blob
-          node .bit/tests/test.3.1.js
+          node .bit/tests/test.3.1.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
       - name: Step 35
         if: ${{steps.vars.outputs.count == 35 && github.event.head_commit.message != 'Update progress'}}
         env:
@@ -43,7 +43,7 @@ jobs:
         run: |
           npm install node-fetch
           npm install form-data
-          node .bit/tests/test.3.2.js
+          node .bit/tests/test.3.2.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
       - name: Step 37
         if: ${{steps.vars.outputs.count == 37 && github.event.head_commit.message != 'Update progress'}}
         env:
@@ -53,7 +53,7 @@ jobs:
         run: |
           npm install node-fetch
           npm install form-data
-          node .bit/tests/test.3.3.js
+          node .bit/tests/test.3.3.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
       - name: Step 41
         if: ${{steps.vars.outputs.count == 41 && github.event.head_commit.message != 'Update progress'}}
         env:
@@ -64,7 +64,7 @@ jobs:
         run: |
           npm install node-fetch
           npm install form-data
-          node .bit/tests/test.3.5.js
+          node .bit/tests/test.3.5.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
       - name: Check for branch
         if: ${{steps.vars.outputs.count > 41 && github.event.head_commit.message != 'Update progress'}}
         run: |
