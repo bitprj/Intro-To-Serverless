@@ -32,7 +32,7 @@ jobs:
           SONGREC_ENDPOINT: ${{ secrets.SONGREC_ENDPOINT }}
         run: |
           npm install node-fetch
-          node .bit/tests/test.2.6.js
+          node .bit/tests/test.2.6.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
 
       - name: Step 27
         if: ${{steps.vars.outputs.count == 27 && github.event.head_commit.message != 'Update progress'}}
@@ -40,7 +40,7 @@ jobs:
           SONGREC_ENDPOINT: ${{ secrets.SONGREC_ENDPOINT }}
         run: |
           npm install node-fetch
-          node .bit/tests/test.2.7.js
+          node .bit/tests/test.2.7.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
 
       - name: Step 29
         if: ${{steps.vars.outputs.count == 29 && github.event.head_commit.message != 'Update progress'}}
@@ -48,7 +48,7 @@ jobs:
           SONGREC_ENDPOINT: ${{ secrets.SONGREC_ENDPOINT }}
         run: |
           npm install node-fetch
-          node .bit/tests/test.2.8.js
+          node .bit/tests/test.2.8.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
       - name: Check for branch
         if: ${{steps.vars.outputs.count > 29 && github.event.head_commit.message != 'Update progress'}}
         run: |
