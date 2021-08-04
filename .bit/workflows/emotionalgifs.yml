@@ -33,7 +33,7 @@ jobs:
         run: |
           npm install node-fetch
           npm install form-data
-          node .bit/tests/test.2.2.js
+          node .bit/tests/test.2.2.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
 
       - name: Step 19
         if: ${{steps.vars.outputs.count == 19 && github.event.head_commit.message != 'Update progress'}}
@@ -42,7 +42,7 @@ jobs:
         run: |
           npm install node-fetch
           npm install form-data
-          node .bit/tests/test.2.3.js
+          node .bit/tests/test.2.3.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
 
       - name: Step 21
         if: ${{steps.vars.outputs.count == 21 && github.event.head_commit.message != 'Update progress'}}
@@ -51,7 +51,7 @@ jobs:
         run: |
           npm install node-fetch
           npm install form-data
-          node .bit/tests/test.2.4.js
+          node .bit/tests/test.2.4.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
 
       - name: Step 23
         if: ${{steps.vars.outputs.count == 23 && github.event.head_commit.message != 'Update progress'}}
@@ -60,7 +60,7 @@ jobs:
         run: |
           npm install node-fetch
           npm install form-data
-          node .bit/tests/test.2.5.js
+          node .bit/tests/test.2.5.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
 
       - name: Check for branch
         if: ${{steps.vars.outputs.count > 23 && github.event.head_commit.message != 'Update progress'}}
