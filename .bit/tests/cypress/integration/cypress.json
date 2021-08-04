@@ -1,6 +1,0 @@
-{
-  "fixturesFolder": ".bit/tests/cypress/fixtures",
-  "integrationFolder": ".bit/tests/cypress/integration",
-  "supportFile": false,
-  "pluginsFile": false
-}

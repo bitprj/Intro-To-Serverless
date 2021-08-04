@@ -1,0 +1,5 @@
+{
+  "fixturesFolder": "cypress/fixtures",
+  "supportFile": false,
+  "pluginsFile": false
+}
