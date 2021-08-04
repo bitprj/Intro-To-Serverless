@@ -8,7 +8,7 @@ const repo = args['repo'];
 cypress
     .run({
         // the path is relative to the current working directory
-        spec: './cypress/integration/4.1.spec.js',
+        spec: '.bit/tests/cypress/integration/4.1.spec.js',
     })
     .then((results) => {
         console.log(results)
