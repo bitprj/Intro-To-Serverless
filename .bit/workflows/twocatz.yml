@@ -31,14 +31,14 @@ jobs:
           TWOCATZ_ENDPOINT: ${{ secrets.TWOCATZ_ENDPOINT }}
         run: |
           npm install node-fetch
-          node .bit/tests/test.1.6.js
+          node .bit/tests/test.1.6.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
       - name: Step 10
         if: ${{steps.vars.outputs.count == 10 && github.event.head_commit.message != 'Update progress'}}
         env:
           TWOCATZ_ENDPOINT: ${{ secrets.TWOCATZ_ENDPOINT }}
         run: |
           npm install node-fetch
-          node .bit/tests/test.1.7.js
+          node .bit/tests/test.1.7.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
       - name: Check for branch
         if: ${{steps.vars.outputs.count > 10 && github.event.head_commit.message != 'Update progress'}}
         run: |
