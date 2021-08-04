@@ -31,8 +31,10 @@ jobs:
         run: npm install cypress
         
       - name: Step 51
+        uses: cypress-io/github-action@v2
         if: ${{steps.vars.outputs.count == 51 && github.event.head_commit.message != 'Update progress'}}
-        run: node .bit/tests/test.4.1.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
+        with: 
+          run: cypress/integration/4.1.spec.js 
 
       - name: Step 53
         uses: cypress-io/github-action@v2
