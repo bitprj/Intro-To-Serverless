@@ -7,7 +7,7 @@ Cypress.on('fail', (error, runnable) => {
     // we now have access to the err instance
     // and the mocha runnable this failed on
 
-    throw error // throw error to have test still fail
+    throw new Error("CUSTOME RRRORR") // throw error to have test still fail
 })
 
 describe('Testing Bunnimage', () => {
