@@ -66,6 +66,6 @@ jobs:
           npm install form-data
           node .bit/tests/test.3.5.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
       - name: Check for branch
-        if: ${{steps.vars.outputs.count > 41 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count > 42 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/wrongbranch.js
