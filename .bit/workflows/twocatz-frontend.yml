@@ -31,17 +31,17 @@ jobs:
 
       - name: Step 59
         uses: cypress-io/github-action@v2
-        if: ${{steps.vars.outputs.count == 60 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 59 && github.event.head_commit.message != 'Update progress'}}
         with:
           spec: cypress/integration/4.5.spec.js
 
       - name: Step 61
-        if: ${{steps.vars.outputs.count == 62 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count == 61 && github.event.head_commit.message != 'Update progress'}}
         env:
           TWOCATZ_ENDPOINT: ${{ secrets.TWOCATZ_ENDPOINT }}
         run: |
           npm install node-fetch
-          node .bit/tests/test.4.6.js
+          node .bit/tests/test.4.6.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
       - name: Step 63
         uses: cypress-io/github-action@v2
         if: ${{steps.vars.outputs.count == 63 && github.event.head_commit.message != 'Update progress'}}
