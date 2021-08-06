@@ -10,12 +10,8 @@ cypress
         // the path is relative to the current working directory
         spec: 'cypress/integration/4.1.spec.js',
     })
-    .then((results) => {
-        console.log(results)
+    .then(async (results) => {
+        // console.log(results)
+        let msg = `Total Failed: ${results.totalFailed} Total Passed: ${results.totalPassed}`
+        await functions.throwError(msg, user, repo);
     })
-    .catch(async (err) => {
-        console.error("ERROR: " + err);
-        await functions.throwError(err, user, repo)
-        process.exit(1);
-    });
-
