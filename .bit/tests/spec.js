@@ -16,6 +16,9 @@ cypress
     })
     .then(async (results) => {
         // console.log(results)
-        let msg = `Total Failed: ${results.totalFailed} Total Passed: ${results.totalPassed}`
-        await functions.throwError(msg, user, repo);
+        if (results.totalFailed > 0) {
+            let msg = `Total Failed: ${results.totalFailed} Total Passed: ${results.totalPassed}`
+            await functions.throwError(msg, user, repo);
+        }
+
     })
