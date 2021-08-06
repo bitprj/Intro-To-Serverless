@@ -39,10 +39,10 @@ jobs:
           TWOCATZ_ENDPOINT: ${{ secrets.TWOCATZ_ENDPOINT }}
         run: |
           npm install node-fetch
-          node .bit/tests/test.4.7.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
+          node .bit/tests/test.4.6.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
       - name: Step 63
         if: ${{steps.vars.outputs.count == 63 && github.event.head_commit.message != 'Update progress'}}
-        run: node .bit/tests/spec.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}} --spec=cypress/integration/4.6.spec.js
+        run: node .bit/tests/spec.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}} --spec=cypress/integration/4.7.spec.js
       - name: Check for branch
         if: ${{steps.vars.outputs.count > 63 && github.event.head_commit.message != 'Update progress'}}
         run: |
