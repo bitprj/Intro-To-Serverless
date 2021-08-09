@@ -227,8 +227,8 @@ General Tips
 
 ### :question: Do I have to push a commit to run a check?
 
-Nope! Here's how to manually trigger a check for your code to move on:
-
+<details>
+<summary>Nope! Here's how to manually trigger a check for your code to move on ▶️</summary>
 #### Setting up
 1. Go to `Actions`
 2. Click on the specific workflow run that you want to run again.
@@ -239,9 +239,13 @@ Nope! Here's how to manually trigger a check for your code to move on:
 #### Re-running the check
 Click on `Re-run jobs`. If your code is successful, the check will work and you will be able to move on.
 <img width="1400" alt="Screen Shot 2021-06-06 at 1 15 32 PM" src="https://user-images.githubusercontent.com/69332964/120933780-a2622800-c6c9-11eb-8b66-8fd28e55e56e.png">
+</details>
 <hr>
 
 ### :question: Can I run a check on my own computer?
+
+<details>
+<summary>Running local checks ▶️</summary>
 Yes! You absolutely can. Here is how to configure VScode to allow local checking. This is optional, and is useful if you want to check your code without first commiting for the counselor bot to check. 
 
 1. Go into the `.vscode` folder and click into the `launch.json` file. 
@@ -291,4 +295,5 @@ KEY2=value2
 ```
 5. You are all setup. To run this go to the "Run and Debug" tab on the left panel. At the top, where it says, `Attach to Node Functions`, click the dropdown and select `Run Tests`. Now, you can click the green arrow, and follow the prompted steps to test your function locally!
 
-❗❗ This is not required, as you can always commit your code to the counselor bot to check, but is definitely good to know. 
+‼️ This is not required, as you can always commit your code to the counselor bot to check, but is definitely good to know. 
+</details>
