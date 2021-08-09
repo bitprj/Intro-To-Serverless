@@ -1,3 +1,4 @@
+
 ## :camping: Camp Orientation
 
 *Follow these instructions to get started with your counselor in your new cabin!*
@@ -213,6 +214,12 @@ General Tips
 - [ ] Make sure to save/autosave your code
  
  [Microsoft's Debugging Guide](https://docs.microsoft.com/en-us/visualstudio/debugger/debugging-absolute-beginners?view=vs-2019&tabs=csharp)
+ 
+ ⭐ Ask the CounselorBot for help! Use this syntax when asking the bot:
+ ```
+ [HELP] Exampel help question
+ ```
+ <img width="926" alt="Screen Shot 2021-08-09 at 4 45 42 PM" src="https://user-images.githubusercontent.com/62436772/128772114-b7cac26b-cb7c-474a-bd41-b2c645b99e5d.png">
  
 <br>
 </details>
