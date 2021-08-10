@@ -13,6 +13,16 @@
 | Counselor | Github Bot |
 <hr>
 
+### ⭐ Camp Emojis
+
+| Emoij      | Description |
+| ----------- | ----------- |
+| 💡      | Helpful tips       |
+| ‼️   | Important info        |
+| ❓   | Question you may have        |
+| ⭐   | Features        |
+<hr>
+
 ### :computer: Computer Setup
 
 <details>
@@ -217,7 +227,7 @@ General Tips
  
  ⭐ Ask the CounselorBot for help! Use this syntax when asking the bot:
  ```
- [HELP] Exampel help question
+ [HELP] Example help question
  ```
  <img width="926" alt="Screen Shot 2021-08-09 at 4 45 42 PM" src="https://user-images.githubusercontent.com/62436772/128772114-b7cac26b-cb7c-474a-bd41-b2c645b99e5d.png">
  
