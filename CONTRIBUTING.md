@@ -37,7 +37,17 @@ Our curriculum consists of several parts:
 
 Yes, this is a long list, but you don't have to do everything by yourself, we can work together on this! 💪
 
-#### :two: Formatting and Configuring the Step
+#### :two: The Meaning of Emojis
+Use a lot of emojis! Here is the standard guide for what each emoji should be used for.
+| Emoij      | Description |
+| ----------- | ----------- |
+| 💡      | Helpful tips       |
+| ‼️   | Important info        |
+| ❓   | Question you may have        |
+| ⭐   | Features        |
+
+
+#### :three: Formatting and Configuring the Step
 > To ensure your response files will be able to work with the bot and automations, please adhere to the formats specified below and in the template!
 
 **File name format:** `{week #}.{step #}-{step name}.md`
