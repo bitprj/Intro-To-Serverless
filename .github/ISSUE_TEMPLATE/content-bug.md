@@ -1,8 +1,9 @@
 ---
-name: "🐛 Content Bug Report"
+name: "\U0001F41B Content Bug Report"
 about: Report a bug in our instructions - do we need to add or modify content?
-title: '[Content Bug]'
-labels: 'triage, bug'
+title: "[Content Bug]"
+labels: bug
+assignees: ''
 
 ---
 
