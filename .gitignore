@@ -95,3 +95,6 @@ local.settings.json
 
 # local history vscode extension
 .history/
+
+# DS_Store
+.DS_Store
