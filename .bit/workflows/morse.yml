@@ -24,16 +24,16 @@ jobs:
           
       - name: Get Count
         id: vars
-        run: echo ::set-output name=count::$(node ./.bit/progressjs/getProgress.js --repo=${{github.event.repository.name}} --owner=${{github.repository_owner}} )
+        run: echo ::set-output name=count::$(node ./.bit/scripts/getProgress.js --repo=${{github.event.repository.name}} --owner=${{github.repository_owner}} )
 
-      - name: Step 8
-        if: ${{steps.vars.outputs.count == 10 && github.event.head_commit.message != 'Update progress'}}
+      - name: Step 12
+        if: ${{steps.vars.outputs.count == 12 && github.event.head_commit.message != 'Update progress'}}
         env:
           MORSE_ENDPOINT: ${{ secrets.MORSE_ENDPOINT }}
         run: |
           npm install node-fetch
-          node .bit/tests/test.1.8.js
+          node .bit/tests/test.1.8.js --repo=${{github.event.repository.name}} --user=${{github.repository_owner}}
       - name: Check for branch
-        if: ${{steps.vars.outputs.count > 10 && github.event.head_commit.message != 'Update progress'}}
+        if: ${{steps.vars.outputs.count > 12 && github.event.head_commit.message != 'Update progress'}}
         run: |
           node .bit/tests/wrongbranch.js

@@ -1,21 +1,22 @@
-let uri = undefined
+
+let uri;
 const fetch = require('node-fetch');
-const functions = require('./functions.js')
+const args = require('minimist')(process.argv.slice(2))
+const functions = require('./functions');
+const user = args['user'];
+const repo = args['repo'];
 
-//if you wanna add more files, just put a comma after the filename (array)
+async function main() {
+    try {
+        uri = process.env.HACKERVOICE_ENDPOINT
 
-uri = process.env.HACKERVOICE_ENDPOINT
+        functions.checkSecret(uri, "HACKERVOICE_ENDPOINT")
 
-functions.checkSecret(uri, "HACKERVOICE_ENDPOINT")
+        //If we have no query string then add one
+        //this allows us to append without error
+        uri = functions.queryString(uri)
 
-//If we have no query string then add one
-//this allows us to append without error
-uri = functions.queryString(uri)
-
-try {
-    (async () => {
-
-        const uriWithQuery  = uri + "&password=letmein"
+        const uriWithQuery = uri + "&password=letmein"
 
         const resp = await fetch(uriWithQuery, {
             method: 'GET'
@@ -38,15 +39,20 @@ try {
                 console.error("Try again!")
                 console.error(`We submitted "letmein" and got "${correct}", which should equal "Access granted."`)
                 console.error(`We submitted "incorrect" and got "${incorrect}", which should equal "Access denied."`)
+                await functions.throwError("We got the wrong response, you let the bad guys in!", user, repo)
                 process.exit(1)
             }
         } catch (e) {
             console.error("Are you sure you returned something to us? We didn't get anything. Try again!")
+            await functions.throwError("Are you sure you returned something to us? We didn't get anything. Try again!", user, repo)
             process.exit(1)
         }
 
-    })().catch( e => { console.error("Try again! We got this error when trying to make a request: " + e); process.exit(1) })
-} catch (e) {
-    console.error("You have not added your function url as a secret!");
-    process.exit(1)
+
+    }
+    catch (e) {
+        await functions.throwError(e, user, repo)
+    }
 }
+
+main();

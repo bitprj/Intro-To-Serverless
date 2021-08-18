@@ -15,9 +15,13 @@ steps:
       stepType: PRmerge
       actions:
         - type: respond
-          with: 1.2-Week 1 Step 2.md
+          with: hello.md
           files: ['blog.md']
           scripts: n/a
+        - type: createIssue
+          title: 'Week 1: Say Hello to VSCode'
+          body: 1.2-Week 1 Step 2.md
+        - type: closeIssue
     - title: 'Week 1: Say Hello to VSCode'
       description: 'Task:'
       event: workflow_run.completed
@@ -25,19 +29,9 @@ steps:
       branch: hello
       actions:
         - type: respond
-          with: 1.3-Week 1 Step 3.md
-          files: ['n/a']
-          scripts: test.1.2.js
-    - title: 'Week 1: Getting Cat Pics with Postman'
-      description: 'Task:'
-      event: issue_comment.created
-      stepType: IssueComment
-      branch: hello
-      actions:
-        - type: respond
           with: mergepr.md
           files: ['n/a']
-          scripts: n/a
+          scripts: test.1.2.js
     - title: Merge the PR
       description: 'Tasks:'
       event: pull_request.closed
@@ -47,6 +41,16 @@ steps:
           with: hello.md
           files: ['n/a']
           scripts: n/a
+        - type: createIssue
+          title: 'Week 1: Getting Cat Pics with Postman'
+          body: 1.3-Week 1 Step 3.md
+        - type: closeIssue
+    - title: 'Week 1: Getting Cat Pics with Postman'
+      description: 'Task:'
+      event: issue_comment.created
+      stepType: IssueComment
+      branch: hello
+      actions:
         - type: createIssue
           title: Open up!
           body: 1.4-Week 1 Step 4.md
@@ -58,9 +62,22 @@ steps:
       branch: hackervoice
       actions:
         - type: respond
-          with: 1.5-Week 1 Step 5.md
+          with: mergepr.md
           files: ['n/a']
           scripts: test.1.4.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: hello.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 1: Let me in!'
+          body: 1.5-Week 1 Step 5.md
+        - type: closeIssue
     - title: 'Week 1: Let me in!'
       description: 'Tasks:'
       event: workflow_run.completed
@@ -77,11 +94,11 @@ steps:
       stepType: PRmerge
       actions:
         - type: respond
-          with: hackervoice.md
+          with: hello.md
           files: ['n/a']
           scripts: n/a
         - type: createIssue
-          title: One cat, two cats, red cat, blue cat
+          title: 'Week 1: Trying to make node-fetch happen'
           body: 1.6-Week 1 Step 6.md
         - type: closeIssue
     - title: 'Week 1: Trying to make node-fetch happen'
@@ -91,9 +108,22 @@ steps:
       branch: twocatz
       actions:
         - type: respond
-          with: 1.7-Week 1 Step 7.md
+          with: mergepr.md
           files: ['n/a']
           scripts: test.1.6.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: hello.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 1: Name your Cat'
+          body: 1.7-Week 1 Step 7.md
+        - type: closeIssue
     - title: 'Week 1: Name your Cat'
       description: 'Task:'
       event: workflow_run.completed
@@ -110,7 +140,7 @@ steps:
       stepType: PRmerge
       actions:
         - type: respond
-          with: twocatz.md
+          with: mergepr.md
           files: ['n/a']
           scripts: n/a
         - type: createIssue
@@ -157,7 +187,7 @@ steps:
           files: ['n/a']
           scripts: n/a
         - type: createIssue
-          title: Getting Emotional with APIs
+          title: 'Week 2: Getting Emotional With the Face API'
           body: 2.1-Week 2 Step 1.md
         - type: closeIssue
     - title: 'Week 2: Getting Emotional With the Face API'
@@ -165,10 +195,10 @@ steps:
       event: issue_comment.created
       stepType: IssueComment
       actions:
-        - type: respond
-          with: 2.2-Week 2 Step 2.md
-          files: ['n/a']
-          scripts: n/a
+        - type: createIssue
+          title: 'Week 2: Getting Emotional With Parse-Multipart'
+          body: 2.2-Week 2 Step 2.md
+        - type: closeIssue
     - title: 'Week 2: Getting Emotional With Parse-Multipart'
       description: 'Task:'
       event: workflow_run.completed
@@ -176,9 +206,22 @@ steps:
       branch: emotionalgifs
       actions:
         - type: respond
-          with: 2.3-Week 2 Step 3.md
+          with: hello.md
           files: ['n/a']
           scripts: test.2.2.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 2: Getting Emotional With the Face API'
+          body: 2.3-Week 2 Step 3.md
+        - type: closeIssue
     - title: 'Week 2: Getting Emotional With the Face API'
       description: 'Task:'
       event: workflow_run.completed
@@ -186,9 +229,22 @@ steps:
       branch: emotionalgifs
       actions:
         - type: respond
-          with: 2.4-Week 2 Step 4.md
+          with: hello.md
           files: ['n/a']
           scripts: test.2.3.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 2: Getting Emotional Returning the Dominant Emotion'
+          body: 2.4-Week 2 Step 4.md
+        - type: closeIssue
     - title: 'Week 2: Getting Emotional Returning the Dominant Emotion'
       description: 'Task:'
       event: workflow_run.completed
@@ -196,9 +252,22 @@ steps:
       branch: emotionalgifs
       actions:
         - type: respond
-          with: 2.5-Week 2 Step 5.md
+          with: hello.md
           files: ['n/a']
           scripts: test.2.4.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 2: Getting Emotional Calling the Giphy API'
+          body: 2.5-Week 2 Step 5.md
+        - type: closeIssue
     - title: 'Week 2: Getting Emotional Calling the Giphy API'
       description: 'Task:'
       event: workflow_run.completed
@@ -206,7 +275,7 @@ steps:
       branch: emotionalgifs
       actions:
         - type: respond
-          with: mergepr.md
+          with: hello.md
           files: ['n/a']
           scripts: test.2.5.js
     - title: Merge the PR
@@ -215,7 +284,7 @@ steps:
       stepType: PRmerge
       actions:
         - type: respond
-          with: getting-emotional.md
+          with: mergepr.md
           files: ['n/a']
           scripts: n/a
         - type: createIssue
@@ -229,9 +298,22 @@ steps:
       branch: song4u
       actions:
         - type: respond
-          with: 2.7-Week 2 Step 7.md
+          with: hello.md
           files: ['n/a']
           scripts: test.2.6.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 2: How old are you??'
+          body: 2.7-Week 2 Step 7.md
+        - type: closeIssue
     - title: 'Week 2: How old are you??'
       description: 'Task:'
       event: workflow_run.completed
@@ -239,9 +321,22 @@ steps:
       branch: song4u
       actions:
         - type: respond
-          with: 2.8-Week 2 Step 8.md
+          with: hello.md
           files: ['n/a']
           scripts: test.2.7.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 2: How old are you??'
+          body: 2.8-Week 2 Step 8.md
+        - type: closeIssue
     - title: 'Week 2: Ok, Boomer :neutral_face:'
       description: 'Task:'
       event: workflow_run.completed
@@ -292,9 +387,22 @@ steps:
       branch: bunnimage
       actions:
         - type: respond
-          with: 3.2-Week 3 Step 2.md
+          with: hello.md
           files: ['n/a']
           scripts: test.3.1.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 3: Upload it!'
+          body: 3.2-Week 3 Step 2.md
+        - type: closeIssue
     - title: 'Week 3: Upload it!'
       description: 'Task:'
       event: workflow_run.completed
@@ -302,9 +410,22 @@ steps:
       branch: bunnimage
       actions:
         - type: respond
-          with: 3.3-Week 3 Step 3.md
+          with: hello.md
           files: ['n/a']
           scripts: test.3.2.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 3: Codename Blob + 3RR0R Handling'
+          body: 3.3-Week 3 Step 3.md
+        - type: closeIssue
     - title: 'Week 3: Codename Blob + 3RR0R Handling'
       description: 'Task:'
       event: workflow_run.completed
@@ -312,9 +433,22 @@ steps:
       branch: bunnimage
       actions:
         - type: respond
-          with: 3.4-Week 3 Step 4.md
+          with: hello.md
           files: ['n/a']
           scripts: test.3.3.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 3: Your times up....'
+          body: 3.4-Week 3 Step 4.md
+        - type: closeIssue
     - title: 'Week 3: Your times up....'
       description: 'Task:'
       event: issue_comment.created
@@ -322,9 +456,22 @@ steps:
       branch: bunnimage
       actions:
         - type: respond
-          with: 3.5-Week 3 Step 5.md
+          with: hello.md
           files: ['n/a']
           scripts: n/a
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 3: Download it!'
+          body: 3.5-Week 3 Step 5.md
+        - type: closeIssue
     - title: 'Week 3: Download it!'
       description: 'Task:'
       event: workflow_run.completed
@@ -355,9 +502,22 @@ steps:
       branch: deepsecrets
       actions:
         - type: respond
-          with: 3.7-Week 3 Step 7.md
+          with: hello.md
           files: ['n/a']
           scripts: test.3.6.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 3: Leaky secrets'
+          body: 3.7-Week 3 Step 7.md
+        - type: closeIssue
     - title: 'Week 3: Leaky secrets'
       description: 'Task:'
       event: workflow_run.completed
@@ -365,9 +525,22 @@ steps:
       branch: deepsecrets
       actions:
         - type: respond
-          with: 3.8-Week 3 Step 8.md
+          with: hello.md
           files: ['n/a']
           scripts: test.3.7.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 3: Exposed!!'
+          body: 3.8-Week 3 Step 8.md
+        - type: closeIssue
     - title: 'Week 3: Exposed!!'
       description: 'Task:'
       event: workflow_run.completed
@@ -418,9 +591,22 @@ steps:
       branch: bunnimage-frontend
       actions:
         - type: respond
-          with: 4.2-Week 4 Step 2.md
+          with: hello.md
           files: ['n/a']
           scripts: 4.1.spec.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 4: Error Handling Sir this is a Wendys'
+          body: 4.2-Week 4 Step 2.md
+        - type: closeIssue
     - title: 'Week 4: Error Handling Sir this is a Wendys'
       description: 'Task:'
       event: workflow_run.completed
@@ -428,9 +614,22 @@ steps:
       branch: bunnimage-frontend
       actions:
         - type: respond
-          with: 4.3-Week 4 Step 3.md
+          with: hello.md
           files: ['n/a']
           scripts: 4.2.spec.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 4: Making fetch Happen'
+          body: 4.3-Week 4 Step 3.md
+        - type: closeIssue
     - title: 'Week 4: Making fetch Happen'
       description: 'Task:'
       event: workflow_run.completed
@@ -438,9 +637,22 @@ steps:
       branch: bunnimage-frontend
       actions:
         - type: respond
-          with: 4.4-Week 4 Step 4.md
+          with: hello.md
           files: ['n/a']
           scripts: 4.3.spec.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 4: Downloading your image!'
+          body: 4.4-Week 4 Step 4.md
+        - type: closeIssue
     - title: 'Week 4: Downloading your image!'
       description: 'Task:'
       event: workflow_run.completed
@@ -471,9 +683,22 @@ steps:
       branch: twocatz-frontend
       actions:
         - type: respond
-          with: 4.6-Week 4 Step 6.md
+          with: hello.md
           files: ['n/a']
           scripts: 4.5.spec.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 4: One Cat is not enough Meow'
+          body: 4.6-Week 4 Step 6.md
+        - type: closeIssue
     - title: 'Week 4: One Cat is not enough Meow'
       description: 'Task:'
       event: workflow_run.completed
@@ -481,9 +706,22 @@ steps:
       branch: twocatz-frontend
       actions:
         - type: respond
-          with: 4.7-Week 4 Step 7.md
+          with: hello.md
           files: ['n/a']
           scripts: 4.6.spec.js
+    - title: Merge the PR
+      description: 'Tasks:'
+      event: pull_request.closed
+      stepType: PRmerge
+      actions:
+        - type: respond
+          with: mergepr.md
+          files: ['n/a']
+          scripts: n/a
+        - type: createIssue
+          title: 'Week 4: Ultimate CAT INVASION!'
+          body: 4.7-Week 4 Step 7.md
+        - type: closeIssue
     - title: 'Week 4: Ultimate CAT INVASION!'
       description: 'Task:'
       event: workflow_run.completed

@@ -1,8 +1,9 @@
 ---
-name: "🧪 Test Code Bug Report"
-about: Report a bug in our tests 
-title: '[Test Bug] Week _ Step _'
-labels: 'triage, bug, tests, urgent'
+name: "\U0001F9EA Test Code Bug Report"
+about: Report a bug in our tests
+title: "[Test Bug] Week _ Step _"
+labels: bug
+assignees: ''
 
 ---
 

@@ -6,6 +6,9 @@
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "cypress": "^8.2.0",
+    "node-fetch": "^2.6.1"
+  },
   "devDependencies": {}
 }
