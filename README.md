@@ -5,15 +5,13 @@
 <details>
 <summary>:question: Not sure how to get started?</summary>
 
-Read [GETTING_STARTED.md](/GETTING_STARTED.md) for instructions on how to use this repository, install counselorbot, and general tips for learning serverless! Read over the file carefully and complete all steps:
+Read [GETTING_STARTED.md](/GETTING_STARTED.md) for instructions on how to use this repository, install counselorbot, and general tips for learning serverless! Read over the file carefully and make sure to complete these steps:
  
-1. Read over camp vocabulary & emojis
-2. Complete computer setup
-3. Install VSCode extensions
-4. Install CounselorBot
-5. Read over what happens if a check fails
-6. Read over general debugging guide
-7. Read over how to run a check locally (optional)!
+1. Read over **camp vocabulary & emojis**
+2. Complete **computer setup**
+3. Install **VSCode extensions**
+4. Install **CounselorBot**
+5. Refer back to this file if you ever need help!
 
 </details>
 
