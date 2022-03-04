@@ -3,23 +3,17 @@
 *Managing a server is pretty complicated, but building with serverless architectures simplifies this process. As a student, mastering serverless functions can help you to build projects that solve real-world problems by integrating APIs, constructing user interfaces, and analysing data. Javascript is the core language of this course - one of the most in-demand languages to learn in the industry.*
 
 <details>
- <summary>🌟 Get Started With CounselorBot</summary>
-1. Click `Use this template` in the upper-right hand corner of this repo.
-  
-2. Once the repo is created, click into the `issues` tab
-  
-3. Choose `New Issue`
-  
-4. Select the issue that says `🚀 Start Course`, and click `Get Started`
-  
-5. Click the `Submit new issue` button!
-  
-6. Watch the bot do its magic!
+<summary>:question: Not sure how to get started?</summary>
+
+Read [GETTING_STARTED.md](/GETTING_STARTED.md) for instructions on how to use this repository, install counselorbot, and general tips for learning serverless! Read over the file carefully and make sure to complete these steps:
+ 
+1. Read over **camp vocabulary & emojis**
+2. Complete **computer setup**
+3. Install **VSCode extensions**
+4. Install **CounselorBot**
+5. Refer back to this file if you ever need help!
+
 </details>
-
-#### :question: Not sure how to get started? Click [here](/GETTING_STARTED.md)! 
-#### :exclamation: Need help with Github Actions? Click [here](/GETTING_STARTED.md#x-the-step-failed-what-do-i-do)!
-
 
 ## Table of Contents
 

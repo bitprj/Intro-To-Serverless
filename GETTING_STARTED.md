@@ -107,68 +107,50 @@ Take a look at these [instructions](https://code.visualstudio.com/docs/editor/ex
 </details>
 <hr>
 
-### :robot: Installing the CounselorBot
+### :robot: Getting Started &  Installing CounselorBot
 
 <details>
 <summary>Step by step instructions to install the bot ▶️ </summary>
 
-To interact with your counselor on your repository, head to [this link](https://github.com/apps/counselorbot) and click **The Big Green Button** (Install).
+CounselorBot is a GitHub bot that will guide you through the Intro to Serverless Repository. Please follow these steps to get started!
 
-![image](https://user-images.githubusercontent.com/69332964/114454174-4e930100-9ba8-11eb-8ac9-551e53795a18.png)
+### Creating the serverless repository
+First, create your own serverless repository by clicking `Use this template`
+![](https://i.imgur.com/JxEGtOi.png)
 
+To name your repository, type a name in and click `Create repository from template`.
+![](https://i.imgur.com/YA6PvvJ.png)
 
-
-Next, **choose your personal account** to install the bot on.
-
-![image](https://user-images.githubusercontent.com/69332964/114454284-72eedd80-9ba8-11eb-8c0b-b06055444001.png)
-
-
-
-Make sure to **install it on ALL repositories** and then click **The Big Green Button** (Install & Authorize).
-
-> This is **very important**: make sure **All repositories** is selected!
-
-![image](https://user-images.githubusercontent.com/69332964/114454571-c06b4a80-9ba8-11eb-943d-cbe171e85ab0.png)
+Your serverless repository has been created! Now let's install CounselorBot. You can download CounselorBot from [GitHub Apps](https://github.com/apps/counselorbot).
 
 
+### Installing CounselorBot 
+Head to the link above to install the bot, and then click on the `Install` button!
+![](https://i.imgur.com/qOFdE10.png)
 
-You should then be **automatically** redirected to [this repository](https://github.com/bitprj/Intro-To-Serverless)
+Choose your personal account to install CounselorBot!
+![](https://i.imgur.com/K6j46ZC.png)
 
-![image](https://user-images.githubusercontent.com/69332964/114478884-4d27ff80-9bcd-11eb-905c-1c271069ea51.png)
-<br>
-</details>
-<hr>
+Select the option that says `Only select repositories` and search for the repo you just created by using its name! After that, click the `Install` button!
+![](https://i.imgur.com/q7Rm6M4.png)
 
-### :house: Moving into your cabin
+### Getting started with the course
 
-<details>
-<summary>Step by step instructions to start the course ▶️ </summary>
+Head back to your Serverless repository and head to the `Issues` tab.
+![](https://i.imgur.com/LvNXhcu.png)
 
-Make sure you are on [this](https://github.com/bitprj/Intro-To-Serverless) repository, and once again, click on **The Big Green Button** (Use this template). You should be prompted to **name** your repo.
+Click on the `New issue` button. 
+![](https://i.imgur.com/HZp4EWi.png).
 
-> **Tip:** Name your repository something serverless related! Here's a suggestion: `serverless-emotion-reader`
+Click on the `Get started` button on the `🚀 Start Course` issue template. 
+![](https://i.imgur.com/NtvysEx.png).
 
-Once you're satisfied with your name, click **The Big Green Button** (Create repository from template)! 
+Click `Submit new issue` and you'll be good to go!
+![](https://i.imgur.com/xjGY9D3.png)
 
-![image](https://user-images.githubusercontent.com/69332964/114455919-4340d500-9baa-11eb-9ef3-359429ccafab.png)
+Head back to your `Issues` tab and you should see your first assignment pop up!
+![](https://i.imgur.com/bmxwVtA.png)
 
-
-
-Once your new cabin is created, you should **see a new issue** opened on the top bar of your repository **if you installed your bot correctly**.
-
-![image](https://user-images.githubusercontent.com/69332964/114456826-54d6ac80-9bab-11eb-8f22-2c939d26356c.png)
-
-
-
-Click on `Issues` to find your first Week in the camp: `Getting Started`.
-
-![image](https://user-images.githubusercontent.com/69332964/114478985-806a8e80-9bcd-11eb-951c-ac6499317bd3.png)
-
-
-
-**Click** on `Getting Started` to find your first step of the week. **Follow your counselor's** instructions and have fun!
-
-![image](https://user-images.githubusercontent.com/69332964/114479022-8fe9d780-9bcd-11eb-956f-6e4132220e11.png)
 <br>
 </details>
 <hr>
