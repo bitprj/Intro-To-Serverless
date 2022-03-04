@@ -107,7 +107,7 @@ Take a look at these [instructions](https://code.visualstudio.com/docs/editor/ex
 </details>
 <hr>
 
-### :robot: Installing the CounselorBot
+### :robot: Getting Started &  Installing CounselorBot
 
 <details>
 <summary>Step by step instructions to install the bot ▶️ </summary>
@@ -124,7 +124,7 @@ To name your repository, type a name in and click `Create repository from templa
 Your serverless repository has been created! Now let's install CounselorBot. You can download CounselorBot from [GitHub Apps](https://github.com/apps/counselorbot).
 
 
-### Installing CounselorBot
+### Installing CounselorBot 
 Head to the link above to install the bot, and then click on the `Install` button!
 ![](https://i.imgur.com/qOFdE10.png)
 
@@ -151,40 +151,6 @@ Click `Submit new issue` and you'll be good to go!
 Head back to your `Issues` tab and you should see your first assignment pop up!
 ![](https://i.imgur.com/bmxwVtA.png)
 
-<br>
-</details>
-<hr>
-
-### :house: Moving into your cabin
-
-<details>
-<summary>Step by step instructions to start the course ▶️ </summary>
-
-Make sure you are on [this](https://github.com/bitprj/Intro-To-Serverless) repository, and once again, click on **The Big Green Button** (Use this template). You should be prompted to **name** your repo.
-
-> **Tip:** Name your repository something serverless related! Here's a suggestion: `serverless-emotion-reader`
-
-Once you're satisfied with your name, click **The Big Green Button** (Create repository from template)! 
-
-![image](https://user-images.githubusercontent.com/69332964/114455919-4340d500-9baa-11eb-9ef3-359429ccafab.png)
-
-
-
-Once your new cabin is created, you should **see a new issue** opened on the top bar of your repository **if you installed your bot correctly**.
-
-![image](https://user-images.githubusercontent.com/69332964/114456826-54d6ac80-9bab-11eb-8f22-2c939d26356c.png)
-
-
-
-Click on `Issues` to find your first Week in the camp: `Getting Started`.
-
-![image](https://user-images.githubusercontent.com/69332964/114478985-806a8e80-9bcd-11eb-951c-ac6499317bd3.png)
-
-
-
-**Click** on `Getting Started` to find your first step of the week. **Follow your counselor's** instructions and have fun!
-
-![image](https://user-images.githubusercontent.com/69332964/114479022-8fe9d780-9bcd-11eb-956f-6e4132220e11.png)
 <br>
 </details>
 <hr>
