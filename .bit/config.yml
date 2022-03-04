@@ -158,7 +158,7 @@ steps:
           files: ['n/a']
           scripts: test.1.8.js
     - title: 'Week 1: Week 1 Step 9'
-      description: 'Week 1 Livestream Feedback'
+      description: 'Week 1 Video Feedback'
       event: issue_comment.created
       stepType: feedback
       branch: morse
@@ -347,8 +347,8 @@ steps:
           with: 2.9-Week 2 Step 9.md
           files: ['n/a']
           scripts: test.2.8.js
-    - title: 'Week 2:  Week 2 Livestream Feedback'
-      description: ' Week 2 Livestream Feedback'
+    - title: 'Week 2:  Week 2 Video Feedback'
+      description: ' Week 2 Video Feedback'
       event: issue_comment.created
       stepType: feedback
       branch: song4u
@@ -551,8 +551,8 @@ steps:
           with: 3.9-Week 3 Step 9.md
           files: ['n/a']
           scripts: test.3.8.js
-    - title: 'Week 3: Week 3 Livestream Feedback'
-      description: 'Week 3 Livestream Feedback'
+    - title: 'Week 3: Week 3 Video Feedback'
+      description: 'Week 3 Video Feedback'
       event: issue_comment.created
       stepType: feedback
       branch: deepsecrets
@@ -732,8 +732,8 @@ steps:
           with: 4.8-Week 4 Step 8.md
           files: ['n/a']
           scripts: 4.7.spec.js
-    - title: 'Week 4: Week 4 Livestream Feedback'
-      description: 'Week 4 Livestream Feedback'
+    - title: 'Week 4: Week 4 Video Feedback'
+      description: 'Week 4 Video Feedback'
       event: issue_comment.created
       stepType: feedback
       branch: twocatz-frontend
