@@ -3,6 +3,5 @@ describe('Testing Bunnimage', () => {
         cy.visit('bunnimage/index.html')
         cy.get('input[type="text"]').type('console.log("hi yall")')
         cy.get('input[type="submit"]').click()
-        cy.get('#output').contains('console.log("hi yall")❤️')
     })
 })
