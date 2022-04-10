@@ -24,9 +24,8 @@ async function deleteBlob(filename){
     const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionstring);
     const deletecontainer = "images";
     const deletecontainerClient = await blobServiceClient.getContainerClient(deletecontainer);
-    const deleteblockBlobClient = deletecontainerClient.getBlockBlobClient(filename);
-    const downloadBlockBlobResponse = await deleteblockBlobClient.download(0);
-    const blobDeleteResponse = deleteblockBlobClient.delete();
+    deletecontainerClient.deleteBlob(filename)
+
     console.log(`Deleted block blob ${filename} successfully`);
     result = {
         body : {
