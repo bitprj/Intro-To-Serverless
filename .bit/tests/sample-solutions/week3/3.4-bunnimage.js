@@ -13,7 +13,7 @@ in the local.settings.json file
 module.exports = async function (context, myTimer) {
 
     const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
-    const deleteContainerName = "bunnimage-upload";
+    const deleteContainerName = "images";
 
     const blobContainerClient = await BlobServiceClient.fromConnectionString(connectionString).getContainerClient(deleteContainerName);
     for await (const blob of blobContainerClient.listBlobsFlat()) {
