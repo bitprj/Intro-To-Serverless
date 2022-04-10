@@ -1,52 +1,77 @@
-var multipart = require("parse-multipart")
-const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
 const { BlobServiceClient } = require("@azure/storage-blob");
+const parseMultipart = require("parse-multipart");
+
+// npm i parse-multipart @azure/storage-blob
 
 module.exports = async function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
-    var boundary = multipart.getBoundary(req.headers['content-type']);
-    var body = req.body;
-    var parsedBody = multipart.Parse(body, boundary);
-    context.log(parsedBody);
-    
-    var filetype = parsedBody[0].type;
-    if (filetype == "image/png") {
-        ext = "png";
-    } else if (filetype == "image/jpeg") {
-        ext = "jpeg";
-    } else {
-        username = "invalidimage"
-        ext = "";
+
+    const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
+
+    const boundary = parseMultipart.getBoundary(req.headers['content-type']);
+    const parsedBody = parseMultipart.Parse(req.body, boundary);
+
+    context.log(`The parsed file is: ${parsedBody[0].filename}`);
+
+    const fileType = parsedBody[0].type;
+
+    const ext = getExtByFileType(fileType);
+
+    let responseMessage = "";
+    let responseStatus = 200;
+
+    if (ext) {
+
+        responseMessage = await uploadFile(context, connectionString, parsedBody, ext);
+
+    }
+    else {
+        // The file type was invalid, we return the corresponding error
+        responseStatus = 400;
+        responseMessage = `Invalid file type ${fileType}`;
+
     }
 
-    var responseMessage = await uploadFile(parsedBody, ext);
+    context.log(responseMessage)
+
     context.res = {
+        status: responseStatus,
         body: responseMessage
     };
-    console.log(responseMessage)
+
+
 }
 
-async function uploadFile(parsedBody, ext){
+async function uploadFile(context, connectionString, parsedBody, ext) {
+
     const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);
     // Create a unique name for the container
-    const containerName = //your container name;
-    
-    console.log('\nCreating container...');
-    console.log('\t', containerName);
-    
-    // Get a reference to a container
-    const containerClient = blobServiceClient.getContainerClient(containerName);
-    
-    // Create the container
+    const containerName = "bunnimage-upload";
+
     const blobName = 'test' + "." + ext;
 
-    // Get a block blob client
+    context.log(`Uploading to Azure storage container ${containerName} as blob: ${blobName}`);
+
+    const containerClient = blobServiceClient.getContainerClient(containerName);
+
     const blockBlobClient = containerClient.getBlockBlobClient(blobName);
-    
-    console.log('\nUploading to Azure storage as blob:\n\t', blobName);
-    
-    // Upload data to the blob
+
     const uploadBlobResponse = await blockBlobClient.upload(parsedBody[0].data, parsedBody[0].data.length);
-    console.log("Blob was uploaded successfully. requestId: ", uploadBlobResponse.requestId);
-    return "File Saved";    
+
+    context.log(`Blob was uploaded successfully. requestId: ${uploadBlobResponse.requestId}`);
+
+    return `File ${parsedBody[0].filename} saved successfully as ${blobName}`;
+}
+
+function getExtByFileType(fileType) {
+
+    let ext = "";
+
+    if (fileType === "image/png") {
+        ext = "png";
+    } else if (fileType === "image/jpeg") {
+        ext = "jpeg";
+    }
+
+    return ext;
+
 }
