@@ -1,65 +1,96 @@
-var multipart = require("parse-multipart")
-const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
+const fetch = require("node-fetch");
 const { BlobServiceClient } = require("@azure/storage-blob");
+const parseMultipart = require("parse-multipart");
+
+// npm i parse-multipart node-fetch@2 @azure/storage-blob
 
 module.exports = async function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
-    var boundary = multipart.getBoundary(req.headers['content-type']);
-    var body = req.body;
 
-    var responseMessage = ""
-    try {
-        var parsedBody = multipart.Parse(body, boundary);
-        // get the file extension
-        var filetype = parsedBody[0].type;
-        if (filetype == "image/png") {
-            ext = "png";
-        } else if (filetype == "image/jpeg") {
-            ext = "jpeg";
-        } else if (filetype == "image/jpg") {
-            ext = "jpg"
-        } else {
-            username = "invalidimage"
-            ext = "";
-        }
-        var password = req.headers['codename'];
-        // upload the file to blob
-        responseMessage = await uploadFile(parsedBody, password, ext);
+    const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
+
+    /*
+    Get the filename via the route defined in function.json 
+    (see https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=in-process%2Cfunctionsv2&pivots=programming-language-javascript#customize-the-http-endpoint)
+    
+    The entry looks like this:
+    "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "route": "bunnimage-upload/{filename:alpha}",
+      "name": "req",
+      "methods": [
+        "post"
+      ]
+    },
+    */
+    const fileName = context.bindingData.filename;
+    const boundary = parseMultipart.getBoundary(req.headers['content-type']);
+    const parsedBody = parseMultipart.Parse(req.body, boundary);
+
+    context.log(`The parsed file is: ${parsedBody[0].filename}`);
+
+    const fileType = parsedBody[0].type;
+
+    const ext = getExtByFileType(fileType);
+
+    let responseMessage = "";
+    let responseStatus = 200;
+
+    if (ext) {
+
+        responseMessage = await uploadFile(context, connectionString, parsedBody, ext, fileName);
+
     }
-    catch(err) {
-        context.log(err)
-        context.log("Undefined body image");
-        responseMessage = "Sorry! No image attached."
+    else {
+        // The file type was invalid, we return the corresponding error
+        responseStatus = 400;
+        responseMessage = `Invalid file type ${fileType}`;
+
     }
 
+    context.log(responseMessage)
 
     context.res = {
+        status: responseStatus,
         body: responseMessage
     };
-    console.log(responseMessage)
+
+
 }
 
-async function uploadFile(parsedBody, password, ext){
+async function uploadFile(context, connectionString, parsedBody, ext, fileName) {
+
     const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);
     // Create a unique name for the container
-    const containerName = "images";
-    
-    console.log('\nCreating container...');
-    console.log('\t', containerName);
-    
-    // Get a reference to a container
-    const containerClient = blobServiceClient.getContainerClient(containerName);
-    
-    // Create the container
-    const blobName = password + '.' + ext;
+    const containerName = "bunnimage-upload";
 
-    // Get a block blob client
+    const blobName = fileName + "." + ext;
+    
+    context.log(`Uploading to Azure storage container ${containerName} as blob: ${blobName}`);
+
+    const containerClient = blobServiceClient.getContainerClient(containerName);
+
     const blockBlobClient = containerClient.getBlockBlobClient(blobName);
-    
-    console.log('\nUploading to Azure storage as blob:\n\t', blobName);
-    
-    // Upload data to the blob
+
     const uploadBlobResponse = await blockBlobClient.upload(parsedBody[0].data, parsedBody[0].data.length);
-    console.log("Blob was uploaded successfully. requestId: ", uploadBlobResponse.requestId);
-    return "File Saved";    
+
+    context.log(`Blob was uploaded successfully. requestId: ${uploadBlobResponse.requestId}`);
+
+    return `File ${parsedBody[0].filename} saved successfully as ${blobName}`;
+}
+
+function getExtByFileType(fileType) {
+
+    let ext = "";
+
+    if (fileType === "image/png") {
+        ext = "png";
+    } else if (fileType === "image/jpeg") {
+        ext = "jpeg";
+    }
+
+    return ext;
+
 }
