@@ -455,19 +455,6 @@ steps:
       stepType: IssueComment
       branch: bunnimage
       actions:
-        - type: respond
-          with: hello.md
-          files: ['n/a']
-          scripts: n/a
-    - title: Merge the PR
-      description: 'Tasks:'
-      event: pull_request.closed
-      stepType: PRmerge
-      actions:
-        - type: respond
-          with: mergepr.md
-          files: ['n/a']
-          scripts: n/a
         - type: createIssue
           title: 'Week 3: Download it!'
           body: 3.5-Week 3 Step 5.md
