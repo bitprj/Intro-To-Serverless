@@ -1,33 +1,26 @@
 const { BlobServiceClient } = require("@azure/storage-blob");
-const connectionstring = process.env["AZURE_STORAGE_CONNECTION_STRING"];
+
+/* 
+Timer-triggered Azure Function need a storage account
+When developing locally do not forget to set the "AzureWebJobsStorage": "UseDevelopmentStorage=true"
+in the local.settings.json file
+*/
+
+//Cron values (see function.json - schedule)
+//0 */5 * * * *
+//https://crontab.guru/every-5-minutes
 
 module.exports = async function (context, myTimer) {
-    var timeStamp = new Date().toISOString();
-    const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionstring);
-    const deletecontainer = "images";
-    const deletecontainerClient = await blobServiceClient.getContainerClient(deletecontainer);
 
-    for await (const blob of deletecontainerClient.listBlobsFlat()) {
-        context.log('\t', blob.name);
-        var outputPrint = await deleteBlob(blob.name)
-        context.log(outputPrint)
-        // access the blob's name and call deleteBlob to delete it!
+    const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
+    const deleteContainerName = "images";
+
+    const blobContainerClient = await BlobServiceClient.fromConnectionString(connectionString).getContainerClient(deleteContainerName);
+    for await (const blob of blobContainerClient.listBlobsFlat()) {
+        context.log(`Deleting blob name ${blob.name}`);
+        // log in console what file you are deleting
+        await blobContainerClient.deleteBlob(blob.name);
     }
-    context.log("Just deleted your blobs!")
-    context.log('JavaScript timer trigger function ran!', timeStamp);   
+    context.log(`All blobs of container ${deleteContainerName} deleted`);
+
 };
-
-async function deleteBlob(filename) {
-    const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionstring);
-    const deletecontainer = "images";
-    const deletecontainerClient = await blobServiceClient.getContainerClient(deletecontainer);
-    deletecontainerClient.deleteBlob(filename)
-
-    result = {
-        body: {
-            deletename: filename,
-            success: true
-        }
-    };
-    return result;
-}
