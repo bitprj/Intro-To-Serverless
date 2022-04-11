@@ -1,20 +1,23 @@
-var fetch = require('node-fetch');
-var multipart = require('parse-multipart')
+const multipart = require('parse-multipart');
+//npm i parse-multipart
   
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.'); 
 
-    var boundary = multipart.getBoundary(req.headers['content-type']);
-    // parse the body
-    var parts = multipart.Parse(req.body, boundary);
-    context.log(parts[0])
-    var result = Buffer.from(parts[0].data).toString('base64')
-    context.log(result)
+    const boundary = multipart.getBoundary(req.headers['content-type']);
     
-    //analyze the image
+    const parts = multipart.Parse(req.body, boundary);
+    
+    context.log(parts[0]);
+    
+    const result = Buffer.from(parts[0].data).toString('base64');
+    
+    context.log(result);
+    
+    //TODO analyze the image
 
     context.res = {
         body: result
     };
-    context.done(); 
+
 };
