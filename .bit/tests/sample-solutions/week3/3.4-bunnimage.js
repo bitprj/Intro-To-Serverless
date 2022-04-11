@@ -18,6 +18,7 @@ module.exports = async function (context, myTimer) {
     const blobContainerClient = await BlobServiceClient.fromConnectionString(connectionString).getContainerClient(deleteContainerName);
     for await (const blob of blobContainerClient.listBlobsFlat()) {
         context.log(`Deleting blob name ${blob.name}`);
+        // log in console what file you are deleting
         await blobContainerClient.deleteBlob(blob.name);
     }
     context.log(`All blobs of container ${deleteContainerName} deleted`);
