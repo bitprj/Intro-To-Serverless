@@ -1,18 +1,23 @@
-const querystring = require('qs');
+const qs = require('qs');
+const MessagingResponse = require('twilio').twiml.MessagingResponse;
+//npm i qs twilio
 
 module.exports = async function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
+   
+    const queryObject = qs.parse(req.body);
+    const message = queryObject.Body;
 
-    const queryObject = querystring.parse(req.body);
-    message = queryObject.Body;
-
-    const responseMessage = message
-
+    const twiml = new MessagingResponse();
+    twiml.message('You said: ' + message);
+  
     context.res = {
-        // status: 200, /* Defaults to 200 */
-        body: responseMessage
+      status: 200,
+      body: twiml.toString(),
+      headers: { 'Content-Type': 'application/xml' },
+      isRaw: true
     };
+
 }
 
 // https://www.twilio.com/docs/sms/quickstart/node
-// https://www.neilwithdata.com/azure-functions-post-body-js
+// https://www.twilio.com/docs/usage/tutorials/serverless-webhooks-azure-functions-and-node-js
