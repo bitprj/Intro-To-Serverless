@@ -1,43 +1,46 @@
-var fetch = require("node-fetch");
-module.exports = async function (context, req, inputBlob) {
-    context.log('JavaScript HTTP trigger function processed a request.');
+const fetch = require("node-fetch");
+// npm i node-fetch@2
 
-    var username = req.headers['username'];
-    var download = ""
-    var downloadpng = "https://bunnimagestorage.blob.core.windows.net/images/" + username + ".png";
-    var downloadjpg = "https://bunnimagestorage.blob.core.windows.net/images/" + username + ".jpeg";
-// replace with your own blob storage URL and make sure to make the container public!
-    
-    let pngresp = await fetch(downloadpng, {
+module.exports = async function (context, req, inputBlob) {
+
+    let downloadUri = ""
+    let success = false
+
+    const fileName = context.bindingData.filename;
+
+    // replace with your own blob storage URL and make sure to make the container public!
+    const downloadPng = "https://bunnimagestorage.blob.core.windows.net/images/" + fileName + ".png";
+    const downloadJpg = "https://bunnimagestorage.blob.core.windows.net/images/" + fileName + ".jpeg";
+
+    const pngResp = await fetch(downloadPng, {
         method: 'GET',
     })
-    let pngdata = await pngresp;
-    
-    let jpgresp = await fetch(downloadjpg, {
+
+    const pngData = await pngResp;
+
+    const jpgResp = await fetch(downloadJpg, {
         method: 'GET',
     })
-    let jpgdata = await jpgresp;
-    
-    if (pngdata.statusText == "The specified blob does not exist." && jpgdata.statusText == "The specified blob does not exist." ) {
+
+    const jpgData = await jpgResp;
+
+    if (pngData.status !== 200 && jpgData.status !== 200) {
         success = false;
-    } else if (pngdata.statusText != "The specified blob does not exist.") {
+    } else if (pngData.status === 200) {
         success = true;
-        download = downloadpng
-    } else if (jpgdata.statusText != "The specified blob does not exist.") {
+        downloadUri = downloadPng
+    } else if (jpgData.status === 200) {
         success = true;
-        download = downloadjpg
+        downloadUri = downloadJpg
     }
 
+    context.log(`Success status of request for file ${fileName}: ${success}`);
+
     context.res = {
-            body: {
-                    "downloadUri" : download,
-                    "success": success,
-            }
+        body: {
+            "downloadUri": downloadUri,
+            "success": success,
+        }
     };
 
-
-    // receive the response
-
-    context.log(download);
-    context.done();
 }
