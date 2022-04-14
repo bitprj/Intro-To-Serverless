@@ -334,7 +334,7 @@ steps:
           files: ['n/a']
           scripts: n/a
         - type: createIssue
-          title: 'Week 2: How old are you??'
+          title: 'Week 2: Ok, Boomer :neutral_face:'
           body: 2.8-Week 2 Step 8.md
         - type: closeIssue
     - title: 'Week 2: Ok, Boomer :neutral_face:'
