@@ -35,7 +35,7 @@ bunnForm.addEventListener('submit', function (event) {
         body: payload
     });
 
-    var data = await resp.text();
+    const data = await resp.text();
     console.log(data);
     output.textContent = "Your image has been stored successfully!";
 
