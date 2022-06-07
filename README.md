@@ -32,7 +32,7 @@ Build projects to get started with Azure Functions, Cloud Engineering, and Javas
 |-----------|------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | Project   | HackerVoice | Build your first HTTP Trigger Azure Function that may or may not let you pass, written in Javascript.    |  <ul><li>VSCode</li><li>Github</li><li>Postman</li><li>Azure functions Locally</li><li>Testing Javascript Knowledge</li></ul> |
 | Project   | twoCatz API      | Create a REST API that returns multiple pictures of cats, named after your friends. | <ul><li>Consuming API</li><li>Azure functions Locally</li><li>Vanilla JS</li></ul>|
-| Challenge | [Top Secret]     | Build a Serverless Function that converts English to Morse Code                     | - npm packages - Writing HTTP Trigger Functions                                      |
+| Challenge | [Top Secret]     | Build a Serverless Function that converts English to Morse Code                     | <ul><li>npm packages</li><li>Writing HTTP Trigger Functions</li></ul>                                      |
 
 ### **Week 2** - Working with APIs
 Build projects with awesome APIs from Twilio, Microsoft Cognitive Services, and Giphy! Learn how to read documentation, experiment, and most importantly Google! 
@@ -48,16 +48,16 @@ Build projects with Blob Storage and a NoSQL database to store data recieved thr
 
 | Category  | Assignment       | Description                                                                                                      | Learning Objectives                                                                  |
 |-----------|------------------|------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| Project   | Bunnimage API    | Create a File Sharing API that saves images that are able to be downloaded on another device with a secret code. | - VSCODE - Github - Postman - Azure functions Locally - Testing Javascript Knowledge |
-| Challenge | Deep Secrets API | Everyone has secrets. Text your confessions to a number and receive someone else's back.                         | - Consuming API - Write HTTP Trigger Function - Vanilla Javascript                   |
+| Project   | Bunnimage API    | Create a File Sharing API that saves images that are able to be downloaded on another device with a secret code. | <ul><li>VSCODE</li><li>Github</li><li>Postman</li><li>Azure functions Locally</li><li>Testing Javascript Knowledge</li></ul> |
+| Challenge | Deep Secrets API | Everyone has secrets. Text your confessions to a number and receive someone else's back.                         | <ul><li>Consuming API</li><li>Write HTTP Trigger Function</li><li>Vanilla Javascript</li></ul>                   |
 
 ### **Week 4** - Building a Frontend
 Build a frontend with HTML/CSS/JS to interact with your serverless functions! 
 
 | Category  | Assignment       | Description                                                                                                                | Learning Objectives                                                                  |
 |-----------|------------------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| Project   | Bunnimage App    | Create a Frontend that allows users interact with the Bunnimage API which stores and retrieves images.                     | - VSCODE - Github - Postman - Azure functions Locally - Testing Javascript Knowledge |
-| Challenge | Deep Secrets App | Create a Frontend that allows users interact with the Deep Secrets API which stores and retrieves secrets from a database. | - Consuming API - Write HTTP Trigger Function - Vanilla Javascript                   |
+| Project   | Bunnimage App    | Create a Frontend that allows users interact with the Bunnimage API which stores and retrieves images.                     | <ul><li>VSCODE</li><li>Github</li><li>Postman</li><li>Azure functions Locally</li><li>Testing Javascript Knowledge</li></ul> |
+| Challenge | Deep Secrets App | Create a Frontend that allows users interact with the Deep Secrets API which stores and retrieves secrets from a database. | <ul><li>Consuming API</li><li>Write HTTP Trigger Function</li><li>Vanilla Javascript</li></ul>                   |
 
 ## :zap: Build your Own Project (Week 5-8)
 
