@@ -11,7 +11,7 @@ module.exports = async function (context, req) {
 
 
     async function getCatPic(name) {
-        let resp = await fetch("https://cataas.com/cat/cute/says/" + name, {
+        let resp = await fetch("https://bit-cat.azurewebsites.net/cat/says/" + name, {
             method: 'GET'
         });
         
