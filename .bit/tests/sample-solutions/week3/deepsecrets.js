@@ -3,8 +3,8 @@ const CosmosClient = require("@azure/cosmos").CosmosClient;
 // npm install @azure/cosmos
 
 const config = {
-  endpoint: process.env.ENDPOINT,
-  key: process.env.KEY,
+  endpoint: process.env["ENDPOINT"],
+  key: process.env["KEY"],
   databaseId: "SecretStorer",
   containerId: "secrets",
   partitionKey: {kind: "Hash", paths: ["/secrets"]}

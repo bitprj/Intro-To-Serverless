@@ -5,7 +5,7 @@ const parseMultipart = require("parse-multipart");
 
 module.exports = async function (context, req) {
 
-    const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
+    const connectionString = process.env["AZURE_STORAGE_CONNECTION_STRING"];
 
     const boundary = parseMultipart.getBoundary(req.headers['content-type']);
     const parsedBody = parseMultipart.Parse(req.body, boundary);

@@ -6,7 +6,7 @@ const parseMultipart = require("parse-multipart");
 
 module.exports = async function (context, req) {
 
-    const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
+    const connectionString = process.env["AZURE_STORAGE_CONNECTION_STRING"];
 
     /*
     Get the filename via the route defined in function.json 
