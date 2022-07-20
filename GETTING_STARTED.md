@@ -101,7 +101,6 @@ Take a look at these [instructions](https://code.visualstudio.com/docs/editor/ex
  
 - [Azure Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint). 
-- [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
  
  > Watch this [video](https://www.youtube.com/watch?v=5IGVeq2DdsA) on how to use ESLint with VS Code.
 </details>
