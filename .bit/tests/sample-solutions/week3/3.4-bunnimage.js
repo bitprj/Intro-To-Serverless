@@ -12,7 +12,7 @@ in the local.settings.json file
 
 module.exports = async function (context, myTimer) {
 
-    const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
+    const connectionString = process.env["AZURE_STORAGE_CONNECTION_STRING"];
     const deleteContainerName = "images";
 
     const blobContainerClient = await BlobServiceClient.fromConnectionString(connectionString).getContainerClient(deleteContainerName);

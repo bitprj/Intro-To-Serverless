@@ -34,8 +34,8 @@ module.exports = async function (context, req) {
 
 function getCosmosDBConfig() {
     const config = {
-        endpoint: process.env.COSMOSDB_ENDPOINT,
-        key: process.env.COSMOSDB_KEY,
+        endpoint: process.env["COSMOSDB_ENDPOINT"],
+        key: process.env["COSMOSDB_KEY"],
         databaseId: "SecretStorer",
         containerId: "secrets",
         partitionKey: { kind: "Hash", paths: ["/secrets"] }
