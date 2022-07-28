@@ -1,5 +1,5 @@
-
 #!/bin/bash
+
 nodev=$(node -v);
 funcv=$(func -v);
 
@@ -8,7 +8,7 @@ echo "\n"
 echo "--------------------------------";
 echo "Checking if node is installed...";
 echo "--------------------------------";
-if [[ $(node -v) ]]
+if [[ $nodev ]]
 then
     if [[ ${nodev:1:2} -lt 14 ]]
     then
@@ -31,7 +31,7 @@ echo "\n"
 echo "------------------------------------------------------";
 echo "Checking if Azure Functions Core Tools is installed...";
 echo "------------------------------------------------------";
-if [[ $(func -v) ]]
+if [[ $funcv ]]
 then
     if [[ ${funcv:0:1} < 3 ]]
     then
