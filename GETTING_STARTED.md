@@ -101,7 +101,6 @@ Take a look at these [instructions](https://code.visualstudio.com/docs/editor/ex
  
 - [Azure Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint). 
-- [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
  
  > Watch this [video](https://www.youtube.com/watch?v=5IGVeq2DdsA) on how to use ESLint with VS Code.
 </details>
@@ -238,7 +237,16 @@ Click on `Re-run jobs`. If your code is successful, the check will work and you 
 
 <details>
 <summary>Running local checks ▶️</summary>
-Yes! You absolutely can. Here is how to configure VScode to allow local checking. This is optional, and is useful if you want to check your code without first commiting for the counselor bot to check. 
+
+Yes! You absolutely can, and in fact, **we highly recommend it.** The "normal" and preferred way in software development is to set up your local development in a way that ***allows you to run tests locally*** before deploying.
+
+> **Note:** Take a look at the standard developer flow on GitHub below.
+1. Make your code changes
+2. Test the changes locally *(1 and 2 are usually done in a circle or even the other way around if you are using Test-Driven Development!)*
+3. Push the changed code to your fork or branch
+4. Do a pull request and let the checks and tests run in the repo.
+
+Here is how to configure VScode to allow local checking:
 
 1. Go into the `.vscode` folder and click into the `launch.json` file. 
 2. Edit the `launch.json` file to be:
@@ -287,5 +295,5 @@ KEY2=value2
 ```
 5. You are all setup. To run this go to the "Run and Debug" tab on the left panel. At the top, where it says, `Attach to Node Functions`, click the dropdown and select `Run Tests`. Now, you can click the green arrow, and follow the prompted steps to test your function locally!
 
-‼️ This is not required, as you can always commit your code to the counselor bot to check, but is definitely good to know. 
+
 </details>
